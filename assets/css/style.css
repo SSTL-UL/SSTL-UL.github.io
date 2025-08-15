@@ -470,25 +470,20 @@ h6 {
 --------------------------------------------------------------*/
 
 .hero-title-box {
-  background-color: rgba(0, 0, 0, 0.7) !important;
-  border: 2px solid red;
-  padding: 30px;
-  border-radius: 10px;
   display: inline-block;
-  margin-top: 20px;
-  max-width: 850px;
-  margin-left: auto;
-  margin-right: auto;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
+
 .hero-title {
-  font-size: 48px;
+  font-size: 2.5rem;
   font-weight: 700;
-  color: #ffffff;
-  font-family: "Poppins", sans-serif;
-  margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  white-space: normal;
 }
+
 
 .hero-subtitle {
   font-size: 24px;

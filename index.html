@@ -19,6 +19,68 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+  #hero {
+    position: relative;
+    background: url('assets/img/hero-placeholder.jpg') center center no-repeat;
+    background-size: cover;
+    height: 85vh;
+    color: #fff;
+  }
+
+  #hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+  }
+
+  #hero .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-title-box {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 1.25rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  }
+
+  .hero-title, .hero-subtitle, .hero-tagline {
+    color: #fff;
+    margin: 0.25rem 0;
+  }
+</style>
+
+
+<style>
+  /* Hero overlay + readable title box */
+  #hero {
+    position: relative;
+    background: url('assets/img/hero-placeholder.jpg') center center no-repeat;
+    background-size: cover;
+    height: 85vh;
+    color: #fff;
+  }
+  #hero::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: rgba(0,0,0,0.45); /* dark overlay */
+  }
+  #hero .container { position: relative; z-index: 1; }
+  .hero-title-box {
+    display: inline-block;
+    background: rgba(0,0,0,0.55);
+    padding: 1.25rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  }
+  .hero-title, .hero-subtitle, .hero-tagline { color: #fff; margin: 0.25rem 0; }
+</style>
+
+
 </head>
 
 <body>
@@ -56,8 +118,8 @@
     </div>
   </header>
 
-  <section id="hero" class="d-flex align-items-center" style="background: url('assets/img/hero-placeholder.jpg') center center no-repeat; background-size: cover; height: 85vh;">
-  <div class="container text-center" data-aos="fade-up">
+  <section id="hero" class="d-flex align-items-center">
+  <div class="container text-center">
     <div class="hero-title-box">
       <h1 class="hero-title">Smart and Sustainable Transportation Lab</h1>
       <h2 class="hero-subtitle">Laboratoire de transport intelligent et durable</h2>
