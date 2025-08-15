@@ -171,7 +171,7 @@ h6 {
   background: #fff;
   transition: all 0.5s;
   z-index: 997;
-  height: 86px;
+  height: 120px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -468,24 +468,13 @@ h6 {
 #hero {
   width: 100%;
   height: 75vh;
-  background: url("../img/hero-bg.jpg") top left;
   background-size: cover;
   position: relative;
 }
 
-#hero:before {
-  content: "";
-  background: rgba(255, 255, 255, 0.6);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
 #hero .container {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 #hero h1 {
@@ -493,16 +482,12 @@ h6 {
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
-  color: #222222;
+  color: #fff;
   font-family: "Poppins", sans-serif;
 }
 
-#hero h1 span {
-  color: #106eea;
-}
-
 #hero h2 {
-  color: #555555;
+  color: #eee;
   margin: 5px 0 30px 0;
   font-size: 24px;
   font-weight: 400;
