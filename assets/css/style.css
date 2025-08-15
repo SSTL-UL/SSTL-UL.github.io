@@ -116,42 +116,23 @@ h6 {
 # Top Bar
 --------------------------------------------------------------*/
 #topbar {
-  background: #106eea;
-  height: 40px;
+  background: #007f4e; /* SSTL green */
+  height: 42px;
   font-size: 14px;
-  transition: all 0.5s;
-  color: #fff;
+  color: white;
   padding: 0;
+  transition: background 0.5s ease;
 }
 
-#topbar .contact-info i {
-  font-style: normal;
-  color: #fff;
+#topbar a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-#topbar .contact-info i a,
-#topbar .contact-info i span {
-  padding-left: 5px;
-  color: #fff;
-}
-
-#topbar .contact-info i a {
-  line-height: 0;
-  transition: 0.3s;
-  transition: 0.3s;
-}
-
-#topbar .contact-info i a:hover {
-  color: #fff;
+#topbar a:hover {
   text-decoration: underline;
 }
-/* ========ADDED BY BARSHA========= */
-#contact .contact-center{
-  text-align: center;
-
-}
-
-/* ---------------------------------- */
 
 #topbar .social-links a {
   color: rgba(255, 255, 255, 0.7);
