@@ -35,9 +35,11 @@
     </div>
   </section>
 
-  <header id="header" class="d-flex align-items-center">
+  <header id="header" class="d-flex align-items-center" style="height: 90px;">
     <div class="container d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="SSTL Logo" class="img-fluid" style="height: 60px;"></a>
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="SSTL Logo" class="img-fluid" style="height: 80px;">
+      </a>
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link active" href="index.html">Home</a></li>
@@ -53,16 +55,29 @@
     </div>
   </header>
 
-  <section id="hero" class="d-flex align-items-center" style="background: url('assets/img/hero-placeholder.jpg') center center no-repeat; background-size: cover;">
+  <section id="hero" class="d-flex align-items-center" style="background: url('assets/img/hero-placeholder.jpg') center center no-repeat; background-size: cover; height: 85vh;">
     <div class="container text-center" data-aos="fade-up">
-      <h1>Smart and Sustainable Transportation Lab</h1>
-      <h2>Advancing transportation with AI, behavioral models, and sustainable design.</h2>
+      <h1 class="text-white">Smart and Sustainable Transportation Lab</h1>
+      <h2 class="text-white">Advancing transportation with AI, behavioral models, and sustainable design.</h2>
       <a href="about.html" class="btn btn-primary mt-3">Learn More</a>
     </div>
   </section>
 
-  <!-- Remaining unchanged content should go here... -->
-  <!-- For brevity, assume rest of page is the same and can be reattached later -->
+  <!-- Add this to re-enable rest of the content -->
+  <main id="main">
+    <section class="py-5">
+      <div class="container">
+        <h3>Welcome to the SSTL Lab</h3>
+        <p>This is placeholder content. The rest of the homepage sections (Projects, Research, News, etc.) can be reattached here.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer bg-light py-4">
+    <div class="container text-center">
+      <p class="mb-0">© 2025 Smart and Sustainable Transportation Lab — Université Laval</p>
+    </div>
+  </footer>
 
 </body>
 </html>
