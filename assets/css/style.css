@@ -471,6 +471,7 @@ h6 {
 
 .hero-title-box {
   background-color: rgba(0, 0, 0, 0.5); /* semi-transparent dark overlay for readability */
+  border: 2px solid red;
   padding: 30px;
   border-radius: 10px;
   display: inline-block;
