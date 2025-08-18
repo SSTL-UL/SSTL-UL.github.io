@@ -190,7 +190,7 @@ section {
 }
 
 #header .logo img {
-  max-height: 110px;
+  max-height: 90px;
   transition: max-height 0.3s ease-in-out;
 }
 
@@ -441,12 +441,12 @@ section {
 }
 
 #hero {
-  background-image: url("../img/qc.jpg");
+  background-image: url("/assets/img/qc.jpg");
   height: 85vh;
 }
 
 #team-hero {
-  background-image: url("../img/teampic.jpg");
+  background-image: url("/assets/img/teampic.jpg");
   height: 65vh;
   margin-top: 120px;
 }
@@ -493,14 +493,14 @@ section {
   border-radius: 4px;
   transition: 0.5s;
   color: #fff;
-  background: #106eea;
-  border: 2px solid #106eea;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  background: transparent;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 #hero .btn-primary:hover {
-  background: transparent;
-  border-color: #fff;
+  background: #106eea;
+  border-color: #106eea;
   color: #fff;
 }
 
