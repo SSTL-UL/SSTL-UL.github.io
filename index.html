@@ -1,37 +1,29 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>SSTL</title>
-  <meta name="description" content="Smart and Sustainable Transportation Lab (SSTL) — research, projects, team, and contact for Prof. Bobin Wang at Université Laval.">
-  <meta name="keywords" content="transportation, simulation, MATSim, sustainable mobility, discrete choice, AI, Université Laval">
+  <title>Smart & Sustainable Transportation Lab</title>
+  <meta name="description" content="The official website for the Smart and Sustainable Transportation Lab (SSTL) at Université Laval, led by Prof. Bobin Wang.">
+  <meta name="keywords" content="SSTL, smart transportation, sustainable mobility, Bobin Wang, Université Laval, research">
 
-  <link href="assets/img/logo.png" rel="icon">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Poppins" rel="stylesheet">
+  <!-- Favicons -->
+  <link href="assets/img/logo_4_3_1.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  
-  <link href="assets/css/style.css" rel="stylesheet">
 
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.1.1",
-    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
-    "react/": "https://esm.sh/react@^19.1.1/",
-    "lodash.throttle": "https://esm.sh/lodash.throttle@^4.1.1",
-    "lodash.debounce": "https://esm.sh/lodash.debounce@^4.0.8"
-  }
-}
-</script>
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -52,11 +44,11 @@
 </section>
 -->
 
- <header id="header" class="d-flex align-items-center">
+ <header id="header" class="d-flex align-items-center header-transparent">
   <div class="container d-flex align-items-center justify-content-between">
     <!-- Logo placed inside a white bar -->
     <a href="index.html" class="logo d-flex align-items-center">
-      <img src="assets/img/logo.png" alt="SSTL Logo" class="img-fluid">
+      <img src="assets/img/logo_4_3_1.png" alt="SSTL Logo" class="img-fluid">
     </a>
     <!-- Navigation -->
     <nav id="navbar" class="navbar">
@@ -67,7 +59,7 @@
         <li><a class="nav-link" href="research.html">Research</a></li>
         <li><a class="nav-link" href="team.html">Team</a></li>
         <li><a class="nav-link" href="contact.html">Contact</a></li>
-        <li><a class="nav-link" href="https://scholar.google.com" target="_blank">Publications</a></li>
+        <li><a class="nav-link" href="https://scholar.google.com/citations?user=ET27lQwAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Publications</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav>
@@ -88,20 +80,39 @@
 
   <main id="main">
 
-    <section id="counts" class="counts">
-      <div class="container">
-        <div class="section-title"><h2>Projects</h2></div>
+    <section id="projects-overview" class="projects-overview section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Our Key Projects</h2>
+          <p>We apply innovative research to solve real-world transportation challenges. Here's a glimpse into our work.</p>
+        </div>
         <div class="row">
-          <div class="col-lg-3 col-md-6"><div class="count-box"><a class="nav-link active" href="projects.html"><p>AI Traffic Optimization</p></a></div></div>
-          <div class="col-lg-3 col-md-6"><div class="count-box"><a class="nav-link active" href="projects.html"><p>Quebec Tramway Study</p></a></div></div>
-          <div class="col-lg-3 col-md-6"><div class="count-box"><a class="nav-link active" href="projects.html"><p>MaaS Platforms</p></a></div></div>
-          <div class="col-lg-3 col-md-6"><div class="count-box"><a class="nav-link active" href="projects.html"><p>EV Adoption Modeling</p></a></div></div>
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="project-item">
+              <h4><a href="projects.html">AI Traffic Optimization</a></h4>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="project-item">
+              <h4><a href="projects.html">Quebec Tramway Study</a></h4>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="project-item">
+              <h4><a href="projects.html">MaaS Platforms</a></h4>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="project-item">
+              <h4><a href="projects.html">EV Adoption Modeling</a></h4>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="services" class="services">
-      <div class="container">
+      <div class="container" data-aos="fade-up">
         <div class="section-title"><h2>Research Interests</h2></div>
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
@@ -116,7 +127,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-shape-polygon"></i></div>
               <h4><a href="research.html">Fields of Interest</a></h4>
@@ -130,7 +141,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-book-reader"></i></div>
               <h4><a href="research.html">Courses</a></h4>
@@ -148,7 +159,7 @@
     </section>
 
     <section id="news" class="news section-bg">
-      <div class="container">
+      <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>News & Updates</h2>
           <p>Stay current with our lab's latest achievements, publications, and events.</p>
@@ -162,7 +173,7 @@
     </section>
 
     <section id="contact" class="contact">
-      <div class="container">
+      <div class="container" data-aos="fade-up">
         <div class="section-title"><h2>Contact Info</h2></div>
         <div class="row justify-content-center">
           <div class="col-lg-6">
@@ -184,7 +195,7 @@
     </section>
 
     <section id="clients" class="clients section-bg">
-      <div class="container">
+      <div class="container" data-aos="fade-up">
         <div class="row justify-content-center">
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"><img src="assets/img/clients-collab/iid-bleu.png" class="img-fluid" alt="IID"></div>
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"><img src="assets/img/clients-collab/university-laval.png" class="img-fluid" alt="Université Laval"></div>
@@ -199,6 +210,21 @@
       <p class="mb-0">© 2025 Smart and Sustainable Transportation Lab — Université Laval</p>
     </div>
   </footer>
+  
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
