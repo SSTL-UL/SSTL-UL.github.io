@@ -190,7 +190,7 @@ section {
 }
 
 #header .logo img {
-  max-height: 110px;
+  max-height: 100px;
   transition: max-height 0.3s ease-in-out;
 }
 
@@ -429,7 +429,16 @@ section {
   color: white;
 }
 
-#hero:before,
+#hero:before {
+  content: "";
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 60%);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
 #team-hero:before {
   content: "";
   background: rgba(0, 0, 0, 0.4);
@@ -463,7 +472,7 @@ section {
 }
 
 #hero .hero-title-box {
-  padding: 2rem;
+  padding: 0;
   display: inline-block;
 }
 
