@@ -190,7 +190,7 @@ section {
 }
 
 #header .logo img {
-  max-height: 90px;
+  max-height: 120px;
   transition: max-height 0.3s ease-in-out;
 }
 
