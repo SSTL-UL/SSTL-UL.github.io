@@ -190,7 +190,7 @@ section {
 }
 
 #header .logo img {
-  max-height: 100px;
+  max-height: 110px;
   transition: max-height 0.3s ease-in-out;
 }
 
@@ -616,21 +616,18 @@ section {
 }
 
 .services .icon-box ul li {
-  position: relative;
-  padding-left: 24px;
+  display: flex;
+  align-items: flex-start;
   margin-bottom: 10px;
 }
 
-.services .icon-box ul li::before {
-  content: "\\F28A";
-  font-family: "bootstrap-icons";
-  position: absolute;
-  left: 0;
-  top: 2px;
+.services .icon-box ul li i {
+  font-size: 20px;
+  line-height: 1;
   color: #106eea;
-  font-size: 16px;
+  margin-right: 8px;
+  padding-top: 3px;
 }
-
 
 .services .icon-box:hover {
   border-color: #fff;
