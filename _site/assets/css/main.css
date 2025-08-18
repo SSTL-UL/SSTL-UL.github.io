@@ -1,0 +1,10 @@
+/* Minimal SCSS that will compile */
+.hero-title-box { display: inline-block; background: rgba(0, 0, 0, 0.55); padding: 1.25rem 1.5rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25); }
+
+.hero-title { font-size: 2.5rem; font-weight: 700; color: #fff; }
+
+.hero-subtitle { font-size: 1.5rem; font-weight: 400; color: #f1f1f1; }
+
+#header .navbar a { color: white !important; }
+
+#header .navbar a:hover, #header .navbar .active, #header .navbar li:hover > a { color: #ffd700 !important; }
