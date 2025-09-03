@@ -456,10 +456,7 @@ section {
   margin-top: 120px;
 }
 
-#main {
-  background-image: url("/assets/img/qc_upside.jpg");
-  height: 100vh;
-}
+
 
 #header.header-scrolled+#hero {
   margin-top: 70px;
@@ -786,7 +783,7 @@ section {
 }
 
 #main {
-  background-image: url("/assets/img/qc_upside.jpg");
+  
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -834,3 +831,4 @@ section {
 #projects-overview.transparent-section .section-title p {
   color: white;
 }
+
