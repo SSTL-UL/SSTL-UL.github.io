@@ -180,27 +180,37 @@ section {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
-#header.header-transparent {
-  background: transparent;
-  box-shadow: none;
-}
+
 
 #header.header-scrolled {
   height: 80px;
 }
 
-#header .logo img {
-  max-height: 110px;
-  transition: max-height 0.3s ease-in-out;
-}
+
 
 #header.header-scrolled .logo img {
-  max-height: 70px;
+  max-height: 100px;
 }
 
 .scrolled-offset {
   margin-top: 70px;
 }
+
+
+#header,
+#hero {
+  overflow: visible;
+}
+
+#header .logo img {
+  height: 140px; /* or whatever size you like */
+  margin-top: 10px; /* fine-tune as needed */
+  position: relative;
+  z-index: 1001;
+}
+
+
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -277,20 +287,6 @@ section {
   color: #106eea;
 }
 
-/* Nav links on transparent header */
-#header.header-transparent .navbar a,
-#header.header-transparent .navbar a:focus {
-  color: #fff;
-}
-#header.header-transparent .navbar a:hover,
-#header.header-transparent .navbar .active,
-#header.header-transparent .navbar .active:focus,
-#header.header-transparent .navbar li:hover>a {
-  color: #fff;
-}
-#header.header-transparent .navbar>ul>li>a:before {
-  background-color: #fff;
-}
 
 
 .navbar .dropdown ul {
@@ -451,7 +447,7 @@ section {
 
 #hero {
   background-image: url("/assets/img/qc.jpg");
-  height: 85vh;
+  height: 100vh;
 }
 
 #team-hero {
@@ -460,6 +456,10 @@ section {
   margin-top: 120px;
 }
 
+#main {
+  background-image: url("/assets/img/qc_upside.jpg");
+  height: 100vh;
+}
 
 #header.header-scrolled+#hero {
   margin-top: 70px;
@@ -697,6 +697,8 @@ section {
   padding-top: 0;
 }
 
+
+
 /*--------------------------------------------------------------
 # Team Members as Project Items
 --------------------------------------------------------------*/
@@ -781,4 +783,54 @@ section {
 .main-footer .copyright {
   padding-top: 30px;
   border-top: 1px solid #e2eefd;
+}
+
+#main {
+  background-image: url("/assets/img/qc_upside.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+.section-bg {
+  background-color: transparent;
+}
+.transparent-box {
+  background: rgba(255, 255, 255, 0.7); /* Light glassy effect */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.blur-box {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 30px;
+}
+.project-item,
+.icon-box {
+  background: rgba(255, 255, 255, 0.7); /* or use .transparent-box instead */
+}
+#main::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.3); /* dark overlay */
+  z-index: 1;
+}
+
+#main > * {
+  position: relative;
+  z-index: 2;
+}
+
+#news.transparent-section .section-title h2,
+#news.transparent-section .section-title p {
+  color: white;
+}
+#projects-overview.transparent-section .section-title h2,
+#projects-overview.transparent-section .section-title p {
+  color: white;
 }
