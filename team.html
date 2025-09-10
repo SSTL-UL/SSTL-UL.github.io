@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="/assets/img/logo.png" rel="icon">
+  <link href="/assets/img/logo_v9.png" rel="icon">
   
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -36,18 +36,17 @@
 </head>
 
 <body>
+<div class="top-banner">&nbsp;</div>
 <header id="header" class="d-flex align-items-center">
   <div class="container d-flex align-items-center justify-content-between">
     <a href="/" class="logo d-flex align-items-center">
-      <img src="/assets/img/logo.png" alt="SSTL Logo" class="img-fluid">
+      <img src="/assets/img/logo-horizontal-engl-removebg-preview.png" alt="SSTL Logo" class="img-fluid">
     </a>
 
     <nav id="navbar" class="navbar">
       <ul>
         <li><a class="nav-link" href="/">Home</a></li>
-        <li><a class="nav-link" href="/about.html">About</a></li>
         <li><a class="nav-link" href="/projects.html">Projects</a></li>
-        <!--<li><a class="nav-link" href="/research.html">Research</a></li>  -->
         <li><a class="nav-link active" href="/team.html">Team</a></li>
         <li><a class="nav-link" href="/contact.html">Contact</a></li>
         <li><a class="nav-link" target="_blank" rel="noopener"
@@ -58,237 +57,188 @@
   </div>
 </header>
   
-<!-- ======= Hero Section ======= -->
-<section id="team-hero">
-</section><!-- End Hero -->
-  
+<!-- ======= Hero Slider Section ======= -->
+<section id="team-hero-slider" class="team-hero-slider swiper">
+  <div class="swiper-wrapper">
+    <!-- Slide 1 -->
+    <div class="swiper-slide" style="background-image: url(/assets/img/teampic.jpg);"></div>
+    <!-- Slide 2: You can add another group photo here -->
+    <div class="swiper-slide" style="background-image: url(/assets/img/qc.jpg);"></div>
+    <!-- Slide 3: And another one here -->
+    <div class="swiper-slide" style="background-image: url(/assets/img/teampic.jpg);"></div>
+  </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+</section><!-- End Hero Slider -->
+
   <main id="main">
-    <section id="counts" class="counts"> 
-
-      <div class="container" >
-        <div class="section-title">
-           <h2>Team Members</h2> 
-          <!--<h3><span>Team Members</span></h3>-->
-          <!-- <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p> -->
-        </div>
-          <!-- <h3>Here is my <span>research</span></h3> -->
-          <!-- <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p> -->
-        
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <a class="nav-link active scrollto" href="#team-professor"><p>Professor</p></a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-            <div class="count-box">
-              <a class="nav-link active scrollto" href="#team-post-docs"><p>Post Docs</p></a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <a class="nav-link active" href="#team-phd-students"><p>PhD Students</p></a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <a class="nav-link active" href="#team-masters-students"><p>Masters Students</p></a>
-            </div>
-          </div>         
-
-        </div>
-        <div class="section-title"> 
-           <!-- <h2>This div is added just to create gap between these rows.</h2> -->
-        </div>
-        <!-- ========Second row======== -->
-        <div class="row justify-content-center">
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <a class="nav-link active" href="#team-collaborators"><p>Collaborators</p></a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <a class="nav-link active" href="#team-technicians"><p>Technicians</p></a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-      
-    </section>
     <!-- ======= Team Section ======= -->
-    <section id="team" class="projects-overview section-bg">
-        <div class="container" >
-           <!-- ======= Professor ======= -->
+    <section id="team" class="team section-bg">
+        <div class="container" data-aos="fade-up">
+          
           <div class="section-title">
-            <h2 id="team-professor">Principal Investigator </h2>
+            <h2>Our Team</h2>
           </div>
-          <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" >
-              <div class="project-item">
-                <h4>Prof. Bobin Wang</h4>
-                <p class="team-role">Assistant Professor</p>
-                <div class="team-social">
-                  <a target="_blank" href="mailto:bobin.wang@gmc.ulaval.ca"><i class="bi bi-envelope"></i></a>
-                  <a target="_blank" href="https://www.linkedin.com/in/bobin-wang-47651b9b/"><i class="bi bi-linkedin"></i></a>
+
+          <!-- ======= Principal Investigator ======= -->
+          <div class="section-title">
+            <h3>Principal Investigator</h3>
+          </div>
+          <div class="row justify-content-center mb-5">
+            <div class="col-lg-8">
+              <div class="pi-card">
+                <div class="row align-items-center">
+                  <div class="col-md-4 text-center">
+                    <div class="team-member-photo-container">
+                      <img src="/assets/img/team/Bobin.jpg" class="img-fluid rounded-circle" alt="Prof. Bobin Wang">
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="pi-info">
+                      <h4 class="pi-name">Prof. Bobin Wang</h4>
+                      <p class="pi-title">Assistant Professor, Department of Civil and Water Engineering</p>
+                      <p class="pi-bio">
+                        Dr. Bobin Wang is the director of the Smart and Sustainable Transportation Lab. His research focuses on travel behavior analysis, the interaction of AI and decision theories, and econometric modeling to create more efficient and sustainable urban mobility systems.
+                      </p>
+                      <div class="pi-social">
+                        <a target="_blank" href="mailto:bobin.wang@gmc.ulaval.ca" title="Email"><i class="bi bi-envelope-fill"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/bobin-wang-47651b9b/" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a target="_blank" href="https://scholar.google.com/citations?user=ET2TtlQwAAAAJ&hl=en&oi=ao" title="Google Scholar"><i class="bi bi-mortarboard-fill"></i></a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- ======= Post Docs ======= -->
-          <div class="section-title">
-            <h2 id="team-post-docs">Post Docs</h2>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" >
-              <div class="project-item">
-                <h4>Dr. Ananya Sharma</h4>
-                <p class="team-role">Postdoctoral Fellow</p>
-                <div class="team-social">
-                  <a href="#"><i class="bi bi-envelope"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" >
-              <div class="project-item">
-                <h4>Dr. Kenji Tanaka</h4>
-                <p class="team-role">Postdoctoral Fellow</p>
-                <div class="team-social">
-                  <a href="#"><i class="bi bi-envelope"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
 
           <!-- ======= PhD Students ======= -->
           <div class="section-title">
-            <h2 id="team-phd-students">PhD Students</h2>
+            <h3>PhD Students</h3>
           </div>
-          <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" >
-              <div class="project-item">
-                <h4>Mahdie Asl-Javadian</h4>
-                <p class="team-role">PhD Student</p>
-                <div class="team-social">
-                  <a target="_blank" href="mailto:mahdieh.asl-javadian.1@ulaval.ca"><i class="bi bi-envelope"></i></a>
-                  <a target="_blank" href="https://www.linkedin.com/in/mahdie-asl-javadian-22b67b187"><i class="bi bi-linkedin"></i></a>
+          <div class="row gy-4 justify-content-center">
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+              <div class="team-member-card">
+                <div class="team-member-photo">
+                  <img src="/assets/img/team/Mahdieh.JPG" class="img-fluid" alt="Mahdie Asl-Javadian">
+                  <div class="photo-overlay">
+                    <div class="team-member-social">
+                      <a target="_blank" href="mailto:mahdieh.asl-javadian.1@ulaval.ca"><i class="bi bi-envelope"></i></a>
+                      <a target="_blank" href="https://www.linkedin.com/in/mahdie-asl-javadian-22b67b187"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="team-member-info">
+                  <h4>Mahdie Asl-Javadian</h4>
+                  <span>PhD Student</span>
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" >
-              <div class="project-item">
-                <h4>Hamid Hasanzadeh</h4>
-                <p class="team-role">PhD Student</p>
-                <div class="team-social">
-                  <a target="_blank" href="mailto:Hamid.hasanzadeh.1@ulaval.ca"><i class="bi bi-envelope"></i></a>
-                  <a target="_blank" href="https://www.linkedin.com/in/hasanzadeh-h-ie/"><i class="bi bi-linkedin"></i></a>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+              <div class="team-member-card">
+                <div class="team-member-photo">
+                  <img src="/assets/img/team/Hamid.png" class="img-fluid" alt="Hamid Hasanzadeh">
+                  <div class="photo-overlay">
+                    <div class="team-member-social">
+                      <a target="_blank" href="mailto:Hamid.hasanzadeh.1@ulaval.ca"><i class="bi bi-envelope"></i></a>
+                      <a target="_blank" href="https://www.linkedin.com/in/hasanzadeh-h-ie/"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="team-member-info">
+                  <h4>Hamid Hasanzadeh</h4>
+                  <span>PhD Student</span>
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" >
-              <div class="project-item">
-                <h4>Biao Chen</h4>
-                <p class="team-role">Visiting PhD Student</p>
-                <div class="team-social">
-                  <a href="mailto:biao.chen.1@ulaval.ca"><i class="bi bi-envelope"></i></a>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+              <div class="team-member-card">
+                <div class="team-member-photo">
+                  <img src="/assets/img/team/Hamid.png" class="img-fluid" alt="Xianyu Zhong">
+                  <div class="photo-overlay">
+                    <div class="team-member-social">
+                      <a href="mailto:biao.chen.1@ulaval.ca"><i class="bi bi-envelope"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="team-member-info">
+                  <h4>Xianyu Zhong</h4>
+                  <span>PhD Student</span>
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" >
-              <div class="project-item">
-                <h4>Fatima Al-Jamil</h4>
-                <p class="team-role">PhD Student</p>
-                <div class="team-social">
-                  <a href="#"><i class="bi bi-envelope"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+              <div class="team-member-card">
+                <div class="team-member-photo">
+                  <img src="/assets/img/team/marc.jpg" class="img-fluid" alt="Marc JACOBY">
+                  <div class="photo-overlay">
+                    <div class="team-member-social">
+                      <a href="#"><i class="bi bi-envelope"></i></a>
+                      <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="team-member-info">
+                  <h4>Marc JACOBY</h4>
+                  <span>PhD Student</span>
                 </div>
               </div>
             </div>
+
           </div>
 
            <!-- ======= Masters Students ======= -->
-           <div class="section-title">
-            <h2 id="team-masters-students">Masters students</h2>
+           <div class="section-title mt-5">
+            <h3>M.Sc. Students</h3>
           </div>
-          <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" >
-              <div class="project-item">
-                <h4>Chloé Dubois</h4>
-                <p class="team-role">M.Sc. Student</p>
-                <div class="team-social">
-                  <a href="#"><i class="bi bi-envelope"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
+          <div class="row gy-4 justify-content-center">
+            
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+              <div class="team-member-card">
+                <div class="team-member-photo">
+                  <img src="/assets/img/team/Olivier.png" class="img-fluid" alt="Olivier Bussière">
+                  <div class="photo-overlay">
+                    <div class="team-member-social">
+                      <a href="#"><i class="bi bi-envelope"></i></a>
+                      <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="team-member-info">
+                  <h4>Olivier Bussière</h4>
+                  <span>M.Sc. Student</span>
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" >
-              <div class="project-item">
-                <h4>Samuel Tremblay</h4>
-                <p class="team-role">M.Sc. Student</p>
-                <div class="team-social">
-                  <a href="#"><i class="bi bi-envelope"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
 
-           <!-- ======= Collaborators ======= -->
-           <div class="section-title">
-            <h2 id="team-collaborators">Collaborators</h2>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" >
-              <div class="project-item">
-                <h4>Prof. Emily Carter</h4>
-                <p class="team-role">University of Toronto</p>
-                <div class="team-social">
-                  <a href="#"><i class="bi bi-globe"></i></a>
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+              <div class="team-member-card">
+                <div class="team-member-photo">
+                  <img src="/assets/img/team/camille.jpg" class="img-fluid" alt="Camille Godbout">
+                  <div class="photo-overlay">
+                    <div class="team-member-social">
+                      <a href="#"><i class="bi bi-envelope"></i></a>
+                      <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="team-member-info">
+                  <h4>Camille Godbout</h4>
+                  <span>M.Sc. Student</span>
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" >
-              <div class="project-item">
-                <h4>Dr. Luis Hernandez</h4>
-                <p class="team-role">Polytechnique Montréal</p>
-                <div class="team-social">
-                  <a href="#"><i class="bi bi-globe"></i></a>
-                </div>
-              </div>
-            </div>
+            
           </div>
-
-           <!-- ======= Technicians ======= -->
-           <div class="section-title">
-            <h2 id="team-technicians">Technicians</h2>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" >
-              <div class="project-item">
-                <h4>Jean-Pierre Gagnon</h4>
-                <p class="team-role">Lab Technician</p>
-                <div class="team-social">
-                  <a href="#"><i class="bi bi-envelope"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-  
         </div>
-    </section><!-- End Team Section -->
-  
+    </section> <!-- End Team Section -->
+
   </main>
 
  
@@ -313,6 +263,29 @@
 
   <!-- Template Main JS File -->
   <script src="/assets/js/main.js"></script>
+
+  <!-- Swiper for Hero Slider -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      new Swiper('.team-hero-slider', {
+        speed: 600,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }
+      });
+    });
+  </script>
 
 </body>
 

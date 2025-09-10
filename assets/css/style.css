@@ -34,6 +34,33 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Top Banner
+--------------------------------------------------------------*/
+.top-banner {
+  background: #fff;
+  padding: 8px 15px;
+  text-align: center;
+  border-bottom: 1px solid #e9e9e9;
+  font-size: 14px;
+  color: #333;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 998;
+}
+
+.top-banner a {
+  font-weight: 600;
+  color: #0d5ab9;
+  text-decoration: underline;
+}
+
+.top-banner a:hover {
+  color: #106eea;
+}
+
+/*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
 section {
@@ -169,48 +196,53 @@ section {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #fff;
-  height: 120px;
   transition: all 0.5s;
-  z-index: 997;
+  z-index: 999;
   position: fixed;
-  top: 0;
+  top: 50px; /* Adjusted for top banner */
   left: 0;
   right: 0;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  height: 130px;
+  background: transparent;
 }
-
 
 
 #header.header-scrolled {
   height: 80px;
-}
-
-
-
-#header.header-scrolled .logo img {
-  max-height: 100px;
+  background: #fff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 .scrolled-offset {
   margin-top: 70px;
 }
 
+#header .logo {
+  position: relative;
+  z-index: 1001;
+  background: transparent;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  transition: all 0.5s ease; /* Smooth transition */
+}
 
-#header,
-#hero {
-  overflow: visible;
+#header.header-scrolled .logo {
+  margin-top: 0; /* Returns the logo to its normal position in the scrolled header */
 }
 
 #header .logo img {
-  height: 140px; /* or whatever size you like */
-  margin-top: 10px; /* fine-tune as needed */
-  position: relative;
-  z-index: 1001;
+  max-height: 180px; /* A larger size for the horizontal logo */
+  transition: all 0.3s ease-in-out;
 }
 
-
-
+#header.header-scrolled .logo img {
+  max-height: 150px; /* A smaller size when header is scrolled */
+}
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -247,10 +279,11 @@ section {
   padding: 0 3px;
   font-size: 15px;
   font-weight: 600;
-  color: #222222;
+  color: #f9f5f5;
   white-space: nowrap;
   transition: 0.3s;
   position: relative;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .navbar a i,
@@ -285,9 +318,21 @@ section {
 .navbar .active:focus,
 .navbar li:hover>a {
   color: #106eea;
+  text-shadow: none;
 }
 
+#header.header-scrolled .navbar a,
+#header.header-scrolled .navbar a:focus {
+  color: #222;
+  text-shadow: none;
+}
 
+#header.header-scrolled .navbar a:hover,
+#header.header-scrolled .navbar .active,
+#header.header-scrolled .navbar .active:focus,
+#header.header-scrolled .navbar li:hover>a {
+  color: #106eea;
+}
 
 .navbar .dropdown ul {
   display: block;
@@ -312,6 +357,7 @@ section {
   padding: 10px 20px;
   font-weight: 400;
   color: #222; /* Ensure dropdown links are dark */
+  text-shadow: none;
 }
 
 .navbar .dropdown ul a i {
@@ -357,15 +403,16 @@ section {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #222222;
+  color: #fff;
   font-size: 28px;
   cursor: pointer;
   display: none;
   line-height: 0;
   transition: 0.5s;
 }
-#header.header-transparent .mobile-nav-toggle {
-  color: #fff;
+
+#header.header-scrolled .mobile-nav-toggle {
+  color: #222;
 }
 
 .mobile-nav-toggle.bi-x {
@@ -416,8 +463,7 @@ section {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-#hero,
-#team-hero {
+#hero {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -435,28 +481,11 @@ section {
   right: 0;
 }
 
-#team-hero:before {
-  content: "";
-  background: rgba(0, 0, 0, 0.4);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
 #hero {
   background-image: url("/assets/img/qc.jpg");
   height: 100vh;
+  width: 100%;
 }
-
-#team-hero {
-  background-image: url("/assets/img/teampic.jpg");
-  height: 65vh;
-  margin-top: 120px;
-}
-
-
 
 #header.header-scrolled+#hero {
   margin-top: 70px;
@@ -525,6 +554,117 @@ section {
     line-height: 24px;
   }
 }
+
+/*--------------------------------------------------------------
+# Team Hero Slider
+--------------------------------------------------------------*/
+.team-hero-slider {
+  width: 100%;
+  height: 65vh;
+  margin-top: 168px; /* Adjusted for banner + header */
+  position: relative;
+}
+
+.team-hero-slider .swiper-slide {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.team-hero-slider .swiper-slide::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.team-hero-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.7);
+  opacity: 1;
+}
+
+.team-hero-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #106eea;
+}
+
+.team-hero-slider .swiper-button-prev,
+.team-hero-slider .swiper-button-next {
+  color: #fff;
+  transition: 0.3s;
+}
+
+.team-hero-slider .swiper-button-prev:hover,
+.team-hero-slider .swiper-button-next:hover {
+  color: #106eea;
+}
+
+@media (max-width: 768px) {
+  .team-hero-slider {
+    height: 50vh;
+  }
+}
+
+/*--------------------------------------------------------------
+# Page Hero Section
+--------------------------------------------------------------*/
+.page-hero {
+  width: 100%;
+  height: 50vh;
+  margin-top: 168px;
+  /* Consistent with team page slider for spacing below header */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.page-hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.page-hero h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#projects-hero,
+#contact-hero {
+  background-image: url("/assets/img/qc.jpg");
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    height: 40vh;
+  }
+
+  .page-hero h1 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Projects Overview Section
@@ -684,45 +824,199 @@ section {
 /*--------------------------------------------------------------
 # Fix for content hidden under fixed header
 --------------------------------------------------------------*/
-#main {
-  padding-top: 130px;
-}
-
-/* Remove padding-top when main content follows a hero section */
-#hero+#main,
-#team-hero+#main {
-  padding-top: 0;
-}
-
-
 
 /*--------------------------------------------------------------
-# Team Members as Project Items
+# Team Page
 --------------------------------------------------------------*/
-.projects-overview .project-item p.team-role {
+.team .section-title h3 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #444;
+  margin: 40px 0 20px 0;
+}
+
+/* PI Card */
+.pi-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #106eea;
+}
+
+.pi-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+}
+
+.pi-title {
+  font-style: italic;
   color: #6c757d;
-  font-size: 15px;
-  margin-top: 5px;
   margin-bottom: 15px;
 }
 
-.projects-overview .project-item .team-social a {
-  color: #555555;
-  margin: 0 5px;
-  font-size: 18px;
-  display: inline-block;
-  transition: 0.3s;
+.pi-bio {
+  line-height: 1.7;
 }
 
-.projects-overview .project-item .team-social a:hover {
+.pi-social a {
+  font-size: 22px;
+  color: #555;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.pi-social a:hover {
   color: #106eea;
 }
 
-.projects-overview #team .project-item h4 {
+/* Team Member Card */
+.team-member-card {
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  width: 100%;
+}
+
+.team-member-photo {
+  position: relative;
+}
+
+.team-member-photo img {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin: 30px auto 0 auto;
+  border: 5px solid #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.photo-overlay {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 180px;
+  width: 180px;
+  background: rgba(16, 110, 234, 0.8);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-member-social a {
+  color: #fff;
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+.team-member-card:hover .photo-overlay {
+  opacity: 1;
+}
+
+.team-member-info {
+  padding: 25px 15px;
+}
+
+.team-member-info h4 {
+  font-weight: 700;
   margin-bottom: 5px;
   font-size: 18px;
+  color: #222;
+}
+
+.team-member-info span {
+  display: block;
+  font-size: 14px;
+  font-style: italic;
+  color: #6c757d;
+}
+
+.team-member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+/*--------------------------------------------------------------
+# New Project Entry Row Styles
+--------------------------------------------------------------*/
+.project-entry-row {
+  margin-bottom: 50px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+}
+
+.project-entry-row:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.project-entry-row h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
   color: #222222;
 }
+
+.project-entry-row p {
+  line-height: 1.6;
+  color: #444444;
+}
+
+.project-entry-row .btn-primary {
+  margin-top: 15px;
+}
+
+.project-image {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+
+/*--------------------------------------------------------------
+# Project Detail Page Styles
+--------------------------------------------------------------*/
+.project-detail-section .section-title h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-top: 20px;
+}
+
+.project-detail-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.project-detail-card h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #106eea;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.project-detail-card p {
+  line-height: 1.7;
+  color: #555;
+}
+
 
 /*--------------------------------------------------------------
 # Footer
@@ -781,54 +1075,3 @@ section {
   padding-top: 30px;
   border-top: 1px solid #e2eefd;
 }
-
-#main {
-  
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-}
-.section-bg {
-  background-color: transparent;
-}
-.transparent-box {
-  background: rgba(255, 255, 255, 0.7); /* Light glassy effect */
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.blur-box {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 10px;
-  padding: 30px;
-}
-.project-item,
-.icon-box {
-  background: rgba(255, 255, 255, 0.7); /* or use .transparent-box instead */
-}
-#main::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.3); /* dark overlay */
-  z-index: 1;
-}
-
-#main > * {
-  position: relative;
-  z-index: 2;
-}
-
-#news.transparent-section .section-title h2,
-#news.transparent-section .section-title p {
-  color: white;
-}
-#projects-overview.transparent-section .section-title h2,
-#projects-overview.transparent-section .section-title p {
-  color: white;
-}
-
