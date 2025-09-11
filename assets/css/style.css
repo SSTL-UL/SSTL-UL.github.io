@@ -216,6 +216,7 @@ section {
 
 #header .logo {
   position: relative;
+  overflow: hidden; /* Added for shine effect */
   z-index: 1001;
   background: transparent;
   width: auto;
@@ -241,7 +242,7 @@ section {
 }
 
 #header.header-scrolled .logo img {
-  max-height: 120px;
+  max-height: 140px;
   /* A smaller size when header is scrolled */
 }
 
@@ -583,9 +584,9 @@ section {
 }
 
 .btn-get-started:hover {
-  background: #106eea;
-  border-color: #106eea;
-  color: #fff;
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.9);
+  color: #222;
 }
 
 #home-hero,
@@ -1099,4 +1100,29 @@ section {
 
 .home-page #header.header-scrolled .logo .logo-scrolled {
   display: block;
+}
+
+/*--------------------------------------------------------------
+# Logo Shine Effect
+--------------------------------------------------------------*/
+@keyframes shine-effect {
+  0% {
+    transform: translateX(-200%) skewX(-25deg);
+  }
+
+  100% {
+    transform: translateX(200%) skewX(-25deg);
+  }
+}
+
+.home-page #header:not(.header-scrolled) .logo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+  animation: shine-effect 5s infinite;
+  animation-delay: 3s;
 }
