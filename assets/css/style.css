@@ -235,13 +235,13 @@ section {
 }
 
 #header .logo img {
-  max-height: 140px;
+  max-height: 120px;
   /* Adjusted to fit header */
   transition: all 0.3s ease-in-out;
 }
 
 #header.header-scrolled .logo img {
-  max-height: 120px;
+  max-height: 70px;
   /* A smaller size when header is scrolled */
 }
 
@@ -549,6 +549,43 @@ section {
   margin: 15px 0 0 0;
   font-size: 24px;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.hero-about-box {
+  max-width: 700px;
+  margin: 40px auto 0 auto;
+  padding: 0;
+  background: transparent;
+  border-radius: 8px;
+}
+
+.hero-about-text {
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 0 20px 0;
+  font-size: 17px;
+  line-height: 1.7;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.btn-get-started {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #fff;
+  text-shadow: none;
+}
+
+.btn-get-started:hover {
+  background: #106eea;
+  border-color: #106eea;
+  color: #fff;
 }
 
 #home-hero,
@@ -991,6 +1028,8 @@ section {
   height: 100vh;
   padding-top: 140px;
   /* Space for the header */
+  align-items: flex-end;
+  padding-bottom: 15vh;
 }
 
 /* Style navigation links for transparent header */
