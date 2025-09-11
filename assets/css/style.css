@@ -235,13 +235,13 @@ section {
 }
 
 #header .logo img {
-  max-height: 120px;
+  max-height: 160px;
   /* Adjusted to fit header */
   transition: all 0.3s ease-in-out;
 }
 
 #header.header-scrolled .logo img {
-  max-height: 70px;
+  max-height: 120px;
   /* A smaller size when header is scrolled */
 }
 
