@@ -975,3 +975,89 @@ section {
   padding-top: 30px;
   border-top: 1px solid #e2eefd;
 }
+
+/*--------------------------------------------------------------
+# Homepage Specific Styles
+--------------------------------------------------------------*/
+/* Make header transparent on homepage */
+.home-page #header {
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Adjust Hero section to fill screen and sit behind header */
+.home-page #home-hero {
+  margin-top: 0;
+  height: 100vh;
+  padding-top: 140px;
+  /* Space for the header */
+}
+
+/* Style navigation links for transparent header */
+.home-page #header .navbar a,
+.home-page #header .navbar a:focus,
+.home-page #header .mobile-nav-toggle {
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.home-page #header .navbar a:hover,
+.home-page #header .navbar .active,
+.home-page #header .navbar .active:focus,
+.home-page #header .navbar li:hover>a {
+  color: #fff;
+}
+
+.home-page #header .navbar>ul>li>a:before {
+  background-color: #fff;
+}
+
+/* Keep dropdown menu solid */
+.home-page #header .navbar .dropdown ul a,
+.home-page #header .navbar .dropdown ul a:focus {
+  color: #222;
+  text-shadow: none;
+}
+
+.home-page #header .navbar .dropdown ul a:hover,
+.home-page #header .navbar .dropdown ul .active:hover,
+.home-page #header .navbar .dropdown ul li:hover>a {
+  color: #106eea;
+}
+
+/* --- Scrolled State on Homepage --- */
+.home-page #header.header-scrolled {
+  background: #fff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.home-page #header.header-scrolled .navbar a,
+.home-page #header.header-scrolled .navbar a:focus,
+.home-page #header.header-scrolled .mobile-nav-toggle {
+  color: #222;
+  text-shadow: none;
+}
+
+.home-page #header.header-scrolled .navbar a:hover,
+.home-page #header.header-scrolled .navbar .active,
+.home-page #header.header-scrolled .navbar .active:focus,
+.home-page #header.header-scrolled .navbar li:hover>a {
+  color: #106eea;
+}
+
+.home-page #header.header-scrolled .navbar>ul>li>a:before {
+  background-color: #106eea;
+}
+
+/* Logo swap for homepage scrolled header */
+.home-page #header .logo .logo-scrolled {
+  display: none;
+}
+
+.home-page #header.header-scrolled .logo .logo-main {
+  display: none;
+}
+
+.home-page #header.header-scrolled .logo .logo-scrolled {
+  display: block;
+}
