@@ -236,13 +236,13 @@ section {
 }
 
 #header .logo img {
-  max-height: 160px;
+  max-height: 120px;
   /* Adjusted to fit header */
   transition: all 0.3s ease-in-out;
 }
 
 #header.header-scrolled .logo img {
-  max-height: 140px;
+  max-height: 70px;
   /* A smaller size when header is scrolled */
 }
 
@@ -777,12 +777,37 @@ section {
 }
 
 /* PI Card */
-.pi-card {
-  background: #fff;
-  padding: 30px;
+.pi-info-card,
+.pi-bio-card {
+  background: transparent;
+  padding: 40px;
   border-radius: 10px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
-  border-left: 5px solid #106eea;
+  box-shadow: none;
+  width: 100%;
+  height: 100%;
+}
+
+.pi-info-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pi-info-card img {
+  max-width: 180px;
+  border: 5px solid #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.pi-bio-card .pi-bio-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #106eea;
+  display: inline-block;
 }
 
 .pi-name {
@@ -792,8 +817,14 @@ section {
 }
 
 .pi-title {
-  font-style: italic;
+  font-style: normal;
   color: #6c757d;
+  margin-bottom: 5px;
+}
+
+.pi-department {
+  font-size: 15px;
+  color: #888;
   margin-bottom: 15px;
 }
 
@@ -804,7 +835,7 @@ section {
 .pi-social a {
   font-size: 22px;
   color: #555;
-  margin-right: 15px;
+  margin: 0 10px;
   transition: color 0.3s;
 }
 
