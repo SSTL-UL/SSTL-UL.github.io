@@ -952,13 +952,25 @@ section {
 /*--------------------------------------------------------------
 # New Project Entry Row Styles
 --------------------------------------------------------------*/
+/* Make project cards on projects page equal height */
+.projects .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
 .project-entry-row {
-  margin-bottom: 50px;
+  margin-bottom: 0;
+  /* Replaced by grid gap */
   padding: 30px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease-in-out;
+  /* Vertically center content in cards of varying heights */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .project-entry-row:hover {
@@ -967,15 +979,21 @@ section {
 }
 
 .project-entry-row h3 {
-  font-size: 24px;
+  font-size: 18px;
+  /* Increased for emphasis */
+  line-height: 1.3;
+  /* Added for better spacing on multi-line titles */
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 0;
   color: #222222;
 }
 
 .project-entry-row p {
-  line-height: 1.6;
+  font-size: 10px;
+  /* Slightly decreased for contrast */
+  line-height: 1.7;
   color: #444444;
+  text-align: justify;
 }
 
 .project-entry-row .btn-primary {
