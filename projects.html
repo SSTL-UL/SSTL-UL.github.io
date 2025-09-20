@@ -24,18 +24,10 @@
 
   <!-- Template Main CSS File -->
   <link href="/assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: BizLand
-  * Updated: Jan 29 2024 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
-  <div class="top-banner">We are actively recruiting PhD and M.Sc. students. Interested in shaping the future of mobility? <a href="/#news">Find out more!</a></div>
+  <div class="top-banner">We are actively recruiting PhD and M.Sc. students. Interested in shaping the future of mobility? <a href="/opportunities.html">Find out more!</a></div>
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
@@ -45,6 +37,12 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link" href="/">Home</a></li>
+          <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="/about.html">About the Lab</a></li>
+              <li><a href="/about-bobin.html">About Prof. Wang</a></li>
+            </ul>
+          </li>
           <li class="dropdown"><a class="nav-link active" href="/projects.html"><span>Projects</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="/projects.html">All Projects</a></li>
@@ -55,8 +53,9 @@
             </ul>
           </li>
           <li><a class="nav-link" href="/team.html">Team</a></li>
+          <li><a class="nav-link" href="/opportunities.html">Opportunities</a></li>
           <li><a class="nav-link" href="/contact.html">Contact</a></li>
-          <li><a class="nav-link" target="_blank" rel="noopener" href="/publications.html">Publications</a></li>
+          <li><a class="nav-link" href="/publications.html" target="_blank" rel="noopener">Publications</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -75,108 +74,112 @@
     <section id="projects" class="projects section-bg">
       <div class="container" data-aos="fade-up">
 
-         <!-- Project 1 -->
-        <div class="project-entry-row" data-aos="fade-up">
-          <div class="row align-items-center">
-            <div class="col-md-4">
-              <h3>Understanding and predicting the modal shift of motorists in relation to their territory: A study of the link between individuals' car dependence, their built environment, and their territory. </h3>
-            </div>
-            <div class="col-md-8">
-              <p>The thesis project aims to study the relationships between built environments and individuals' automobile dependence, in light of the diversity of cities that make up the Quebec territory, by answering the research question: How can the study of the link that exclusive motorists have with their built environment and their territory help to combat automobile dependence? .</p>
-              <a href="/project_page/project_1.html" class="btn btn-primary btn-sm">Learn More</a>
-            </div>
-          </div>
-        </div>
+        <div class="row gy-4">
 
-         <!-- Project 2 -->
-        <div class="project-entry-row" data-aos="fade-up">
-          <div class="row align-items-center">
-            <div class="col-md-4">
-              <h3>The potential of battery electric trucks in forest transportation </h3>
-            </div>
-            <div class="col-md-8">
-              <p>This PhD thesis focuses on the development of optimization models in forest transportation. We will develop a heterogenous electric vehicle routing problems for the application of lumber and log hauling in forestry. The potential of electric trucks in forestry is evaluated in three stages: Strategic, tactical and operational. Each stage corresponds to one research paper. The strategic stage looks at the scale at which the technology has been deployed and its impact on the industry. The tactical plan looks into determining the optimal locations of installing charging stations. Operational plan seeks the best routes to choose amongst a given set of candidates in the network. For the tactical and operational plans, we develop optimization models based on a comprehensive energy consumption analysis of the network. This project will be executed in coordination with the FORAC industrial partners </p>
-              <a href="/project_page/project_1.html" class="btn btn-primary btn-sm">Learn More</a>
+          <!-- Project Card 1 -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="project-card">
+              <img src="https://picsum.photos/seed/modalshift/400/250" alt="Placeholder image for project on modal shift." class="project-image">
+              <div class="project-content">
+                <h3><a href="/project_page/project_1.html">Understanding and predicting the modal shift of motorists in relation to their territory: A study of the link between individuals' car dependence, their built environment, and their territory.</a></h3>
+                <div class="mt-auto">
+                  <a href="/project_page/project_1.html" class="btn btn-primary btn-sm">Learn More</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-         <!-- Project 3 -->
-        <div class="project-entry-row" data-aos="fade-up">
-          <div class="row align-items-center">
-            <div class="col-md-4">
-              <h3>Exploration du potentiel des alternatives à l'auto-solo pour réduire les GES. </h3>
-            </div>
-            <div class="col-md-8">
-              <p>Developing deep learning models to predict and mitigate urban traffic congestion in real-time.</p>
-              <a href="/project_page/project_1.html" class="btn btn-primary btn-sm">Learn More</a>
+          <!-- Project Card 2 -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card">
+              <img src="https://picsum.photos/seed/electrictrucks/400/250" alt="Placeholder image for project on electric trucks." class="project-image">
+              <div class="project-content">
+                <h3><a href="/project_page/project_1.html">The potential of battery electric trucks in forest transportation</a></h3>
+                <div class="mt-auto">
+                  <a href="/project_page/project_1.html" class="btn btn-primary btn-sm">Learn More</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Project 4 -->
-        <div class="project-entry-row" data-aos="fade-up">
-          <div class="row align-items-center">
-            <div class="col-md-4">
-              <h3>AI-Driven Optimization for Multimodal Transportation Networks: Integrating Theoretical Insights with Data-Driven Decision Modeling </h3>
-            </div>
-            <div class="col-md-8">
-              <p>Developing deep learning models to predict and mitigate urban traffic congestion in real-time.</p>
-              <a href="/project_page/project_1.html" class="btn btn-primary btn-sm">Learn More</a>
+          <!-- Project Card 3 -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-card">
+              <img src="https://picsum.photos/seed/alternatives/400/250" alt="Placeholder image for project on driving alternatives." class="project-image">
+              <div class="project-content">
+                <h3><a href="/project_page/project_1.html">Exploration du potentiel des alternatives à l'auto-solo pour réduire les GES.</a></h3>
+                <div class="mt-auto">
+                  <a href="/project_page/project_1.html" class="btn btn-primary btn-sm">Learn More</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Project 5 -->
-        <div class="project-entry-row" data-aos="fade-up">
-          <div class="row align-items-center">
-            <div class="col-md-4">
-              <h3>AI-Driven Optimization for Multimodal Transportation Networks: Integrating Theoretical Insights with Data-Driven Decision Modeling</h3>
-            </div>
-            <div class="col-md-8">
-              <p>A longitudinal study analyzing the effects of the new Quebec City tramway on travel behavior and modal shift.</p>
-              <a href="/project_page/project_2.html" class="btn btn-primary btn-sm">Learn More</a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Project 6 -->
-        <div class="project-entry-row" data-aos="fade-up">
-          <div class="row align-items-center">
-            <div class="col-md-4">
-              <h3>Machine Learning for New Approaches to Urban Mobility Simulation</h3>
-            </div>
-            <div class="col-md-8">
-              <p>This project develops a transportation simulator that represents cars and roads as a network of connected points. By using artificial intelligence, it aims to capture how drivers adapt their routes based on traffic conditions and congestion levels. The focus is on making these simulations more data-driven and realistic, providing deeper insights into how transportation systems work and offering a safe virtual space to test new ideas for improving mobility. </p>
-              <a href="/project_page/project_3.html" class="btn btn-primary btn-sm">Learn More</a>
+          <!-- Project Card 4 -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="project-card">
+              <img src="https://picsum.photos/seed/aioptimization/400/250" alt="Placeholder image for project on AI optimization." class="project-image">
+              <div class="project-content">
+                <h3><a href="/project_page/project_1.html">AI-Driven Optimization for Multimodal Transportation Networks: Integrating Theoretical Insights with Data-Driven Decision Modeling</a></h3>
+                <div class="mt-auto">
+                  <a href="/project_page/project_1.html" class="btn btn-primary btn-sm">Learn More</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Project 7 -->
-        <div class="project-entry-row" data-aos="fade-up">
-          <div class="row align-items-center">
-            <div class="col-md-4">
-              <h3>Carrots and sticks: assessing intervention effectiveness for sustainable mobility systems to reduce GHG emissions </h3>
-            </div>
-            <div class="col-md-8">
-              <p>To achieve the goal of reducing emissions from 2005 levels by 40% in 2030, the government of Canada provides a number of measures to encourage people to change their travel modes to sustainable mobilities. Some measures are in favor of promoting alternative transport (e.g.,"carrots"), and others aim to discourage unsustainable modes (e.g., “sticks”). The objective of this research program is to develop new survey and experiment methods to get data, then to simulate and evaluate the effects of modal shift strategies on mobility, and finally to calculate the contribution of different types of strategies to GHG reduction (Carrots, Sticks, or Combined). </p>
-              <a href="/project_page/project_4.html" class="btn btn-primary btn-sm">Learn More</a>
+          <!-- Project Card 5 -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="project-card">
+              <img src="https://picsum.photos/seed/multimodal/400/250" alt="Placeholder image for project on multimodal networks." class="project-image">
+              <div class="project-content">
+                <h3><a href="/project_page/project_2.html">AI-Driven Optimization for Multimodal Transportation Networks: Integrating Theoretical Insights with Data-Driven Decision Modeling</a></h3>
+                <div class="mt-auto">
+                  <a href="/project_page/project_2.html" class="btn btn-primary btn-sm">Learn More</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Project 8 -->
-        <div class="project-entry-row" data-aos="fade-up">
-          <div class="row align-items-center">
-            <div class="col-md-4">
-              <h3>Integrated Multimodal Travel Behavior Analysis under Mobility as a Service </h3>
-            </div>
-            <div class="col-md-8">
-              <p>tbd</p>
-              <a href="/project_page/project_4.html" class="btn btn-primary btn-sm">Learn More</a>
+          <!-- Project Card 6 -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="500">
+            <div class="project-card">
+              <img src="https://picsum.photos/seed/mlsimulation/400/250" alt="Placeholder image for project on machine learning simulation." class="project-image">
+              <div class="project-content">
+                <h3><a href="/project_page/project_3.html">Machine Learning for New Approaches to Urban Mobility Simulation</a></h3>
+                <div class="mt-auto">
+                  <a href="/project_page/project_3.html" class="btn btn-primary btn-sm">Learn More</a>
+                </div>
+              </div>
             </div>
           </div>
+
+          <!-- Project Card 7 -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="600">
+            <div class="project-card">
+              <img src="https://picsum.photos/seed/interventions/400/250" alt="Placeholder image for project on mobility interventions." class="project-image">
+              <div class="project-content">
+                <h3><a href="/project_page/project_4.html">Carrots and sticks: assessing intervention effectiveness for sustainable mobility systems to reduce GHG emissions</a></h3>
+                <div class="mt-auto">
+                  <a href="/project_page/project_4.html" class="btn btn-primary btn-sm">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 8 -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="700">
+            <div class="project-card">
+              <img src="https://picsum.photos/seed/maas/400/250" alt="Placeholder image for project on Mobility as a Service." class="project-image">
+              <div class="project-content">
+                <h3><a href="/project_page/project_4.html">Integrated Multimodal Travel Behavior Analysis under Mobility as a Service</a></h3>
+                <div class="mt-auto">
+                  <a href="/project_page/project_4.html" class="btn btn-primary btn-sm">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -184,9 +187,11 @@
   </main>
 
   <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer bg-light py-4">
-    <div class="container text-center">
-      <p class="mb-0">© 2025 Smart and Sustainable Transportation Lab — Université Laval</p>
+  <footer id="footer" class="main-footer">
+    <div class="container">
+      <div class="copyright text-center py-4">
+        © 2025 Smart and Sustainable Transportation Lab — Université Laval
+      </div>
     </div>
   </footer><!-- End Footer -->
 

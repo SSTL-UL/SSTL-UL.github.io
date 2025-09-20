@@ -37,12 +37,12 @@ h6 {
 # Top Banner
 --------------------------------------------------------------*/
 .top-banner {
-  background: #fff;
+  background: #0d5ab9;
   padding: 8px 15px;
   text-align: center;
   border-bottom: 1px solid #e9e9e9;
   font-size: 14px;
-  color: #333;
+  color: #fff;
   width: 100%;
   position: fixed;
   top: 0;
@@ -52,12 +52,12 @@ h6 {
 
 .top-banner a {
   font-weight: 600;
-  color: #0d5ab9;
+  color: #fff;
   text-decoration: underline;
 }
 
 .top-banner a:hover {
-  color: #106eea;
+  color: #f1f6fe;
 }
 
 /*--------------------------------------------------------------
@@ -197,53 +197,20 @@ section {
 --------------------------------------------------------------*/
 #header {
   transition: all 0.5s;
-  z-index: 999;
+  z-index: 997;
   position: fixed;
-  top: 50px;
+  top: 37px;
   /* Adjusted for top banner */
   left: 0;
   right: 0;
-  height: 140px;
-  background: #fff;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-}
-
-#header.header-scrolled {
   height: 90px;
   background: #fff;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
-#header .logo {
-  position: relative;
-  overflow: hidden; /* Added for shine effect */
-  z-index: 1001;
-  background: transparent;
-  width: auto;
-  height: auto;
-  border-radius: 0;
-  box-shadow: none;
-  padding: 0;
-  margin: 0;
-  line-height: 1;
-  transition: all 0.5s ease;
-  /* Smooth transition */
-}
-
-#header.header-scrolled .logo {
-  margin-top: 0;
-  /* Returns the logo to its normal position in the scrolled header */
-}
-
 #header .logo img {
-  max-height: 120px;
-  /* Adjusted to fit header */
-  transition: all 0.3s ease-in-out;
-}
-
-#header.header-scrolled .logo img {
   max-height: 70px;
-  /* A smaller size when header is scrolled */
+  transition: all 0.3s ease-in-out;
 }
 
 /*--------------------------------------------------------------
@@ -336,6 +303,7 @@ section {
   background: #fff;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
+  border-radius: 4px;
 }
 
 .navbar .dropdown ul li {
@@ -346,7 +314,6 @@ section {
   padding: 10px 20px;
   font-weight: 400;
   color: #222;
-  /* Ensure dropdown links are dark */
   text-shadow: none;
 }
 
@@ -401,10 +368,6 @@ section {
   transition: 0.5s;
 }
 
-#header.header-scrolled .mobile-nav-toggle {
-  color: #222;
-}
-
 .mobile-nav-toggle.bi-x {
   color: #fff;
 }
@@ -444,11 +407,62 @@ section {
   right: 15px;
   bottom: 15px;
   left: 15px;
+  padding: 10px 0;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
 }
 
 .navbar-mobile a,
 .navbar-mobile a:focus {
-  color: #fff;
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #222;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover>a {
+  color: #106eea;
+}
+
+.navbar-mobile .getstarted,
+.navbar-mobile .getstarted:focus {
+  margin: 15px;
+}
+
+.navbar-mobile .dropdown ul {
+  position: static;
+  display: none;
+  margin: 10px 20px;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 1;
+  visibility: visible;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+
+.navbar-mobile .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar-mobile .dropdown ul a {
+  padding: 10px 20px;
+}
+
+.navbar-mobile .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar-mobile .dropdown ul a:hover,
+.navbar-mobile .dropdown ul .active:hover,
+.navbar-mobile .dropdown ul li:hover>a {
+  color: #106eea;
+}
+
+.navbar-mobile .dropdown>.dropdown-active {
+  display: block;
 }
 
 /*--------------------------------------------------------------
@@ -457,8 +471,7 @@ section {
 .team-hero-slider {
   width: 100%;
   height: 65vh;
-  margin-top: 190px;
-  /* Adjusted for banner + header */
+  margin-top: 127px; /* Adjusted for banner + header */
   position: relative;
 }
 
@@ -511,8 +524,8 @@ section {
 --------------------------------------------------------------*/
 .page-hero {
   width: 100%;
-  height: 50vh;
-  margin-top: 190px;
+  height: 40vh;
+  margin-top: 127px;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -592,13 +605,18 @@ section {
 #home-hero,
 #projects-hero,
 #contact-hero,
-#project-detail-hero {
+#project-detail-hero,
+#about-hero,
+#opportunities-hero,
+#publications-hero,
+#team-member-hero {
   background-image: url("/assets/img/qc.jpg");
 }
 
 @media (max-width: 768px) {
   .page-hero {
-    height: 40vh;
+    min-height: 300px;
+    height: auto;
   }
 
   .page-hero h1 {
@@ -779,10 +797,10 @@ section {
 /* PI Card */
 .pi-info-card,
 .pi-bio-card {
-  background: transparent;
+  background: #fff;
   padding: 40px;
   border-radius: 10px;
-  box-shadow: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   width: 100%;
   height: 100%;
 }
@@ -860,19 +878,40 @@ section {
 }
 
 /* Team Member Card - General */
+.team-member-card-link {
+  display: block;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+}
+
+.team-member-card-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.team-member-card-link:hover .team-member-info h4 {
+  color: #106eea;
+}
+
 .team-member-card {
   position: relative;
   text-align: center;
-  background: transparent;
-  box-shadow: none;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .team-member-photo {
   position: relative;
   width: 180px;
   height: 180px;
-  margin: 0 auto;
+  margin: 25px auto 0 auto;
   border-radius: 50%;
   overflow: hidden;
   border: 5px solid #fff;
@@ -885,41 +924,6 @@ section {
   object-fit: cover;
 }
 
-.photo-overlay {
-  display: none;
-}
-
-.team-member-bio {
-  color: #6c757d;
-  font-size: 14px;
-  line-height: 1.6;
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-out, opacity 0.5s ease-out, margin-top 0.5s ease-out;
-  margin-top: 0;
-}
-
-.team-member-social {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-out, opacity 0.5s ease-out, margin-top 0.5s ease-out;
-  margin-top: 0;
-}
-
-.team-member-card:hover .team-member-bio {
-  max-height: 200px;
-  opacity: 1;
-  margin-top: 15px;
-}
-
-.team-member-card:hover .team-member-social {
-  max-height: 100px;
-  opacity: 1;
-  margin-top: 15px;
-}
-
 .team-member-info {
   padding: 25px 15px;
 }
@@ -929,6 +933,7 @@ section {
   margin-bottom: 5px;
   font-size: 18px;
   color: #222;
+  transition: color 0.3s;
 }
 
 .team-member-info span {
@@ -938,72 +943,58 @@ section {
   color: #6c757d;
 }
 
-.team-member-social a {
-  color: #555;
-  font-size: 20px;
-  margin: 0 10px;
-  transition: color 0.3s;
-}
-
-.team-member-social a:hover {
-  color: #106eea;
-}
-
 /*--------------------------------------------------------------
-# New Project Entry Row Styles
+# Projects Page Card Styles
 --------------------------------------------------------------*/
-/* Make project cards on projects page equal height */
-.projects .container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-}
-
-.project-entry-row {
-  margin-bottom: 0;
-  /* Replaced by grid gap */
-  padding: 30px;
+.projects .project-card {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease-in-out;
-  /* Vertically center content in cards of varying heights */
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  overflow: hidden; /* Ensures image corners are clipped */
 }
 
-.project-entry-row:hover {
+.projects .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
-.project-entry-row h3 {
-  font-size: 18px;
-  /* Increased for emphasis */
-  line-height: 1.3;
-  /* Added for better spacing on multi-line titles */
-  font-weight: 700;
-  margin-bottom: 0;
-  color: #222222;
-}
-
-.project-entry-row p {
-  font-size: 10px;
-  /* Slightly decreased for contrast */
-  line-height: 1.7;
-  color: #444444;
-  text-align: justify;
-}
-
-.project-entry-row .btn-primary {
-  margin-top: 15px;
-}
-
-.project-image {
-  border-radius: 8px;
+.projects .project-card .project-image {
   width: 100%;
-  height: auto;
+  height: 180px;
+  object-fit: cover;
+}
+
+.projects .project-card .project-content {
+  padding: 25px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Fills remaining card space */
+}
+
+.projects .project-card h3 {
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.projects .project-card h3 a {
+  color: #106eea;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.projects .project-card:hover h3 a {
+  color: #3b8af2;
+}
+
+.projects .project-card .btn-primary {
+  align-self: flex-start;
 }
 
 /*--------------------------------------------------------------
@@ -1047,7 +1038,8 @@ section {
 }
 
 .main-footer .footer-top {
-  background: #f6f9fe;
+  background: #fff;
+  border-top: 1px solid #e2eefd;
   padding: 60px 0 30px 0;
 }
 
@@ -1092,117 +1084,4 @@ section {
 .main-footer .copyright {
   padding-top: 30px;
   border-top: 1px solid #e2eefd;
-}
-
-/*--------------------------------------------------------------
-# Homepage Specific Styles
---------------------------------------------------------------*/
-/* Make header transparent on homepage */
-.home-page #header {
-  background: transparent;
-  box-shadow: none;
-}
-
-/* Adjust Hero section to fill screen and sit behind header */
-.home-page #home-hero {
-  margin-top: 0;
-  height: 100vh;
-  padding-top: 140px;
-  /* Space for the header */
-  align-items: flex-end;
-  padding-bottom: 15vh;
-}
-
-/* Style navigation links for transparent header */
-.home-page #header .navbar a,
-.home-page #header .navbar a:focus,
-.home-page #header .mobile-nav-toggle {
-  color: #fff;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-.home-page #header .navbar a:hover,
-.home-page #header .navbar .active,
-.home-page #header .navbar .active:focus,
-.home-page #header .navbar li:hover>a {
-  color: #fff;
-}
-
-.home-page #header .navbar>ul>li>a:before {
-  background-color: #fff;
-}
-
-/* Keep dropdown menu solid */
-.home-page #header .navbar .dropdown ul a,
-.home-page #header .navbar .dropdown ul a:focus {
-  color: #222;
-  text-shadow: none;
-}
-
-.home-page #header .navbar .dropdown ul a:hover,
-.home-page #header .navbar .dropdown ul .active:hover,
-.home-page #header .navbar .dropdown ul li:hover>a {
-  color: #106eea;
-}
-
-/* --- Scrolled State on Homepage --- */
-.home-page #header.header-scrolled {
-  background: #fff;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-}
-
-.home-page #header.header-scrolled .navbar a,
-.home-page #header.header-scrolled .navbar a:focus,
-.home-page #header.header-scrolled .mobile-nav-toggle {
-  color: #222;
-  text-shadow: none;
-}
-
-.home-page #header.header-scrolled .navbar a:hover,
-.home-page #header.header-scrolled .navbar .active,
-.home-page #header.header-scrolled .navbar .active:focus,
-.home-page #header.header-scrolled .navbar li:hover>a {
-  color: #106eea;
-}
-
-.home-page #header.header-scrolled .navbar>ul>li>a:before {
-  background-color: #106eea;
-}
-
-/* Logo swap for homepage scrolled header */
-.home-page #header .logo .logo-scrolled {
-  display: none;
-}
-
-.home-page #header.header-scrolled .logo .logo-main {
-  display: none;
-}
-
-.home-page #header.header-scrolled .logo .logo-scrolled {
-  display: block;
-}
-
-/*--------------------------------------------------------------
-# Logo Shine Effect
---------------------------------------------------------------*/
-@keyframes shine-effect {
-  0% {
-    transform: translateX(-200%) skewX(-25deg);
-  }
-
-  100% {
-    transform: translateX(200%) skewX(-25deg);
-  }
-}
-
-.home-page #header:not(.header-scrolled) .logo::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 75%;
-  height: 100%;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
-  animation: shine-effect 5s infinite;
-  animation-delay: 3s;
 }
