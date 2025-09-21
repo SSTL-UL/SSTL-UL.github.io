@@ -38,6 +38,7 @@ h6 {
 --------------------------------------------------------------*/
 section {
   padding: 60px 0;
+  padding-bottom: 10px; /* overrides the shorthand */
   overflow: hidden;
 }
 
