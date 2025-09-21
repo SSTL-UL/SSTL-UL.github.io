@@ -990,6 +990,39 @@ section {
   padding-bottom: 5px;
 }
 
+/*--------------------------------------------------------------
+# Publications Page Styles
+--------------------------------------------------------------*/
+.publication-list h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eef1f5;
+}
+
+.publication-list ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.publication-list ul li {
+  padding: 10px 0 10px 25px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.publication-list ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  color: #106eea;
+  font-size: 1.2em;
+  line-height: 1;
+}
 
 /*--------------------------------------------------------------
 # Footer
