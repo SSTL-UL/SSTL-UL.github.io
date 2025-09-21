@@ -991,6 +991,49 @@ section {
 }
 
 /*--------------------------------------------------------------
+# About PI Details
+--------------------------------------------------------------*/
+.pi-details {
+  padding-top: 0;
+}
+
+.pi-details .info-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  height: 100%;
+}
+
+.pi-details .info-card h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f1f6fe;
+  display: flex;
+  align-items: center;
+}
+
+.pi-details .info-card h4 i {
+  font-size: 24px;
+  color: #106eea;
+  margin-right: 15px;
+}
+
+.pi-details .info-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pi-details .info-card ul li {
+  padding-bottom: 10px;
+  line-height: 1.6;
+}
+
+/*--------------------------------------------------------------
 # Publications Page Styles
 --------------------------------------------------------------*/
 .publication-list h3 {
@@ -1012,6 +1055,7 @@ section {
   padding: 10px 0 10px 25px;
   position: relative;
   line-height: 1.6;
+  font-size: 0.9rem;
 }
 
 .publication-list ul li::before {
