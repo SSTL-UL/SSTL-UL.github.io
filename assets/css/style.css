@@ -584,7 +584,7 @@ section {
 #opportunities-hero,
 #publications-hero,
 #team-member-hero {
-  background-image: url("/assets/img/qc.jpg");
+  background-image: url("../img/qc.jpg");
 }
 
 @media (max-width: 768px) {

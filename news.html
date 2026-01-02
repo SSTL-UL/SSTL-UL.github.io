@@ -5,96 +5,367 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>About — Smart &amp; Sustainable Transportation Lab</title>
-  <meta name="description" content="About the Smart & Sustainable Transportation Lab at Université Laval.">
-  <meta name="keywords" content="SSTL, Université Laval, transportation, research, mobility">
+  <title>News — Smart &amp; Sustainable Transportation Lab</title>
+  <meta name="description" content="Latest news and activities from the Smart & Sustainable Transportation Lab (SSTL) at Université Laval.">
+  <meta name="keywords" content="SSTL, news, events, transportation, research, Université Laval">
 
   <!-- Favicons -->
-  <link href="/assets/img/logo.png" rel="icon">
-  
+  <link href="assets/img/logo.png" rel="icon">
+
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="/assets/css/style.css" rel="stylesheet">
+  <!-- Main CSS -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    /* Optional top banner (if you already style it elsewhere, you can remove this) */
+    .top-banner {
+      background: #0b3d91;
+      color: #fff;
+      padding: 10px 14px;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    .top-banner a {
+      color: #fff;
+      text-decoration: underline;
+      font-weight: 700;
+    }
+
+    /* ===== Events / Activities ===== */
+    .event-card {
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, .06);
+      border-radius: 18px;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, .06);
+      overflow: hidden;
+      padding: 18px;
+    }
+
+    .event-title {
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .event-meta {
+      opacity: .85;
+      font-size: .95rem;
+      margin-bottom: 12px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .event-meta .badge {
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-weight: 800;
+    }
+
+    .event-desc {
+      opacity: .92;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    /* Swiper styling */
+    .event-swiper {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 0, 0, .06);
+      background: #eef2f7;
+    }
+
+    .event-swiper .swiper-slide img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 576px) {
+      .event-swiper .swiper-slide img {
+        height: 220px;
+      }
+    }
+
+    .event-actions {
+      margin-top: 14px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn-pill {
+      border-radius: 999px;
+      font-weight: 800;
+      padding: 10px 14px;
+    }
+  </style>
 </head>
 
 <body>
-  <div class="top-banner">We are actively recruiting PhD and M.Sc. students. Interested in shaping the future of mobility? <a href="/opportunities.html">Find out more!</a></div>
+
+  <div class="top-banner">
+    We are actively recruiting PhD and M.Sc. students. Interested in shaping the future of mobility?
+    <a href="opportunities.html">Find out more!</a>
+  </div>
+
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <a href="/" class="logo d-flex align-items-center">
-        <img src="/assets/img/logo-horizontal-engl-removebg-preview.png" alt="SSTL Logo" class="img-fluid">
+      <a href="" class="logo d-flex align-items-center">
+        <img src="assets/img/logo-horizontal-engl-removebg-preview.png" alt="SSTL Logo" class="img-fluid">
       </a>
 
-    <!-- Navigation -->
-    <nav id="navbar" class="navbar">
-      <ul>
-        <li><a class="nav-link active" href="/">Home</a></li>
-        <li><a class="nav-link" href="/about-bobin.html">About Prof. Wang</a></li>
-        <li><a class="nav-link" href="/team.html">Team</a></li>
-        <li><a class="nav-link" href="/projects.html">Projects</a></li>
-        <li><a class="nav-link" href="/publications.html">Publications</a></li>
-        <li><a class="nav-link" href="/news.html">News</a></li>
-        <li><a class="nav-link" href="/opportunities.html">Opportunities</a></li>
-        <li><a class="nav-link" href="/contact.html">Contact</a></li>
-      </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav>
-  </div>
-</header>
-    </div>
-  </header><!-- End Header -->
-  
-  <!-- ======= About Hero Section ======= -->
-  <section id="about-hero" class="page-hero">
-    <div class="container text-center" data-aos="fade-down">
-      <h1>About The Lab</h1>
-    </div>
-  </section><!-- End About Hero Section -->
+      <!-- Navigation -->
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="about-bobin.html">About Prof. Wang</a></li>
+          <li><a class="nav-link" href="team.html">Team</a></li>
+          <li><a class="nav-link" href="projects.html">Projects</a></li>
+          <li><a class="nav-link" href="publications.html">Publications</a></li>
+          <li><a class="nav-link active" href="news.html">News</a></li>
+          <li><a class="nav-link" href="opportunities.html">Opportunities</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
 
-  <main id="main">  
-    <section id="about" class="about section-bg">
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Hero ======= -->
+  <!-- ✅ FIX: use the same hero id as contact.html so it gets the same background image from style.css -->
+  <section id="contact-hero" class="page-hero">
+    <div class="container text-center" data-aos="fade-down">
+      <h1>About the Lab</h1>
+      <p class="mt-2" style="opacity:.9;">
+        Mission, research focus, and recent activities.
+      </p>
+    </div>
+  </section>
+  <!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ===================== KEEP ALL INFORMATION (Mission / Approach) ===================== -->
+    <section id="about" class="about section-bg py-5">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
           <h2>Our Mission</h2>
-          <p>The Smart & Sustainable Transportation Lab (SSTL) is dedicated to advancing research and developing innovative solutions for modern mobility challenges. Our work focuses on the intersection of transportation engineering, artificial intelligence, and sustainable urban planning.</p>
+          <p>
+            The Smart &amp; Sustainable Transportation Lab (SSTL) is dedicated to advancing research and developing
+            innovative solutions for modern mobility challenges. Our work focuses on the intersection of
+            transportation engineering, artificial intelligence, and sustainable urban planning.
+          </p>
         </div>
 
         <div class="row content">
           <div class="col-lg-10 offset-lg-1">
             <p>
-              We are a dynamic research group based at the Department of Mechanical Engineering at Université Laval. Our primary goal is to address complex transportation issues through rigorous data-driven analysis, advanced modeling techniques, and the development of cutting-edge technologies. We aim to create transportation systems that are not only efficient and intelligent but also equitable and environmentally sustainable.
+              We are a dynamic research group based at the Department of Mechanical Engineering at Université Laval.
+              Our primary goal is to address complex transportation issues through rigorous data-driven analysis,
+              advanced modeling techniques, and the development of cutting-edge technologies. We aim to create
+              transportation systems that are not only efficient and intelligent but also equitable and environmentally
+              sustainable.
             </p>
+
             <h3>Our Approach</h3>
             <p>
-              Our research integrates theoretical insights with practical, data-driven decision modeling. We specialize in several key areas:
+              Our research integrates theoretical insights with practical, data-driven decision modeling. We specialize
+              in several key areas:
             </p>
+
             <ul>
               <li><i class="bi bi-check-circle"></i> Analysis of travel behavior and discrete choice modeling.</li>
               <li><i class="bi bi-check-circle"></i> Development of integrated urban mobility solutions like Mobility as a Service (MaaS).</li>
               <li><i class="bi bi-check-circle"></i> Examination of the relationship between transportation, climate change, and land use.</li>
               <li><i class="bi bi-check-circle"></i> Application of AI, machine learning, and econometric modeling to solve transportation problems.</li>
             </ul>
+
             <p>
-              The lab is led by <a href="/about-bobin.html">Prof. Bobin Wang</a>, a leading expert in transportation analysis and modeling. Our team is composed of passionate graduate students and researchers who are committed to making a positive impact on the future of mobility.
+              The lab is led by <a href="about-bobin.html">Prof. Bobin Wang</a>, a leading expert in transportation
+              analysis and modeling. Our team is composed of passionate graduate students and researchers who are
+              committed to making a positive impact on the future of mobility.
             </p>
           </div>
         </div>
 
       </div>
     </section>
+
+    <!-- ===================== FINAL SECTION: EVENTS / ACTIVITIES ===================== -->
+    <section id="lab-activities" class="py-5">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Latest Activities</h2>
+          <p>Highlights from SSTL events, outreach, and lab life.</p>
+        </div>
+
+        <!-- ===================== EVENT 1: TAC Conference ===================== -->
+        <div class="event-card mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-5">
+
+              <div class="swiper event-swiper" id="swiper-tac">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="assets/img/events/TAC_conf2025/tac1.jpg" alt="TAC photo 1"></div>
+                  <div class="swiper-slide"><img src="assets/img/events/TAC_conf2025/tac2.jpg" alt="TAC photo 2"></div>
+                  <div class="swiper-slide"><img src="assets/img/events/TAC_conf2025/tac3.jpg" alt="TAC photo 3"></div>
+                  <div class="swiper-slide"><img src="assets/img/events/TAC_conf2025/tac4.jpg" alt="TAC photo 4"></div>
+                  <div class="swiper-slide"><img src="assets/img/events/TAC_conf2025/tac5.jpg" alt="TAC photo 5"></div>
+                  <div class="swiper-slide"><img src="assets/img/events/TAC_conf2025/tac6.jpg" alt="TAC photo 6"></div>
+                  <div class="swiper-slide"><img src="assets/img/events/TAC_conf2025/tac7.jpg" alt="TAC photo 7"></div>
+                  <div class="swiper-slide"><img src="assets/img/events/TAC_conf2025/tac8.jpg" alt="TAC photo 8"></div>
+                  <div class="swiper-slide"><img src="assets/img/events/TAC_conf2025/tac9.jpg" alt="TAC photo 9"></div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+
+            </div>
+
+            <div class="col-lg-7">
+              <div class="event-meta">
+                <span class="badge bg-primary">Conference</span>
+                <span><i class="bi bi-calendar3 me-1"></i> October 2025</span>
+                <span><i class="bi bi-geo-alt me-1"></i> Québec, Canada</span>
+              </div>
+
+              <h3 class="event-title">Transportation Association of Canada (TAC Conference) </h3>
+
+              <p class="event-desc">
+                SSTL participated in the 2025 Transportation Association of Canada (TAC) Annual Conference, the largest
+                national gathering of transportation professionals in Canada. The conference brings together experts from
+                industry, government (municipal, provincial, territorial, and federal), universities, and professional
+                associations, offering a rich program of technical sessions, panels, workshops, and an exhibition
+                showcasing the latest innovations in transportation.
+                <br><br>
+                During TAC 2025, our team contributed through multiple presentations highlighting ongoing research projects,
+                as well as participation in panel sessions and poster sessions. This event provided an excellent opportunity
+                to share our work, exchange ideas with the broader transportation community, and strengthen connections with
+                partners working on real-world mobility challenges.
+              </p>
+
+              <div class="event-actions">
+                <a class="btn btn-primary btn-pill"
+                  href="https://www.tac-atc.ca/en/conference-meetings/annual-conference/" target="_blank" rel="noopener">
+                  <i class="bi bi-box-arrow-up-right me-2"></i>Conference link
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================== EVENT 2: Logo creation ===================== -->
+        <div class="event-card mb-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-5">
+
+              <div class="swiper event-swiper" id="swiper-logo">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="assets/img/events/logo_prints/cap.png" alt="Logo creation 1"></div>
+                  <div class="swiper-slide"><img src="assets/img/events/logo_prints/T-shirt.png" alt="Logo creation 2"></div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+
+            </div>
+
+            <div class="col-lg-7">
+              <div class="event-meta">
+                <span class="badge bg-success">Lab life</span>
+                <span><i class="bi bi-calendar3 me-1"></i> September 2025</span>
+              </div>
+
+              <h3 class="event-title">SSTL Visual Identity — Logo Creation</h3>
+
+              <p class="event-desc">
+                To build a strong and consistent visual identity for SSTL, we organized an internal design competition to select the lab’s
+                official logo and color palette. Team members reviewed multiple proposals and voted for the combination that best
+                represents our mission in smart and sustainable transportation.
+                <br><br>
+                Following the selection, we applied the new identity across our communication materials and produced branded
+                merchandise—including SSTL t-shirts and caps—to support outreach activities, conference participation, and lab
+                visibility. This initiative helped strengthen our team culture while ensuring a professional and recognizable
+                presence at events.
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================== EVENT 3: Social activity ===================== -->
+        <div class="event-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-5">
+
+              <div class="swiper event-swiper" id="swiper-merch">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="assets/img/events/Team_social_activities/p1.jpg" alt="Social 1"></div>
+                  <div class="swiper-slide"><img src="assets/img/events/Team_social_activities/p2.jpg" alt="Social 2"></div>
+                  <div class="swiper-slide"><img src="assets/img/events/Team_social_activities/p3.jpg" alt="Social 3"></div>
+                  <div class="swiper-slide"><img src="assets/img/events/Team_social_activities/p4.jpg" alt="Social 4"></div>
+                  <div class="swiper-slide"><img src="assets/img/events/Team_social_activities/p5.jpeg" alt="Social 5"></div>
+                  <div class="swiper-slide"><img src="assets/img/events/Team_social_activities/p6.jpeg" alt="Social 6"></div>
+                  <div class="swiper-slide"><img src="assets/img/events/Team_social_activities/p7.jpg" alt="Social 7"></div>
+                  <div class="swiper-slide"><img src="assets/img/events/Team_social_activities/p8.jpg" alt="Social 8"></div>
+                  <div class="swiper-slide"><img src="assets/img/events/Team_social_activities/p9.jpg" alt="Social 9"></div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+
+            </div>
+
+            <div class="col-lg-7">
+              <div class="event-meta">
+                <span class="badge bg-warning text-dark">Social activity</span>
+                <span><i class="bi bi-calendar3 me-1"></i> 2024 - 2025</span>
+              </div>
+
+              <h3 class="event-title">Social activities</h3>
+
+              <p class="event-desc">
+                Beyond research, SSTL values a strong and supportive team culture. Throughout the year, we organize social
+                activities such as sports matches, team dinners, and group gatherings that create space to connect, recharge,
+                and celebrate milestones together. These moments strengthen collaboration, encourage open communication,
+                and help maintain an inclusive environment where everyone can thrive—both academically and personally.
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
   <!-- ======= Footer ======= -->
@@ -104,23 +375,52 @@
         © 2025 Smart and Sustainable Transportation Lab — Université Laval
       </div>
     </div>
-  </footer><!-- End Footer -->
- 
+  </footer>
+
   <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-    
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
   <!-- Vendor JS Files -->
-  <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="/assets/vendor/aos/aos.js"></script>
-  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="/assets/vendor/php-email-form/validate.js"></script>
-  
-  <!-- Template Main JS File -->
-  <script src="/assets/js/main.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Swiper init -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      function initEventSwiper(selector) {
+        var el = document.querySelector(selector);
+        if (!el || typeof Swiper === "undefined") return;
+
+        return new Swiper(selector, {
+          loop: true,
+          speed: 600,
+          autoplay: { delay: 3500, disableOnInteraction: false },
+          pagination: { el: selector + " .swiper-pagination", clickable: true },
+          navigation: {
+            nextEl: selector + " .swiper-button-next",
+            prevEl: selector + " .swiper-button-prev",
+          }
+        });
+      }
+
+      initEventSwiper("#swiper-tac");
+      initEventSwiper("#swiper-logo");
+      initEventSwiper("#swiper-merch");
+    });
+  </script>
 
 </body>
+
 </html>

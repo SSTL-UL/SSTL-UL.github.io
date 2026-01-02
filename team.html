@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-t">
+  <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Team — Smart &amp; Sustainable Transportation Lab</title>
@@ -10,220 +10,635 @@
   <meta content="team, researchers, students, SSTL, Université Laval" name="keywords">
 
   <!-- Favicons -->
-  <link href="/assets/img/logo-horizontal-engl-removebg-preview.png" rel="icon">
-  
+  <link href="assets/img/logo-horizontal-engl-removebg-preview.png" rel="icon">
+
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="/assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Page-only styles for Alumni + Collaborators -->
+  <style>
+    /* Alumni cards reuse your team card structure (same look), this adds small polish */
+    .alumni-note {
+      max-width: 820px;
+      margin: 0 auto;
+      opacity: .9;
+    }
+
+    /* Collaborators layout */
+    .collab-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 18px;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
+      height: 100%;
+    }
+
+    .collab-card h4 {
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .collab-list {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+
+    .collab-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .collab-list li:last-child {
+      border-bottom: none;
+    }
+
+    .collab-list i {
+      margin-top: 3px;
+      color: #0d6efd;
+      flex: 0 0 auto;
+    }
+
+    .collab-list a {
+      font-weight: 700;
+    }
+
+    /* Logos grid */
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    @media (min-width: 992px) {
+      .logo-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .logo-item {
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-radius: 14px;
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 84px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+
+    .logo-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
+    }
+
+    .logo-item img {
+      max-width: 100%;
+      max-height: 44px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .logo-item .logo-text {
+      font-weight: 800;
+      opacity: .85;
+      text-align: center;
+      font-size: .95rem;
+    }
+    /* Collaborator professors (photos) */
+.prof-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 576px){
+  .prof-grid{ grid-template-columns: 1fr; }
+}
+
+.prof-item{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(0,0,0,.05);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.prof-item:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0,0,0,.08);
+}
+
+.prof-item img{
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: 0 0 auto;
+}
+
+.prof-item .prof-meta{
+  line-height: 1.2;
+}
+
+.prof-item .prof-meta .name{
+  font-weight: 800;
+  display: block;
+}
+
+.prof-item .prof-meta small{
+  opacity: .85;
+}
+
+  </style>
 </head>
 
 <body>
-<header id="header" class="d-flex align-items-center">
-  <div class="container d-flex align-items-center justify-content-between">
-    <a href="/" class="logo d-flex align-items-center">
-      <img src="/assets/img/logo-horizontal-engl-removebg-preview.png" alt="SSTL Logo" class="img-fluid">
-    </a>
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a href="" class="logo d-flex align-items-center">
+        <img src="assets/img/logo-horizontal-engl-removebg-preview.png" alt="SSTL Logo" class="img-fluid">
+      </a>
 
-    <!-- Navigation -->
-    <nav id="navbar" class="navbar">
-      <ul>
-        <li><a class="nav-link active" href="/">Home</a></li>
-        <li><a class="nav-link" href="/about-bobin.html">About Prof. Wang</a></li>
-        <li><a class="nav-link" href="/team.html">Team</a></li>
-        <li><a class="nav-link" href="/projects.html">Projects</a></li>
-        <li><a class="nav-link" href="/publications.html">Publications</a></li>
-        <li><a class="nav-link" href="/news.html">News</a></li>
-        <li><a class="nav-link" href="/opportunities.html">Opportunities</a></li>
-        <li><a class="nav-link" href="/contact.html">Contact</a></li>
-      </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav>
-  </div>
-</header>
-  
-<!-- ======= Hero Slider Section ======= -->
-<section id="team-hero-slider" class="team-hero-slider swiper">
-  <div class="swiper-wrapper">
-    <!-- Slide 1 -->
-    <div class="swiper-slide" style="background-image: url(/assets/img/teampic.jpg);"></div>
-    <!-- Slide 2: You can add another group photo here -->
-    <div class="swiper-slide" style="background-image: url(/assets/img/teampic5.jpeg);"></div>
-    <!-- Slide 3: And another one here -->
-    <div class="swiper-slide" style="background-image: url(/assets/img/teampic2.jpg);"></div>
-  </div>
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-pagination"></div>
-</section><!-- End Hero Slider -->
+      <!-- Navigation -->
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="about-bobin.html">About Prof. Wang</a></li>
+          <li><a class="nav-link active" href="team.html">Team</a></li>
+          <li><a class="nav-link" href="projects.html">Projects</a></li>
+          <li><a class="nav-link" href="publications.html">Publications</a></li>
+          <li><a class="nav-link" href="news.html">News</a></li>
+          <li><a class="nav-link" href="opportunities.html">Opportunities</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======= Hero Slider Section ======= -->
+  <section id="team-hero-slider" class="team-hero-slider swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image: url(assets/img/teampic_tac.jpg);"></div>
+      <div class="swiper-slide" style="background-image: url(assets/img/teampic.jpg);"></div>
+      <div class="swiper-slide" style="background-image: url(assets/img/teampic5.jpeg);"></div>
+      <div class="swiper-slide" style="background-image: url(assets/img/teampic2.jpg);"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </section><!-- End Hero Slider -->
 
   <main id="main">
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="team">
-        <div class="container">
-          <div class="row justify-content-center align-items-stretch gy-4 mb-5">
-            <!-- PI Info Card -->
-            <div class="col-lg-4" data-aos="fade-down">
-              <div class="pi-info-card text-center">
-                <img src="/assets/img/team/Bobin.jpg" class="img-fluid rounded-circle mb-3" alt="Prof. Bobin Wang">
-                <h4 class="pi-name mt-3">Dr. Bobin Wang</h4>
-                <p class="pi-title">Principal Investigator</p>
-                <p class="pi-department">Department of Mechanical Engineering</p>
-                <a href="/about-bobin.html" class="btn btn-primary mt-3">View Full Profile</a>
-              </div>
-            </div>
-            <!-- PI Bio Card -->
-            <div class="col-lg-8 d-flex">
-              <div class="pi-bio-card align-self-center">
-                <h4 class="pi-bio-title" data-aos="fade-down">Meet our Principal Investigator</h4>
-                <p class="pi-bio" data-aos="fade-up" data-aos-delay="200">
-                  Dr. Bobin Wang leads the Smart & Sustainable Transportation Lab with over 10 years of research experience in mobility analysis, transportation planning, and the application of AI and data science to solve complex urban challenges. Her work focuses on creating more efficient, equitable, and environmentally friendly transportation systems.
-                </p>
-                <div class="pi-social" data-aos="fade-up" data-aos-delay="300">
-                  <a target="_blank" href="https://bobin-wang.fsg.ulaval.ca/"><i class="bi bi-globe"></i></a>
-                  <a target="_blank" href="https://scholar.google.com/citations?user=ET27lQwAAAAJ&hl=fr&oi=ao" title="Google Scholar"><i class="bi bi-mortarboard-fill"></i></a>
-                  <a target="_blank" href="https://www.researchgate.net/profile/Bobin-Wang" title="ResearchGate"><i class="bi bi-mortarboard"></i></a>
-                  <a target="_blank" href="https://www.linkedin.com/in/bobin-wang-47651b9b/" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
+      <div class="container">
+
+        <div class="row justify-content-center align-items-stretch gy-4 mb-5">
+          <!-- PI Info Card -->
+          <div class="col-lg-4" data-aos="fade-down">
+            <div class="pi-info-card text-center">
+              <img src="assets/img/team/Bobin.jpg" class="img-fluid rounded-circle mb-3" alt="Prof. Bobin Wang">
+              <h4 class="pi-name mt-3">Dr. Bobin Wang</h4>
+              <p class="pi-title">Principal Investigator</p>
+              <p class="pi-department">Department of Mechanical Engineering</p>
+              <a href="about-bobin.html" class="btn btn-primary mt-3">View Full Profile</a>
             </div>
           </div>
 
-          <div class="section-title">
-            <h3>Graduate Students & Researchers</h3>
-          </div>
-
-          <div class="row gy-4 justify-content-center">
-
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-              <a href="/team/hamid-hasanzadeh.html" class="team-member-card-link">
-                <div class="team-member-card">
-                  <div class="team-member-photo">
-                    <img src="/assets/img/team/Hamid.png" class="img-fluid" alt="Hamid Hasanzadeh">
-                  </div>
-                  <div class="team-member-info">
-                    <h4>Hamid Hasanzadeh</h4>
-                    <span>PhD Student</span>
-                  </div>
-                </div>
-              </a>
+          <!-- PI Bio Card -->
+          <div class="col-lg-8 d-flex">
+            <div class="pi-bio-card align-self-center">
+              <h4 class="pi-bio-title" data-aos="fade-down">Meet our Principal Investigator</h4>
+              <p class="pi-bio" data-aos="fade-up" data-aos-delay="200">
+                Dr. Bobin Wang leads the Smart &amp; Sustainable Transportation Lab with over 10 years of research experience in mobility
+                analysis, transportation planning, and the application of AI and data science to solve complex urban challenges. Her work focuses
+                on creating more efficient, equitable, and environmentally friendly transportation systems.
+              </p>
+              <div class="pi-social" data-aos="fade-up" data-aos-delay="300">
+                <a target="_blank" href="https://bobin-wang.fsg.ulaval.ca/"><i class="bi bi-globe"></i></a>
+                <a target="_blank" href="https://scholar.google.com/citations?user=ET27lQwAAAAJ&hl=fr&oi=ao" title="Google Scholar"><i
+                    class="bi bi-mortarboard-fill"></i></a>
+                <a target="_blank" href="https://www.researchgate.net/profile/Bobin-Wang" title="ResearchGate"><i class="bi bi-mortarboard"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/bobin-wang-47651b9b/" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              </div>
             </div>
-
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-              <a href="/team/mahdie-asl-javadian.html" class="team-member-card-link">
-                <div class="team-member-card">
-                  <div class="team-member-photo">
-                    <img src="/assets/img/team/Mahdieh.JPG" class="img-fluid" alt="Mahdie Asl-Javadian">
-                  </div>
-                  <div class="team-member-info">
-                    <h4>Mahdie Asl-Javadian</h4>
-                    <span>PhD Student</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-              <a href="/team/meryam-chaieb.html" class="team-member-card-link">
-                <div class="team-member-card">
-                  <div class="team-member-photo">
-                    <img src="/assets/img/team/meryam.jpg" class="img-fluid" alt="Meryam Chaieb">
-                  </div>
-                  <div class="team-member-info">
-                    <h4>Meryam Chaieb</h4>
-                    <span>PhD Student</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-              <a href="/team/xianyu-zhong.html" class="team-member-card-link">
-                <div class="team-member-card">
-                  <div class="team-member-photo">
-                    <img src="/assets/img/team/Xianyu.png" class="img-fluid" alt="Xianyu Zhong">
-                  </div>
-                  <div class="team-member-info">
-                    <h4>Xianyu Zhong</h4>
-                    <span>PhD Student</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="500">
-              <a href="/team/marc-jacoby.html" class="team-member-card-link">
-                <div class="team-member-card">
-                  <div class="team-member-photo">
-                    <img src="/assets/img/team/marc.jpg" class="img-fluid" alt="Marc JACOBY">
-                  </div>
-                  <div class="team-member-info">
-                    <h4>Marc JACOBY</h4>
-                    <span>PhD Student</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="600">
-              <a href="/team/rahul-iyer.html" class="team-member-card-link">
-                <div class="team-member-card">
-                  <div class="team-member-photo">
-                    <img src="/assets/img/team/rahul.jpg" class="img-fluid" alt="Rahul Iyer">
-                  </div>
-                  <div class="team-member-info">
-                    <h4>Rahul Iyer</h4>
-                    <span>PhD Student</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="700">
-              <a href="/team/olivier-bussiere.html" class="team-member-card-link">
-                <div class="team-member-card">
-                  <div class="team-member-photo">
-                    <img src="/assets/img/team/Olivier.png" class="img-fluid" alt="Olivier Bussière">
-                  </div>
-                  <div class="team-member-info">
-                    <h4>Olivier Bussière</h4>
-                    <span>M.Sc. Student</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="800">
-              <a href="/team/camille-godbout.html" class="team-member-card-link">
-                <div class="team-member-card">
-                  <div class="team-member-photo">
-                    <img src="/assets/img/team/camille.jpg" class="img-fluid" alt="Camille Godbout">
-                  </div>
-                  <div class="team-member-info">
-                    <h4>Camille Godbout</h4>
-                    <span>M.Sc. Student</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            
           </div>
         </div>
-    </section> <!-- End Team Section -->
+
+        <!-- ======= Block 1: Postdocs & Research Professionals ======= -->
+        <div class="section-title mt-5">
+          <h3>Postdocs &amp; Research Professionals</h3>
+        </div>
+
+        <div class="row gy-4 justify-content-center">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <a href="team/Xuelin-Tian.html" class="team-member-card-link">
+              <div class="team-member-card">
+                <div class="team-member-photo">
+                  <img src="assets/img/team/xuelin.jpg" class="img-fluid" alt="Xuelin Tian">
+                </div>
+                <div class="team-member-info">
+                  <h4>Xuelin Tian</h4>
+                  <span>Postdoctoral Research Fellow (Industrial Engineering)</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- ======= Block 2: PhD Students ======= -->
+        <div class="section-title mt-5">
+          <h3>PhD Students</h3>
+        </div>
+
+        <div class="row gy-4 justify-content-center">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <a href="team/hamid-hasanzadeh.html" class="team-member-card-link">
+              <div class="team-member-card">
+                <div class="team-member-photo">
+                  <img src="assets/img/team/Hamid.png" class="img-fluid" alt="Hamid Hasanzadeh">
+                </div>
+                <div class="team-member-info">
+                  <h4>Hamid Hasanzadeh</h4>
+                  <span>PhD Student (Mechanical Engineering)</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <a href="team/mahdie-asl-javadian.html" class="team-member-card-link">
+              <div class="team-member-card">
+                <div class="team-member-photo">
+                  <img src="assets/img/team/Mahdieh.JPG" class="img-fluid" alt="Mahdie Asl-Javadian">
+                </div>
+                <div class="team-member-info">
+                  <h4>Mahdie Asl-Javadian</h4>
+                  <span>PhD Student (Mechanical Engineering)</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <a href="team/meryam-chaieb.html" class="team-member-card-link">
+              <div class="team-member-card">
+                <div class="team-member-photo">
+                  <img src="assets/img/team/meryam.jpg" class="img-fluid" alt="Meryam Chaieb">
+                </div>
+                <div class="team-member-info">
+                  <h4>Meryam Chaieb</h4>
+                  <span>PhD Student (Computer Science)</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <a href="team/xianyu-zhong.html" class="team-member-card-link">
+              <div class="team-member-card">
+                <div class="team-member-photo">
+                  <img src="assets/img/team/Xianyu.png" class="img-fluid" alt="Xianyu Zhong">
+                </div>
+                <div class="team-member-info">
+                  <h4>Xianyu Zhong</h4>
+                  <span>PhD Student (Mechanical Engineering)</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="500">
+            <a href="team/marc-jacoby.html" class="team-member-card-link">
+              <div class="team-member-card">
+                <div class="team-member-photo">
+                  <img src="assets/img/team/marc.jpg" class="img-fluid" alt="Marc Nicolas Jacoby">
+                </div>
+                <div class="team-member-info">
+                  <h4>Marc Nicolas Jacoby</h4>
+                  <span>PhD Student (Territorial Planning &amp; Regional Development)</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="600">
+            <a href="team/rahul-iyer.html" class="team-member-card-link">
+              <div class="team-member-card">
+                <div class="team-member-photo">
+                  <img src="assets/img/team/rahul.jpg" class="img-fluid" alt="Rahul Iyer">
+                </div>
+                <div class="team-member-info">
+                  <h4>Rahul Iyer</h4>
+                  <span>PhD Student (Mechanical Engineering)</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- ======= Block 3: Master Students ======= -->
+        <div class="section-title mt-5">
+          <h3>Master Students</h3>
+        </div>
+
+        <div class="row gy-4 justify-content-center">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <a href="team/olivier-bussiere.html" class="team-member-card-link">
+              <div class="team-member-card">
+                <div class="team-member-photo">
+                  <img src="assets/img/team/Olivier.png" class="img-fluid" alt="Olivier Bussière">
+                </div>
+                <div class="team-member-info">
+                  <h4>Olivier Bussière</h4>
+                  <span>M.Sc. Student (Computer Science, Thesis)</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <a href="team/camille-godbout.html" class="team-member-card-link">
+              <div class="team-member-card">
+                <div class="team-member-photo">
+                  <img src="assets/img/team/camille.jpg" class="img-fluid" alt="Camille Godbout">
+                </div>
+                <div class="team-member-info">
+                  <h4>Camille Godbout</h4>
+                  <span>M.Sc. Student (Computer Science, Thesis)</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- ===================================================== -->
+<!-- ===================== ALUMNI ========================= -->
+<!-- ===================================================== -->
+<div class="section-title mt-5">
+  <h3>Alumni</h3>
+  <p class="alumni-note">
+    Former members of SSTL who contributed to our research and projects.
+  </p>
+</div>
+
+<!-- ONE single row for ALL alumni cards -->
+<div class="row gy-4 justify-content-center">
+
+  <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+    <div class="team-member-card">
+      <div class="team-member-photo">
+        <img src="assets/img/team/alumni/Lorenzo_Dunau.png" class="img-fluid" alt="Lorenzo Duneau">
+      </div>
+      <div class="team-member-info">
+        <h4>Lorenzo Duneau</h4>
+        <span>Former intern — IID scholarship</span><br>
+        <small>Ecole Normale Supérieure Paris-Saclay</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="150">
+    <div class="team-member-card">
+      <div class="team-member-photo">
+        <img src="assets/img/team/alumni/Aditya_Verma.png" class="img-fluid" alt="Aditya Verma">
+      </div>
+      <div class="team-member-info">
+        <h4>Aditya Verma</h4>
+        <span>Former intern — Globalink scholarship</span><br>
+        <small>Vellore Institute of Technology</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+    <div class="team-member-card">
+      <div class="team-member-photo">
+        <img src="assets/img/team/alumni/Hanfei_Zong.png" class="img-fluid" alt="Hanfei Zong">
+      </div>
+      <div class="team-member-info">
+        <h4>Hanfei Zong</h4>
+        <span>Former intern — Globalink scholarship</span><br>
+        <small>Beijing University of Technology</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="250">
+    <div class="team-member-card">
+      <div class="team-member-photo">
+        <img src="assets/img/team/alumni/default_avatar.jpg" class="img-fluid" alt="Muhammad Hamza">
+      </div>
+      <div class="team-member-info">
+        <h4>Muhammad Hamza</h4>
+        <span>Former intern</span><br>
+        <small>University of Engineering &amp; Technology, Lahore, Pakistan</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+    <div class="team-member-card">
+      <div class="team-member-photo">
+        <img src="assets/img/team/alumni/default_avatar.jpg" class="img-fluid" alt="Rayane Badji">
+      </div>
+      <div class="team-member-info">
+        <h4>Rayane Badji</h4>
+        <span>Former M.Sc. student</span><br>
+        <small>Université Laval</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="350">
+    <div class="team-member-card">
+      <div class="team-member-photo">
+        <img src="assets/img/team/alumni/Barsha_Lamichhane.png" class="img-fluid" alt="Barsha Lamichhane">
+      </div>
+      <div class="team-member-info">
+        <h4>Barsha Lamichhane</h4>
+        <span>Former Research Professional</span><br>
+        <small>Université Laval</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+    <div class="team-member-card">
+      <div class="team-member-photo">
+        <img src="assets/img/team/alumni/Mahnaz_Rabbani.png" class="img-fluid" alt="Mahnaz Rabbani Khorasgani">
+      </div>
+      <div class="team-member-info">
+        <h4>Mahnaz Rabbani Khorasgani</h4>
+        <span>Former Research Professional</span><br>
+        <small>Université Laval</small>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+        <!-- ===================================================== -->
+<!-- ================== COLLABORATORS ===================== -->
+<!-- ===================================================== -->
+<div class="section-title mt-5">
+  <h3>Collaborators</h3>
+  <p class="alumni-note">
+    We collaborate with faculty partners, industry, and research centers to create impactful research and real-world solutions.
+  </p>
+</div>
+
+<div class="row gy-4">
+
+  <!-- LEFT: Collaborator professors (WITH PHOTOS) -->
+  <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+    <div class="collab-card">
+      <h4><i class="bi bi-people"></i> Collaborating Professors</h4>
+
+      <div class="prof-grid">
+
+        <!-- IMPORTANT:
+             Put professor photos in: /assets/img/clients-collab/
+             Use the EXACT filename you created.
+        -->
+
+        <a class="prof-item" href="https://www.engineering.cornell.edu/people/ricardo-daziano/" target="_blank" rel="noopener" aria-label="Ricardo Daziano">
+          <img src="assets/img/clients-collab/Ricardo Daziano.png" alt="Ricardo Daziano">
+          <div class="prof-meta">
+            <span class="name">Ricardo Daziano</span>
+            <small>Cornell University</small>
+          </div>
+        </a>
+
+        <a class="prof-item" href="https://www.polyu.edu.hk/lsgi/people/academic-staff/prof-tony-cheng-xiang-zhuge/" target="_blank" rel="noopener" aria-label="Chengxiang Zhuge">
+          <img src="assets/img/clients-collab/Chengxiang Zhuge.png" alt="Chengxiang Zhuge">
+          <div class="prof-meta">
+            <span class="name">Chengxiang Zhuge</span>
+            <small>The Hong Kong Polytechnic University</small>
+          </div>
+        </a>
+
+        <a class="prof-item" href="https://esad.faaad.ulaval.ca/personnel/professeurs/jean-dube" target="_blank" rel="noopener" aria-label="Jean Dubé">
+          <img src="assets/img/clients-collab/Jean Dubé.png" alt="Jean Dubé">
+          <div class="prof-meta">
+            <span class="name">Jean Dubé</span>
+            <small>Université Laval</small>
+          </div>
+        </a>
+
+        <a class="prof-item" href="https://christian-gagne.fsg.ulaval.ca/" target="_blank" rel="noopener" aria-label="Christian Gagné">
+          <img src="assets/img/clients-collab/Christian Gagné.png" alt="Christian Gagné">
+          <div class="prof-meta">
+            <span class="name">Christian Gagné</span>
+            <small>Université Laval</small>
+          </div>
+        </a>
+
+      </div>
+
+      
+    </div>
+  </div>
+
+  <!-- RIGHT: Industry & research center logos -->
+  <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+    <div class="collab-card">
+      <h4><i class="bi bi-buildings"></i> Industry Partners</h4>
+
+      <div class="logo-grid">
+
+        <a class="logo-item" href="#" target="_blank" rel="noopener" aria-label="ARTM">
+          <img src="assets/img/clients-collab/ARTM.jpg" alt="ARTM logo">
+        </a>
+
+        <a class="logo-item" href="#" target="_blank" rel="noopener" aria-label="STM">
+          <img src="assets/img/clients-collab/STM.jpg" alt="STM logo">
+        </a>
+
+        <a class="logo-item" href="#" target="_blank" rel="noopener" aria-label="RTC">
+          <img src="assets/img/clients-collab/RTC.jpg" alt="RTC logo">
+        </a>
+
+        <a class="logo-item" href="#" target="_blank" rel="noopener" aria-label="Université Laval">
+          <img src="assets/img/clients-collab/university-laval.png" alt="Université Laval logo">
+        </a>
+
+        <a class="logo-item" href="#" target="_blank" rel="noopener" aria-label="Ville de Québec">
+          <img src="assets/img/clients-collab/ville de québec.png" alt="Ville de Québec logo">
+        </a>
+
+        <a class="logo-item" href="#" target="_blank" rel="noopener" aria-label="IVADO">
+          <img src="assets/img/clients-collab/ivado.png" alt="IVADO logo">
+        </a>
+
+        <a class="logo-item" href="#" target="_blank" rel="noopener" aria-label="IID">
+          <img src="assets/img/clients-collab/iid-bleu.png" alt="IID logo">
+        </a>
+
+        <a class="logo-item" href="#" target="_blank" rel="noopener" aria-label="NSERC">
+          <img src="assets/img/clients-collab/NSERC.png" alt="NSERC logo">
+        </a>
+
+        <a class="logo-item" href="#" target="_blank" rel="noopener" aria-label="FRQNT">
+          <img src="assets/img/clients-collab/FRQNT.png" alt="FRQNT logo">
+        </a>
+
+        <a class="logo-item" href="#" target="_blank" rel="noopener" aria-label="FP Innovation">
+          <img src="assets/img/clients-collab/FP innovation.png" alt="FP Innovation logo">
+        </a>
+
+        <a class="logo-item" href="#" target="_blank" rel="noopener" aria-label="Greenplay">
+          <img src="assets/img/clients-collab/greenplay.png" alt="Greenplay logo">
+        </a>
+
+        <a class="logo-item" href="#" target="_blank" rel="noopener" aria-label="Accès transport viable">
+          <img src="assets/img/clients-collab/acces transport viable.jpg" alt="Accès transport viable logo">
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+    </section><!-- End Team Section -->
 
   </main>
 
- 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="main-footer">
     <div class="container">
@@ -232,21 +647,23 @@
       </div>
     </div>
   </footer><!-- End Footer -->
- 
+
   <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
   <!-- Vendor JS Files -->
-  <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="/assets/vendor/aos/aos.js"></script>
-  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="/assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="/assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 
   <!-- Swiper for Hero Slider -->
   <script>

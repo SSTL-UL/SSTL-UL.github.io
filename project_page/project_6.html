@@ -6,94 +6,267 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Carrots and sticks: assessing intervention effectiveness for sustainable mobility systems to reduce GHG emissions — SSTL</title>
-  <meta content="Details on the AI-Driven Optimization for Multimodal Transportation Networks project." name="description">
-  <meta content="AI, optimization, multimodal networks, transportation, SSTL" name="keywords">
+  <meta
+    content="Project page: Evaluating the real-world effectiveness of sustainable mobility policies ('carrots' and 'sticks') in reducing transportation GHG emissions."
+    name="description">
+  <meta
+    content="carrots and sticks, policy evaluation, sustainable mobility, GHG emissions, econometrics, difference-in-differences, transportation, SSTL"
+    name="keywords">
 
   <!-- Favicons -->
-  <link href="/assets/img/logo_v9.png" rel="icon">
-  
+  <link href="../assets/img/logo_v9.png" rel="icon">
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="/assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+  <!-- Local styles: slider box + Project Team cards -->
+  <style>
+    /* One clean image box (slider) */
+    .project-media {
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+      background: #fff;
+    }
+
+    .project-media .carousel-item img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 575px) {
+      .project-media .carousel-item img {
+        height: 240px;
+      }
+    }
+
+    .project-media .carousel-control-prev,
+    .project-media .carousel-control-next {
+      width: 12%;
+    }
+
+    /* Project Team box */
+    .project-team-box {
+      background: #fff;
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+      margin-top: 14px;
+    }
+
+    .project-team-title {
+      font-weight: 700;
+      margin: 0 0 12px 0;
+      font-size: 1.05rem;
+    }
+
+    .team-mini-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+    }
+
+    .team-mini-card + .team-mini-card {
+      margin-top: 10px;
+    }
+
+    .team-mini-card:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+      border-color: rgba(0, 0, 0, 0.12);
+    }
+
+    .team-mini-avatar {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(0, 0, 0, 0.06);
+      flex: 0 0 auto;
+    }
+
+    .team-mini-name {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+
+    .team-mini-role {
+      margin: 2px 0 0 0;
+      font-size: 0.92rem;
+      opacity: 0.85;
+    }
+  </style>
 </head>
 
 <body>
- <!-- ======= Header ======= -->
+  <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <a href="/" class="logo d-flex align-items-center">
-        <img src="/assets/img/logo-horizontal-engl-removebg-preview.png" alt="SSTL Logo" class="img-fluid">
+      <a href="" class="logo d-flex align-items-center">
+        <img src="../assets/img/logo-horizontal-engl-removebg-preview.png" alt="SSTL Logo" class="img-fluid">
       </a>
 
-    <!-- Navigation -->
-    <nav id="navbar" class="navbar">
-      <ul>
-        <li><a class="nav-link active" href="/">Home</a></li>
-        <li><a class="nav-link" href="/about-bobin.html">About Prof. Wang</a></li>
-        <li><a class="nav-link" href="/team.html">Team</a></li>
-        <li><a class="nav-link" href="/projects.html">Projects</a></li>
-        <li><a class="nav-link" href="/publications.html">Publications</a></li>
-        <li><a class="nav-link" href="/news.html">News</a></li>
-        <li><a class="nav-link" href="/opportunities.html">Opportunities</a></li>
-        <li><a class="nav-link" href="/contact.html">Contact</a></li>
-      </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav>
-  </div>
-</header>
+      <!-- Navigation -->
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link" href="../index.html">Home</a></li>
+          <li><a class="nav-link" href="../about-bobin.html">About Prof. Wang</a></li>
+          <li><a class="nav-link" href="../team.html">Team</a></li>
+          <li><a class="nav-link active" href="../projects.html">Projects</a></li>
+          <li><a class="nav-link" href="../publications.html">Publications</a></li>
+          <li><a class="nav-link" href="../news.html">News</a></li>
+          <li><a class="nav-link" href="../opportunities.html">Opportunities</a></li>
+          <li><a class="nav-link" href="../contact.html">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+
+    </div>
+  </header>
 
   <!-- ======= Project Hero Section ======= -->
   <section id="project-detail-hero" class="page-hero">
     <div class="container text-center">
       <h1>Carrots and sticks: assessing intervention effectiveness for sustainable mobility systems to reduce GHG emissions</h1>
     </div>
-  </section><!-- End Project Hero Section -->
+  </section>
+  <!-- End Project Hero Section -->
 
-  <main id="main">  
+  <main id="main">
     <section class="project-detail-section section-bg">
       <div class="container" data-aos="fade-up">
-        
+
         <div class="row pt-5 gy-4">
+          <!-- LEFT: text -->
           <div class="col-lg-7">
             <div class="project-detail-card">
               <h4>Objective</h4>
               <p>
-                This research focuses on bridging the gap between traditional transportation network theory and modern data-driven AI techniques. The goal is to create hybrid models that leverage the strengths of both approaches to optimize the performance, resilience, and sustainability of complex multimodal transportation systems.
+                To combat climate change, governments worldwide implement a variety of policies to encourage sustainable transportation.
+                These interventions range from <strong>“carrots”</strong> (incentives such as EV subsidies and public transit grants) to
+                <strong>“sticks”</strong> (disincentives such as carbon taxes and congestion pricing).
+                This project aims to systematically evaluate the <strong>real-world effectiveness</strong> of these policy levers in reducing
+                greenhouse gas (GHG) emissions from the transportation sector.
               </p>
+
               <h4>Methodology</h4>
               <p>
-                We are developing novel algorithms that integrate classical network equilibrium and traffic flow theories with deep reinforcement learning and predictive analytics. By using large-scale datasets from traffic sensors, GPS, and public transit APIs, our models can learn complex network dynamics and proactively manage congestion, incidents, and demand fluctuations. The research involves both simulation-based experiments and real-world case studies in collaboration with municipal transport authorities.
+                We use quasi-experimental research designs and large-scale, longitudinal datasets from jurisdictions that implemented sustainable mobility policies.
+                Using advanced econometric methods (e.g., <strong>difference-in-differences</strong>, <strong>regression discontinuity</strong>),
+                we estimate the causal impact of each policy on outcomes such as vehicle-miles traveled (VMT), mode split, fleet composition,
+                and overall transportation GHG emissions. This enables robust comparisons of behavioral responses and cost-effectiveness across policy packages.
               </p>
+
               <h4>Expected Outcomes</h4>
               <p>
-                This project will produce a new generation of decision support tools for transportation planners and operators. These tools will enable dynamic and adaptive management of urban mobility, including real-time traffic signal control, optimized transit scheduling, and proactive incident response strategies. Ultimately, our work aims to enhance urban mobility, reduce travel times, and lower the environmental impact of transportation.
+                The project will provide evidence-based guidance for policymakers on designing optimal “carrots + sticks” packages to accelerate the transition
+                to sustainable mobility. Outputs will include actionable insights for climate targets (with attention to equity and economic impacts),
+                as well as dissemination through policy briefs, academic publications, and a public-facing interactive tool for exploring scenarios.
               </p>
-              <h4>Research Team</h4>
-              <ul>
-                <li><a href="/team/xianyu-zhong.html">Xianyu Zhong</a></li>
-              </ul>
             </div>
           </div>
+
+          <!-- RIGHT: slider + Project Team -->
           <div class="col-lg-5">
-            <img src="https://picsum.photos/seed/aiOptimization/600/400" alt="Abstract image representing AI and network optimization" class="project-detail-img">
+
+            <!-- ✅ ONE BOX: Slider -->
+            <div class="project-media" data-aos="zoom-in" data-aos-delay="50">
+              <div id="project6Carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4500">
+                <div class="carousel-inner">
+
+                  <!-- CHANGE these filenames if needed -->
+                  <div class="carousel-item active">
+                    <img src="../images/projects_images/projet-6.png" alt="Carrots and sticks policy evaluation — visual 1">
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="../images/projects_images/projet-6.png" alt="Carrots and sticks policy evaluation — visual 2">
+                  </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#project6Carousel" data-bs-slide="prev" aria-label="Previous image">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#project6Carousel" data-bs-slide="next" aria-label="Next image">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+
+            <!-- ✅ Project Team -->
+            <div class="project-team-box" data-aos="fade-up" data-aos-delay="120">
+              <div class="project-team-title">Project Team</div>
+
+              <!-- Camille -->
+              <a class="team-mini-card" href="../team/camille-godbout.html" aria-label="Open Camille Godbout profile">
+                <img class="team-mini-avatar" src="../assets/img/team/camille.jpg" alt="Camille Godbout">
+                <div>
+                  <p class="team-mini-name">Camille Godbout</p>
+                  <p class="team-mini-role">M.Sc. Student (Computer Science, Thesis)</p>
+                </div>
+              </a>
+
+              <!-- Meryam (update link + image filename as needed) -->
+              <a class="team-mini-card" href="../team/meryam-chaieb.html" aria-label="Open Meryam profile">
+                <img class="team-mini-avatar" src="../assets/img/team/meryam.jpg" alt="Meryam">
+                <div>
+                  <p class="team-mini-name">Meryam Chaieb</p>
+                  <p class="team-mini-role">PhD Student (Computer Science)</p>
+                </div>
+              </a>
+
+          
+
+              <!-- Xianyu -->
+              <a class="team-mini-card" href="../team/xianyu-zhong.html" aria-label="Open Xianyu Zhong profile">
+                <img class="team-mini-avatar" src="../assets/img/team/Xianyu.png" alt="Xianyu Zhong">
+                <div>
+                  <p class="team-mini-name">Xianyu Zhong</p>
+                  <p class="team-mini-role">PhD Student (Mechanical Engineering)</p>
+                </div>
+              </a>
+
+              <!-- Xuelin (update link + image filename as needed) -->
+              <a class="team-mini-card" href="../team/Xuelin-Tian.html" aria-label="Open Xuelin profile">
+                <img class="team-mini-avatar" src="../assets/img/team/xuelin.jpg" alt="Xuelin">
+                <div>
+                  <p class="team-mini-name">Xuelin</p>
+                  <p class="team-mini-role">Postdoctoral Research Fellow (Industrial Engineering)</p>
+                </div>
+              </a>
+
+            </div>
+
           </div>
         </div>
 
       </div>
     </section>
   </main>
-  
+
   <!-- ======= Footer ======= -->
   <footer id="footer" class="main-footer">
     <div class="container">
@@ -101,23 +274,23 @@
         © 2025 Smart and Sustainable Transportation Lab — Université Laval
       </div>
     </div>
-  </footer><!-- End Footer -->
- 
+  </footer>
+
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-    
+
   <!-- Vendor JS Files -->
-  <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="/assets/vendor/aos/aos.js"></script>
-  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="/assets/vendor/php-email-form/validate.js"></script>
-  
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+
   <!-- Template Main JS File -->
-  <script src="/assets/js/main.js"></script>
+  <script src="../assets/js/main.js"></script>
 
 </body>
 

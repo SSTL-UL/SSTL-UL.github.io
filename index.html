@@ -9,41 +9,66 @@
   <meta name="keywords" content="SSTL, smart transportation, sustainable mobility, Bobin Wang, Université Laval, research">
 
   <!-- Favicons -->
-  <link href="/assets/img/logo-horizontal-engl-removebg-preview.png" rel="icon">
+  <link href="assets/img/logo-horizontal-engl-removebg-preview.png" rel="icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="/assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Centered News Cards (Option 1) -->
+  <style>
+    /* Limit + center the full row of cards */
+    .news-cards-row {
+      max-width: 1100px; /* adjust 1000–1200 as you like */
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Make the whole card clickable without changing colors */
+    .news-card-link {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Ensure icon-box fills height nicely if columns stretch */
+    .news-card-link .icon-box {
+      height: 100%;
+    }
+  </style>
 </head>
 
 <body>
-  
- <header id="header" class="d-flex align-items-center">
+
+<header id="header" class="d-flex align-items-center">
   <div class="container d-flex align-items-center justify-content-between">
-    <a href="/" class="logo d-flex align-items-center">
-      <img src="/assets/img/logo-horizontal-engl-removebg-preview.png" alt="SSTL Logo" class="img-fluid">
+    <a href="" class="logo d-flex align-items-center">
+      <img src="assets/img/logo-horizontal-engl-removebg-preview.png" alt="SSTL Logo" class="img-fluid">
     </a>
+
     <!-- Navigation -->
     <nav id="navbar" class="navbar">
       <ul>
-        <li><a class="nav-link active" href="/">Home</a></li>
-        <li><a class="nav-link" href="/about-bobin.html">About Prof. Wang</a></li>
-        <li><a class="nav-link" href="/team.html">Team</a></li>
-        <li><a class="nav-link" href="/projects.html">Projects</a></li>
-        <li><a class="nav-link" href="/publications.html">Publications</a></li>
-        <li><a class="nav-link" href="/news.html">News</a></li>
-        <li><a class="nav-link" href="/opportunities.html">Opportunities</a></li>
-        <li><a class="nav-link" href="/contact.html">Contact</a></li>
+        <li><a class="nav-link active" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about-bobin.html">About Prof. Wang</a></li>
+        <li><a class="nav-link" href="team.html">Team</a></li>
+        <li><a class="nav-link" href="projects.html">Projects</a></li>
+        <li><a class="nav-link" href="publications.html">Publications</a></li>
+        <li><a class="nav-link" href="news.html">News</a></li>
+        <li><a class="nav-link" href="opportunities.html">Opportunities</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav>
@@ -58,156 +83,209 @@
       <h2>Laboratoire de transport intelligent et durable</h2>
     </div>
     <div class="hero-about-box" data-aos="fade-up" data-aos-delay="300">
-      <a href="/team.html" class="btn-get-started">Meet the Team</a>
+      <a href="team.html" class="btn-get-started">Meet the Team</a>
     </div>
   </div>
 </section><!-- End Home Hero Section -->
 
-  <main id="main">
+<main id="main">
 
-    <!-- ======= Lab Mission Section ======= -->
-    <section id="lab-mission" class="about section-bg">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Our Mission</h2>
-        </div>
-        <div class="row content">
-          <div class="col-lg-10 offset-lg-1">
-            <p>
-              The Smart & Sustainable Transportation Lab (SSTL) is dedicated to advancing research and developing innovative solutions for modern mobility challenges. Our work focuses on the intersection of transportation engineering, artificial intelligence, and sustainable urban planning.
-            </p>
-            <h3>Our Approach</h3>
-            <p>
-              Our research integrates theoretical insights with practical, data-driven decision modeling. We specialize in several key areas:
-            </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> Analysis of travel behavior and discrete choice modeling.</li>
-              <li><i class="bi bi-check-circle"></i> Development of integrated urban mobility solutions like Mobility as a Service (MaaS).</li>
-              <li><i class="bi bi-check-circle"></i> Examination of the relationship between transportation, climate change, and land use.</li>
-              <li><i class="bi bi-check-circle"></i> Application of AI, machine learning, and econometric modeling to solve transportation problems.</li>
-            </ul>
-          </div>
+  <!-- ======= Lab Mission Section ======= -->
+  <section id="lab-mission" class="about section-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Our Mission</h2>
+      </div>
+      <div class="row content">
+        <div class="col-lg-10 offset-lg-1">
+          <p>
+            The Smart &amp; Sustainable Transportation Lab (SSTL) is dedicated to advancing research and developing innovative solutions for modern mobility challenges. Our work focuses on the intersection of transportation engineering, artificial intelligence, and sustainable urban planning.
+          </p>
+          <h3>Our Approach</h3>
+          <p>
+            Our research integrates theoretical insights with practical, data-driven decision modeling. We specialize in several key areas:
+          </p>
+          <ul>
+            <li><i class="bi bi-check-circle"></i> Analysis of travel behavior and discrete choice modeling.</li>
+            <li><i class="bi bi-check-circle"></i> Development of integrated urban mobility solutions like Mobility as a Service (MaaS).</li>
+            <li><i class="bi bi-check-circle"></i> Examination of the relationship between transportation, climate change, and land use.</li>
+            <li><i class="bi bi-check-circle"></i> Application of AI, machine learning, and econometric modeling to solve transportation problems.</li>
+          </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-
-    <section id="projects" class="projects section-bg">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Our Research</h2>
-          <p>We apply innovative research to solve real-world transportation challenges. Here's a glimpse into our work.</p>
-        </div>
-        <div class="row gy-4">
-
-          <!-- Project Card 1 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <a href="/project_page/project_1.html" class="project-card">
-              <img src="https://picsum.photos/seed/mlsimulation/400/300" alt="Placeholder image for project on machine learning simulation." class="project-image">
-              <div class="project-content">
-                <h3>Machine Learning for New Approaches to Urban Mobility Simulation</h3>
-              </div>
-            </a>
-          </div>
-
-          <!-- Project Card 2 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up">
-            <a href="/project_page/project_2.html" class="project-card">
-              <img src="https://picsum.photos/seed/modalshift/400/300" alt="Placeholder image for project on modal shift." class="project-image">
-              <div class="project-content">
-                <h3>Understanding and predicting the modal shift of motorists in relation to their territory</h3>
-              </div>
-            </a>
-          </div>
-
-          <!-- Project Card 3 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <a href="/project_page/project_3.html" class="project-card">
-              <img src="https://picsum.photos/seed/electrictrucks/400/300" alt="Placeholder image for project on electric trucks." class="project-image">
-              <div class="project-content">
-                <h3>The potential of battery electric trucks in forest transportation</h3>
-              </div>
-            </a>
-          </div>
-
-          
-        </div>
-        <div class="text-center mt-5">
-          <a href="/projects.html" class="btn btn-primary">View All Projects</a>
-        </div>
+  <!-- ======= Projects Section ======= -->
+  <section id="projects" class="projects section-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Our Research</h2>
+        <p>We apply innovative research to solve real-world transportation challenges. Here's a glimpse into our work.</p>
       </div>
-    </section>
-    
-    <section id="news" class="news section-bg">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>News & Updates</h2>
-         <!-- <p>Stay current with our lab's latest achievements, publications, and events.</p>-->
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-4"><div class="icon-box"><h4><a href="">New Publication on MaaS</a></h4><p><strong>Oct 15, 2024:</strong> Prof. Wang's latest paper on "Behavioral Barriers to MaaS Adoption" has been published in Transportation Research Part A.</p></div></div>
-          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-4"><div class="icon-box"><h4><a href="">Lab Awarded NSERC Grant</a></h4><p><strong>Sep 01, 2024:</strong> Our lab received a NSERC Discovery Grant to support AI traffic research.</p></div></div>
-          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-4"><div class="icon-box"><h4><a href="">Welcome New PhD Students</a></h4><p><strong>Aug 20, 2024:</strong> We welcome Elena Rodriguez and Jin Chen to the lab!</p></div></div>
-        </div>
-      </div>
-    </section>
 
-  </main>
+      <div class="row gy-4">
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="main-footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row gy-4 justify-content-between align-items-start">
-
-          <div class="col-lg-5 col-md-12 footer-info">
-            <h4 class="footer-heading">Address</h4>
-            <p>
-              Adrien-Pouliot Pavillon<br>
-              1065, Medicine Avenue, Office 3348<br>
-              Université Laval, Quebec G1V 0A6
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4 class="footer-heading">Email</h4>
-            <p><a href="mailto:transport@gmc.ulaval.ca">transport@gmc.ulaval.ca</a></p>
-            <p><a href="mailto:bobin.wang@gmc.ulaval.ca">bobin.wang@gmc.ulaval.ca</a></p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-partners text-md-end">
-            <h4 class="footer-heading">Partners</h4>
-            <div class="partner-logos">
-              <img src="/assets/img/clients-collab/iid-bleu.png" class="img-fluid" alt="Institut intelligence et données">
-              <img src="/assets/img/clients-collab/university-laval.png" class="img-fluid" alt="Université Laval">
+        <!-- Project Card 1 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <a href="project_page/project_1.html" class="project-card">
+            <img src="images/projects_images/projet-6.png" alt="Project on machine learning simulation." class="project-image">
+            <div class="project-content">
+              <h3>Machine Learning for New Approaches to Urban Mobility Simulation</h3>
             </div>
-          </div>
-
+          </a>
         </div>
+
+        <!-- Project Card 2 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+          <a href="project_page/project_2.html" class="project-card">
+            <img src="images/projects_images/projet-2.png" alt="Project on modal shift." class="project-image">
+            <div class="project-content">
+              <h3>Understanding and predicting the modal shift of motorists in relation to their territory</h3>
+            </div>
+          </a>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <a href="project_page/project_3.html" class="project-card">
+            <img src="images/projects_images/project-3.png" alt="Project on electric trucks." class="project-image">
+            <div class="project-content">
+              <h3>The potential of battery electric trucks in forest transportation</h3>
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="projects.html" class="btn btn-primary">View All Projects</a>
       </div>
     </div>
+  </section>
 
+  <!-- ======= News Section (CENTERED - Option 1) ======= -->
+  <section id="news" class="news section-bg">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>News &amp; Updates</h2>
+        <p>Recent highlights and announcements from SSTL.</p>
+      </div>
+
+      <div class="row justify-content-center g-4 news-cards-row">
+
+        <!-- TAC Conference -->
+        <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+          <a href="news.html" class="news-card-link">
+            <div class="icon-box">
+              <h4><span>TAC 2025 — Conference Participation</span></h4>
+              <p><strong>Oct 2025:</strong> SSTL presented multiple research contributions at the Transportation Association of Canada (TAC) Annual Conference.</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Logo identity -->
+        <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+          <a href="news.html" class="news-card-link">
+            <div class="icon-box">
+              <h4><span>SSTL Visual Identity — Logo &amp; Colors</span></h4>
+              <p><strong>Sep 2025:</strong> We held an internal vote to select our new logo and color palette, followed by branded caps and t-shirts.</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Existing item -->
+        <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+          <a href="news.html" class="news-card-link">
+            <div class="icon-box">
+              <h4><span>New Publication on MaaS</span></h4>
+              <p><strong>Oct 15, 2024:</strong> Prof. Wang's latest paper on "Behavioral Barriers to MaaS Adoption" has been published in Transportation Research Part A.</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Existing item -->
+        <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+          <a href="news.html" class="news-card-link">
+            <div class="icon-box">
+              <h4><span>Lab Awarded NSERC Grant</span></h4>
+              <p><strong>Sep 01, 2024:</strong> Our lab received a NSERC Discovery Grant to support AI traffic research.</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Existing item -->
+        <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+          <a href="news.html" class="news-card-link">
+            <div class="icon-box">
+              <h4><span>Welcome New PhD Students</span></h4>
+              <p><strong>Aug 20, 2024:</strong> We welcome Elena Rodriguez and Jin Chen to the lab!</p>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="main-footer">
+  <div class="footer-top">
     <div class="container">
-      <div class="copyright text-center">
-        © 2025 Smart and Sustainable Transportation Lab — Université Laval
+      <div class="row gy-4 justify-content-between align-items-start">
+
+        <div class="col-lg-5 col-md-12 footer-info">
+          <h4 class="footer-heading">Address</h4>
+          <p>
+            Adrien-Pouliot Pavillon<br>
+            1065, Medicine Avenue, Office 3348<br>
+            Université Laval, Quebec G1V 0A6
+          </p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h4 class="footer-heading">Email</h4>
+          <p><a href="mailto:transport@gmc.ulaval.ca">transport@gmc.ulaval.ca</a></p>
+          <p><a href="mailto:bobin.wang@gmc.ulaval.ca">bobin.wang@gmc.ulaval.ca</a></p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-partners text-md-end">
+          <h4 class="footer-heading">Partners</h4>
+          <div class="partner-logos">
+            <img src="assets/img/clients-collab/iid-bleu.png" class="img-fluid" alt="Institut intelligence et données">
+            <img src="assets/img/clients-collab/university-laval.png" class="img-fluid" alt="Université Laval">
+          </div>
+        </div>
+
       </div>
     </div>
-  </footer><!-- End Footer -->
-  
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  </div>
 
-  <!-- Vendor JS Files -->
-  <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="/assets/vendor/aos/aos.js"></script>
-  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="/assets/vendor/php-email-form/validate.js"></script>
-  
-  <!-- Template Main JS File -->
-  <script src="/assets/js/main.js"></script>
+  <div class="container">
+    <div class="copyright text-center">
+      © 2025 Smart and Sustainable Transportation Lab — Université Laval
+    </div>
+  </div>
+</footer><!-- End Footer -->
+
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+
 </body>
 </html>
