@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Smart and Sustainable Transportation Lab Website
 
 This repository hosts the source code for the **Smart and Sustainable Transportation Lab (SSTL)** website, based in Québec City, Canada.  
