@@ -34,6 +34,25 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Centre le logo dans la colonne 
+--------------------------------------------------------------*/
+.footer-logo-wrap{
+  height: 100%;
+  display: flex;
+  align-items: center;      /* centre verticalement */
+  justify-content: center;  /* centre horizontalement */
+  text-align: center;
+}
+
+/* Taille du logo (ajuste comme tu veux) */
+.footer-logo-fr{
+  width: 100%;
+  max-width: 260px; /* augmente à 300/340 si tu veux plus grand */
+  height: auto;
+}
+
+
+/*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
 section {
