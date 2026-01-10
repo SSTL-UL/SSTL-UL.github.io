@@ -33,24 +33,6 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
-/*--------------------------------------------------------------
-# Centre le logo dans la colonne 
---------------------------------------------------------------*/
-.footer-logo-wrap{
-  width: 100%;
-  height: auto;           /* la “bande” */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer-logo-fr{
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;     /* garantit pas de déformation */
-}
 
 
 
