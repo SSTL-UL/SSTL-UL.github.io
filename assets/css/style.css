@@ -42,7 +42,7 @@ h6 {
 .footer-logo-fr{
   height: -60px;   /* augmente à 90/110 si tu veux plus gros */
   width: auto;    /* garde les proportions => pas de déformation */
-  max-width: 100%;
+  max-width: 80%;
 }
 
 
