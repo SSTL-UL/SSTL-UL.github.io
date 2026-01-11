@@ -65,63 +65,49 @@
       margin-bottom: 18px;
     }
 
-    .mini-info {
-      background: #fff;
-      border-radius: 16px;
-      padding: 16px;
-      border: 1px solid rgba(0, 0, 0, 0.06);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
-      height: 100%;
-    }
-
-    .mini-info h4 {
-      font-size: 1.05rem;
-      font-weight: 800;
-      margin-bottom: 8px;
-    }
-
     .project-card {
       border: 0;
       border-radius: 16px;
       overflow: hidden;
       box-shadow: 0 10px 26px rgba(0, 0, 0, 0.07);
       height: 100%;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-thumb {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      display: block;
+      background: #eef2f7;
     }
 
     .project-card .card-body {
       padding: 16px 16px 14px 16px;
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
     }
 
-    .project-badge {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      padding: 7px 10px;
+    .card-actions {
+      margin-top: auto;
+      padding-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn-cta {
       border-radius: 999px;
-      font-weight: 700;
-      font-size: .85rem;
-      border: 1px solid rgba(0, 0, 0, 0.10);
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(6px);
+      padding: 10px 16px;
+      font-weight: 800;
     }
 
-    .badge-open {
-      color: #198754;
-      border-color: rgba(25, 135, 84, 0.25);
-      background: rgba(25, 135, 84, 0.10);
-    }
-
-    .badge-closed {
-      color: #dc3545;
-      border-color: rgba(220, 53, 69, 0.25);
-      background: rgba(220, 53, 69, 0.10);
-    }
-
-    .pdf-preview {
-      width: 100%;
-      height: 240px;
-      border: 0;
-      background: #f6f7f9;
+    .btn-cta.btn-sm {
+      padding: 8px 12px;
+      font-weight: 800;
     }
 
     .benefits-card {
@@ -141,35 +127,6 @@
     .benefits-list li {
       margin-bottom: 8px;
     }
-
-    .btn-cta {
-      border-radius: 999px;
-      padding: 10px 16px;
-      font-weight: 800;
-    }
-    /* --- Align buttons at the bottom of each card --- */
-.project-card {
-  display: flex;
-  flex-direction: column;
-}
-
-.project-card .pdf-preview {
-  flex: 0 0 auto;
-}
-
-.project-card .card-body {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-}
-
-/* Container holding the buttons */
-.project-card .card-actions {
-  margin-top: auto;   /* pushes buttons to the bottom */
-  padding-top: 12px;
-}
-
-
   </style>
 </head>
 
@@ -196,6 +153,7 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
+
     </div>
   </header>
 
@@ -208,7 +166,7 @@
 
   <main id="main">
 
-    <!-- ===================== 1) TOP: ACTively hiring ===================== -->
+    <!-- ===================== TOP INTRO ===================== -->
     <section class="section-bg py-5">
       <div class="container" data-aos="fade-up">
 
@@ -218,7 +176,10 @@
             WE ARE ACTIVELY HIRING
           </div>
 
-          <div class="hire-title">Welcome to the Smart & Sustainable Transportation Lab (SSTL) / Laboratoire de transport intelligent et durable (LTID)</div>
+          <div class="hire-title">
+            Welcome to the Smart &amp; Sustainable Transportation Lab (SSTL) / Laboratoire de transport intelligent et durable (LTID)
+          </div>
+
           <div class="hire-subtitle">
             Funded opportunities are available for <strong>PhD</strong>, <strong>M.Sc.</strong>, and <strong>Postdoc</strong> candidates.
             To apply, email us at
@@ -229,245 +190,217 @@
             <a class="btn btn-primary btn-cta" href="mailto:transport@gmc.ulaval.ca">
               <i class="bi bi-envelope"></i> Apply by Email
             </a>
-            <a class="btn btn-outline-primary btn-cta" href="#open-projects">
-              <i class="bi bi-folder2-open"></i> See Open Projects
+            <a class="btn btn-outline-primary btn-cta" href="#open-positions">
+              <i class="bi bi-folder2-open"></i> View Open Positions
+            </a>
+            <a class="btn btn-outline-primary btn-cta" href="#regular-positions">
+              <i class="bi bi-layers"></i> View Regular Positions
             </a>
           </div>
-
-          
-
-          
         </div>
 
       </div>
     </section>
 
-    <!-- ===================== 2) PROJECT CARDS WITH PDF PREVIEW ===================== -->
-<section id="open-projects" class="py-5">
-  <div class="container" data-aos="fade-up">
+    <!-- ===================== SECTION 1: OPEN POSITIONS (POSTDOC) ===================== -->
+    <section id="open-positions" class="py-5">
+      <div class="container" data-aos="fade-up">
 
-    <div class="section-title">
-      <h2>Open Projects</h2>
-      
-    </div>
+        <div class="section-title">
+          <h2>Open Positions</h2>
+          <p>Postdoctoral opportunities currently open.</p>
+        </div>
 
-    <div class="row g-4">
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card project-card">
+              <!-- image (no scrolling) -->
+              <img class="project-thumb" src="assets/img/opportunities/postdoc.jpg" alt="Postdoctoral recruitment">
 
-      <!-- ========= Project 1 ========= -->
-      <div class="col-lg-4 col-md-6">
-        <div class="card project-card position-relative">
-          <div class="project-badge badge-open">Open positions</div>
+              <div class="card-body">
+                <h4 class="mb-2">Postdoctoral Recruitment</h4>
+                <p class="mb-3">
+                  Official recruitment notice for postdoctoral positions (requirements, responsibilities, benefits, and application process).
+                </p>
 
-          <!-- PDF preview (same PDF for all 6 projects; they are listed on page 1) -->
-          <iframe class="pdf-preview"
-            src="assets\opportunities_pdf\Master’s_PhD_Postdoc recruitments at ULaval in Canada.pdf"
-            title="Recruitment PDF preview"></iframe>
+                <div class="card-actions">
+                  <a class="btn btn-primary btn-sm btn-cta"
+                    href="assets/opportunities_pdf/postodc_recrutement_english and frensh.pdf.pdf"
+                    target="_blank" rel="noopener">
+                    <i class="bi bi-file-earmark-pdf"></i> Open PDF
+                  </a>
 
-          <div class="card-body">
-            <h4 class="mb-2">Carrots and sticks: assessing intervention effectiveness for sustainable mobility systems to reduce GHG emissions </h4>
-            
-
-            <div class="card-actions d-flex flex-wrap gap-2">
-
-              <a class="btn btn-primary btn-sm btn-cta"
-                href="https://www.projets-recherche.ulaval.ca/en/project?id=441306"
-                target="_blank" rel="noopener">
-                <i class="bi bi-box-arrow-up-right"></i> Project Page
-              </a>
-              <a class="btn btn-outline-primary btn-sm btn-cta"
-                href="mailto:transport@gmc.ulaval.ca?subject=Prospective%20Candidate%20%E2%80%94%20Project%20441306&body=Hello%2C%0D%0A%0D%0AI%20am%20interested%20in%20Project%20441306%20(Carrot%20and%20sticks)%20and%20would%20like%20to%20apply.%0D%0A%0D%0ARegards%2C">
-                <i class="bi bi-envelope"></i> Apply
-              </a>
+                  <a class="btn btn-outline-primary btn-sm btn-cta"
+                    href="mailto:transport@gmc.ulaval.ca?subject=Prospective%20Postdoc%20Candidate&body=Hello%2C%0D%0A%0D%0AI%20am%20interested%20in%20the%20postdoctoral%20opportunity%20and%20would%20like%20to%20apply.%0D%0A%0D%0ARegards%2C">
+                    <i class="bi bi-envelope"></i> Apply
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
+        <small class="d-block mt-2" style="opacity:.75;">
+          If you don’t have a postdoc image yet, create: <code>assets/img/opportunities/postdoc.jpg</code> (recommended size: ~1600×900).
+        </small>
+
       </div>
+    </section>
 
-      <!-- ========= Project 2 ========= -->
-      <div class="col-lg-4 col-md-6">
-        <div class="card project-card position-relative">
-          <div class="project-badge badge-open">Open positions</div>
+    <!-- ===================== SECTION 2: REGULAR POSITIONS ===================== -->
+    <section id="regular-positions" class="section-bg py-5">
+      <div class="container" data-aos="fade-up">
 
-          <iframe class="pdf-preview"
-            src="assets\opportunities_pdf\Master’s_PhD_Postdoc recruitments at ULaval in Canada.pdf"
-            title="Recruitment PDF preview"></iframe>
+        <div class="section-title">
+          <h2>Regular Positions</h2>
+          <p>Fully funded PhD positions and thesis-based M.Sc. projects with scholarships. For details, see the cards below.</p>
+        </div>
 
-          <div class="card-body">
-            <h4 class="mb-2">Application of gamification to incentivize sustainable urban mobility</h4>
-            
+        <div class="row g-4">
 
-            <div class="card-actions d-flex flex-wrap gap-2">
+          <!-- Project 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card project-card">
+              <img class="project-thumb" src="images/projects_images/project-6.png" alt="Project 441306">
+              <div class="card-body">
+                <h4 class="mb-2">Carrots and sticks: assessing intervention effectiveness for sustainable mobility systems to reduce GHG emissions</h4>
 
-              <a class="btn btn-primary btn-sm btn-cta"
-                href="https://www.projets-recherche.ulaval.ca/en/project?id=441311"
-                target="_blank" rel="noopener">
-                <i class="bi bi-box-arrow-up-right"></i> Project Page
-              </a>
-              <a class="btn btn-outline-primary btn-sm btn-cta"
-                href="mailto:transport@gmc.ulaval.ca?subject=Prospective%20Candidate%20%E2%80%94%20Project%20441311&body=Hello%2C%0D%0A%0D%0AI%20am%20interested%20in%20Project%20441311%20(Gamification)%20and%20would%20like%20to%20apply.%0D%0A%0D%0ARegards%2C">
-                <i class="bi bi-envelope"></i> Apply
-              </a>
+                <div class="card-actions">
+                  <a class="btn btn-primary btn-sm btn-cta"
+                    href="https://www.projets-recherche.ulaval.ca/en/project?id=441306"
+                    target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right"></i> Project Page
+                  </a>
+                  <a class="btn btn-outline-primary btn-sm btn-cta"
+                    href="mailto:transport@gmc.ulaval.ca?subject=Prospective%20Candidate%20%E2%80%94%20Project%20441306&body=Hello%2C%0D%0A%0D%0AI%20am%20interested%20in%20Project%20441306%20(Carrot%20and%20sticks)%20and%20would%20like%20to%20apply.%0D%0A%0D%0ARegards%2C">
+                    <i class="bi bi-envelope"></i> Apply
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- ========= Project 3 ========= -->
-      <div class="col-lg-4 col-md-6">
-        <div class="card project-card position-relative">
-          <div class="project-badge badge-open">Open positions</div>
+          <!-- Project 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card project-card">
+              <img class="project-thumb" src="images/projects_images/project-2.2.png" alt="Project 441311">
+              <div class="card-body">
+                <h4 class="mb-2">Application of gamification to incentivize sustainable urban mobility</h4>
 
-          <iframe class="pdf-preview"
-            src="assets\opportunities_pdf\Master’s_PhD_Postdoc recruitments at ULaval in Canada.pdf"
-            title="Recruitment PDF preview"></iframe>
-
-          <div class="card-body">
-            <h4 class="mb-2">Simulate travel demand under carrots and sticks measures</h4>
-            
-
-            <div class="card-actions d-flex flex-wrap gap-2">
-
-              <a class="btn btn-primary btn-sm btn-cta"
-                href="https://www.projets-recherche.ulaval.ca/en/project?id=441313"
-                target="_blank" rel="noopener">
-                <i class="bi bi-box-arrow-up-right"></i> Project Page
-              </a>
-              <a class="btn btn-outline-primary btn-sm btn-cta"
-                href="mailto:transport@gmc.ulaval.ca?subject=Prospective%20Candidate%20%E2%80%94%20Project%20441313&body=Hello%2C%0D%0A%0D%0AI%20am%20interested%20in%20Project%20441313%20(Travel%20demand%20simulation)%20and%20would%20like%20to%20apply.%0D%0A%0D%0ARegards%2C">
-                <i class="bi bi-envelope"></i> Apply
-              </a>
+                <div class="card-actions">
+                  <a class="btn btn-primary btn-sm btn-cta"
+                    href="https://www.projets-recherche.ulaval.ca/en/project?id=441311"
+                    target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right"></i> Project Page
+                  </a>
+                  <a class="btn btn-outline-primary btn-sm btn-cta"
+                    href="mailto:transport@gmc.ulaval.ca?subject=Prospective%20Candidate%20%E2%80%94%20Project%20441311&body=Hello%2C%0D%0A%0D%0AI%20am%20interested%20in%20Project%20441311%20(Gamification)%20and%20would%20like%20to%20apply.%0D%0A%0D%0ARegards%2C">
+                    <i class="bi bi-envelope"></i> Apply
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- ========= Project 4 ========= -->
-      <div class="col-lg-4 col-md-6">
-        <div class="card project-card position-relative">
-          <div class="project-badge badge-open">Open positions</div>
+          <!-- Project 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card project-card">
+              <img class="project-thumb" src="images/projects_images/project-3.2.png" alt="Project 441313">
+              <div class="card-body">
+                <h4 class="mb-2">Simulate travel demand under carrots and sticks measures</h4>
 
-          <iframe class="pdf-preview"
-            src="assets\opportunities_pdf\Master’s_PhD_Postdoc recruitments at ULaval in Canada.pdf"
-            title="Recruitment PDF preview"></iframe>
-
-          <div class="card-body">
-            <h4 class="mb-2">Measuring life cycle GHG emissions and economic values</h4>
-            
-            <div class="card-actions d-flex flex-wrap gap-2">
-
-              <a class="btn btn-primary btn-sm btn-cta"
-                href="https://www.projets-recherche.ulaval.ca/en/project?id=441316"
-                target="_blank" rel="noopener">
-                <i class="bi bi-box-arrow-up-right"></i> Project Page
-              </a>
-              <a class="btn btn-outline-primary btn-sm btn-cta"
-                href="mailto:transport@gmc.ulaval.ca?subject=Prospective%20Candidate%20%E2%80%94%20Project%20441316&body=Hello%2C%0D%0A%0D%0AI%20am%20interested%20in%20Project%20441316%20(Life%20cycle%20GHG%20%26%20economics)%20and%20would%20like%20to%20apply.%0D%0A%0D%0ARegards%2C">
-                <i class="bi bi-envelope"></i> Apply
-              </a>
+                <div class="card-actions">
+                  <a class="btn btn-primary btn-sm btn-cta"
+                    href="https://www.projets-recherche.ulaval.ca/en/project?id=441313"
+                    target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right"></i> Project Page
+                  </a>
+                  <a class="btn btn-outline-primary btn-sm btn-cta"
+                    href="mailto:transport@gmc.ulaval.ca?subject=Prospective%20Candidate%20%E2%80%94%20Project%20441313&body=Hello%2C%0D%0A%0D%0AI%20am%20interested%20in%20Project%20441313%20(Travel%20demand%20simulation)%20and%20would%20like%20to%20apply.%0D%0A%0D%0ARegards%2C">
+                    <i class="bi bi-envelope"></i> Apply
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- ========= Project 5 ========= -->
-      <div class="col-lg-4 col-md-6">
-        <div class="card project-card position-relative">
-          <div class="project-badge badge-open">Open positions</div>
+          <!-- Project 4 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card project-card">
+              <img class="project-thumb" src="images/projects_images/project-4.2.png" alt="Project 441316">
+              <div class="card-body">
+                <h4 class="mb-2">Measuring life cycle GHG emissions and economic values</h4>
 
-          <iframe class="pdf-preview"
-            src="assets\opportunities_pdf\Master’s_PhD_Postdoc recruitments at ULaval in Canada.pdf"
-            title="Recruitment PDF preview"></iframe>
-
-          <div class="card-body">
-            <h4 class="mb-2">Integrated Multimodal Travel Behavior Analysis under MaaS</h4>
-            
-
-            <div class="card-actions d-flex flex-wrap gap-2">
-
-              <a class="btn btn-primary btn-sm btn-cta"
-                href="https://www.projets-recherche.ulaval.ca/en/project?id=441293"
-                target="_blank" rel="noopener">
-                <i class="bi bi-box-arrow-up-right"></i>  Project Page
-              </a>
-              <a class="btn btn-outline-primary btn-sm btn-cta"
-                href="mailto:transport@gmc.ulaval.ca?subject=Prospective%20Candidate%20%E2%80%94%20Project%20441293&body=Hello%2C%0D%0A%0D%0AI%20am%20interested%20in%20Project%20441293%20(MaaS)%20and%20would%20like%20to%20apply.%0D%0A%0D%0ARegards%2C">
-                <i class="bi bi-envelope"></i> Apply
-              </a>
+                <div class="card-actions">
+                  <a class="btn btn-primary btn-sm btn-cta"
+                    href="https://www.projets-recherche.ulaval.ca/en/project?id=441316"
+                    target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right"></i> Project Page
+                  </a>
+                  <a class="btn btn-outline-primary btn-sm btn-cta"
+                    href="mailto:transport@gmc.ulaval.ca?subject=Prospective%20Candidate%20%E2%80%94%20Project%20441316&body=Hello%2C%0D%0A%0D%0AI%20am%20interested%20in%20Project%20441316%20(Life%20cycle%20GHG%20%26%20economics)%20and%20would%20like%20to%20apply.%0D%0A%0D%0ARegards%2C">
+                    <i class="bi bi-envelope"></i> Apply
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- ========= Project 6 ========= -->
-      <div class="col-lg-4 col-md-6">
-        <div class="card project-card position-relative">
-          <div class="project-badge badge-open">Open positions</div>
+          <!-- Project 5 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card project-card">
+              <img class="project-thumb" src="images/projects_images/project-4.png" alt="Project 441293">
+              <div class="card-body">
+                <h4 class="mb-2">Integrated Multimodal Travel Behavior Analysis under MaaS</h4>
 
-          <iframe class="pdf-preview"
-            src="assets\opportunities_pdf\Master’s_PhD_Postdoc recruitments at ULaval in Canada.pdf"
-            title="Recruitment PDF preview"></iframe>
-
-          <div class="card-body">
-            <h4 class="mb-2"> PASA-GES: Exploration of the potential of alternatives to single occupancy vehicles to reduce GHG emissions </h4>
-            
-
-            <div class="card-actions d-flex flex-wrap gap-2">
-
-              <a class="btn btn-primary btn-sm btn-cta"
-                href="https://www.projets-recherche.ulaval.ca/en/project?id=441299"
-                target="_blank" rel="noopener">
-                <i class="bi bi-box-arrow-up-right"></i>  Project Page
-              </a>
-              <a class="btn btn-outline-primary btn-sm btn-cta"
-                href="mailto:transport@gmc.ulaval.ca?subject=Prospective%20Candidate%20%E2%80%94%20Project%20441299&body=Hello%2C%0D%0A%0D%0AI%20am%20interested%20in%20Project%20441299%20(PASA-GES)%20and%20would%20like%20to%20apply.%0D%0A%0D%0ARegards%2C">
-                <i class="bi bi-envelope"></i> Apply
-              </a>
+                <div class="card-actions">
+                  <a class="btn btn-primary btn-sm btn-cta"
+                    href="https://www.projets-recherche.ulaval.ca/en/project?id=441293"
+                    target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right"></i> Project Page
+                  </a>
+                  <a class="btn btn-outline-primary btn-sm btn-cta"
+                    href="mailto:transport@gmc.ulaval.ca?subject=Prospective%20Candidate%20%E2%80%94%20Project%20441293&body=Hello%2C%0D%0A%0D%0AI%20am%20interested%20in%20Project%20441293%20(MaaS)%20and%20would%20like%20to%20apply.%0D%0A%0D%0ARegards%2C">
+                    <i class="bi bi-envelope"></i> Apply
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- ========= Postdoc recruitment (single card) ========= -->
-      <div class="col-12">
-        <div class="card project-card position-relative">
-          <div class="project-badge badge-open">Open Postions</div>
+          <!-- Project 6 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card project-card">
+              <img class="project-thumb" src="images/projects_images/project-7.png" alt="Project 441299">
+              <div class="card-body">
+                <h4 class="mb-2">PASA-GES: Exploration of the potential of alternatives to single occupancy vehicles to reduce GHG emissions</h4>
 
-          <iframe class="pdf-preview"
-            style="height: 320px;"
-            src="assets\opportunities_pdf\Postdoc recruitments at ULaval_Bobin Wang_English.pdf"
-            title="Postdoc recruitment PDF preview"></iframe>
-
-          <div class="card-body">
-            <h4 class="mb-2">Postdoctoral Recruitment</h4>
-            <p class="mb-3">
-              Official recruitment notice for postdoctoral positions (requirements, responsibilities, benefits, and application process).
-            </p>
-
-            <div class="card-actions d-flex flex-wrap gap-2">
-
-              <a class="btn btn-primary btn-sm btn-cta"
-                href="assets\opportunities_pdf\Postdoc recruitments at ULaval_Bobin Wang_English.pdf"
-                target="_blank" rel="noopener">
-                <i class="bi bi-file-earmark-pdf"></i> Open PDF
-              </a>
-              <a class="btn btn-outline-primary btn-sm btn-cta"
-                href="mailto:transport@gmc.ulaval.ca?subject=Prospective%20Postdoc%20Candidate&body=Hello%2C%0D%0A%0D%0AI%20am%20interested%20in%20the%20postdoctoral%20opportunity%20and%20would%20like%20to%20apply.%0D%0A%0D%0ARegards%2C">
-                <i class="bi bi-envelope"></i> Apply
-              </a>
+                <div class="card-actions">
+                  <a class="btn btn-primary btn-sm btn-cta"
+                    href="https://www.projets-recherche.ulaval.ca/en/project?id=441299"
+                    target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right"></i> Project Page
+                  </a>
+                  <a class="btn btn-outline-primary btn-sm btn-cta"
+                    href="mailto:transport@gmc.ulaval.ca?subject=Prospective%20Candidate%20%E2%80%94%20Project%20441299&body=Hello%2C%0D%0A%0D%0AI%20am%20interested%20in%20Project%20441299%20(PASA-GES)%20and%20would%20like%20to%20apply.%0D%0A%0D%0ARegards%2C">
+                    <i class="bi bi-envelope"></i> Apply
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
+
         </div>
+
+        <small class="d-block mt-3" style="opacity:.75;">
+          Add your images here (recommended):<br>
+          <code>assets/img/opportunities/project-441306.jpg</code>, <code>project-441311.jpg</code>, <code>project-441313.jpg</code>, <code>project-441316.jpg</code>, <code>project-441293.jpg</code>, <code>project-441299.jpg</code>
+        </small>
+
       </div>
+    </section>
 
-    </div>
-
-    
-
-  </div>
-</section>
-
-
-    <!-- ===================== 3) BENEFITS / PROMOTION ===================== -->
+    <!-- ===================== BENEFITS ===================== -->
     <section class="section-bg py-5">
       <div class="container" data-aos="fade-up">
 
@@ -483,9 +416,9 @@
             <div class="benefits-card">
               <h4><i class="bi bi-lightning-charge"></i> Research Environment</h4>
               <ul class="benefits-list mb-0">
-                <li>Work on transportation &amp; climate change, MaaS, discrete choice modeling, AI, and data science. </li>
+                <li>Work on transportation &amp; climate change, MaaS, discrete choice modeling, AI, and data science.</li>
                 <li>Collaborative culture with opportunities to publish and present internationally.</li>
-                <li>Access to data-driven methods (agent-based simulation, ML, econometrics, optimization). </li>
+                <li>Access to data-driven methods (agent-based simulation, ML, econometrics, optimization).</li>
               </ul>
             </div>
           </div>
@@ -494,8 +427,8 @@
             <div class="benefits-card">
               <h4><i class="bi bi-heart-pulse"></i> Social Benefits &amp; Support</h4>
               <ul class="benefits-list mb-0">
-                <li>Postdocs as ULaval employees can access social benefits. </li>
-                <li>Scholarship opportunities and funding pathways are available for graduate and postdoc candidates. </li>
+                <li>Postdocs as ULaval employees can access social benefits.</li>
+                <li>Scholarship opportunities and funding pathways are available for graduate and postdoc candidates.</li>
                 <li>Safe, affordable, high-quality living environment in Québec City (UNESCO heritage city).</li>
               </ul>
             </div>
