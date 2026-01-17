@@ -147,6 +147,59 @@
   max-width: 420px; /* optional: keeps cards visually consistent */
 }
 
+    /* Collaborators layout (used by Partners card too) */
+.collab-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
+  height: 100%;
+}
+
+.collab-card h4 {
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+/* Logos grid */
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (min-width: 992px) {
+  .logo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.logo-item {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 84px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.logo-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
+}
+
+.logo-item img {
+  max-width: 100%;
+  max-height: 44px;
+  object-fit: contain;
+  display: block;
+}
+
   </style>
 </head>
 
@@ -336,14 +389,16 @@ Our research integrates theoretical insights with practical, data-driven decisio
 
   
 <!-- ======= Partners Section ======= -->
-<section id="partners" class="partners section-bg">
+<section id="partners" class="section-bg">
   <div class="container" data-aos="fade-up">
-    <div class="row justify-content-center">
+    <div class="row gy-4">
+
       <div class="col-12" data-aos="fade-up" data-aos-delay="150">
         <div class="collab-card">
           <h4><i class="bi bi-buildings"></i> Partners</h4>
 
           <div class="logo-grid">
+            
             <a class="logo-item" href="#" target="_blank" rel="noopener" aria-label="ARTM">
               <img src="assets/img/clients-collab/ARTM.jpg" alt="ARTM logo">
             </a>
@@ -411,10 +466,10 @@ Our research integrates theoretical insights with practical, data-driven decisio
             <a class="logo-item" href="#" target="_blank" rel="noopener" aria-label="FORAC">
               <img src="assets/img/clients-collab/forac_logo.jpg" alt="FORAC logo">
             </a>
-          </div>
-
+   </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
