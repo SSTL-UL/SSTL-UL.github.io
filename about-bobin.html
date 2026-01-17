@@ -50,19 +50,18 @@
       </nav>
     </div>
 
-    <style>
-  /* ===========================
-     FIX: remove weird spacing in ALL lists in #pi-details
-     (forces normal list flow, cancels flex/justify tricks)
-     =========================== */
+   <style>
+  /* =========================================
+     FIX ONLY: remove weird spacing everywhere in #pi-details
+     (does NOT change bullets globally)
+     ========================================= */
   #pi-details .info-card ul{
     margin: 0;
-    padding-left: 1.2rem;     /* normal indentation */
-    list-style: disc;         /* normal bullet by default */
+    padding-left: 1.2rem;   /* keep normal indent */
   }
 
   #pi-details .info-card ul li{
-    display: list-item !important;  /* IMPORTANT: cancels flex layouts */
+    display: list-item !important; /* cancel flex layouts that create big gaps */
     align-items: initial !important;
     justify-content: initial !important;
     gap: 0 !important;
@@ -70,25 +69,20 @@
     line-height: 1.5;
   }
 
-  /* ===========================
-     Custom bullets ONLY for these two lists
-     =========================== */
+  /* =========================================
+     CUSTOM bullets ONLY where you asked
+     ========================================= */
 
-  /* Reset base for custom lists */
-  #pi-details .info-card ul.list-arrow,
-  #pi-details .info-card ul.list-dot{
+  /* Research Areas: arrow */
+  #pi-details .info-card ul.list-arrow{
     list-style: none !important;
     padding-left: 0 !important;
+    margin: 0 !important;
   }
-
-  /* Make room for the symbol */
-  #pi-details .info-card ul.list-arrow li,
-  #pi-details .info-card ul.list-dot li{
+  #pi-details .info-card ul.list-arrow li{
     position: relative;
-    padding-left: 22px; /* space for marker */
+    padding-left: 22px;
   }
-
-  /* Arrow marker (Research Areas) */
   #pi-details .info-card ul.list-arrow li::before{
     content: "➤";
     position: absolute;
@@ -98,7 +92,16 @@
     color: #000;
   }
 
-  /* Dot marker (Awards) */
+  /* Awards: dot */
+  #pi-details .info-card ul.list-dot{
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 0 !important;
+  }
+  #pi-details .info-card ul.list-dot li{
+    position: relative;
+    padding-left: 22px;
+  }
   #pi-details .info-card ul.list-dot li::before{
     content: "•";
     position: absolute;
@@ -108,6 +111,7 @@
     color: #000;
   }
 </style>
+
 
   </header>
 
