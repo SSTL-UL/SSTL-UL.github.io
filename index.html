@@ -27,6 +27,97 @@
 
   <!-- Centered News Cards (Option 1) -->
   <style>
+    /* =========================
+   PROFESSIONAL TYPOGRAPHY (Aptos-like)
+   ========================= */
+
+/* Body font: Aptos-like fallback stack */
+:root{
+  --body-font: "Aptos", "Calibri", "Segoe UI", "Arial", sans-serif;
+  --heading-font: "Aptos Display", "Aptos", "Calibri", "Segoe UI", "Arial", sans-serif;
+  --text-color: #1b1f23; /* darker, more official */
+}
+
+/* Apply globally */
+body{
+  font-family: var(--body-font) !important;
+  color: var(--text-color);
+  font-size: 17px;              /* Word-like */
+  line-height: 1.65;            /* comfortable */
+}
+
+/* Section width: avoid very long lines */
+#lab-mission .container,
+#projects .container{
+  max-width: 980px;             /* more “report-like” */
+}
+
+/* Headings style */
+#lab-mission .section-title h2,
+#projects .section-title h2{
+  font-family: var(--heading-font) !important;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* Subheading “Research” */
+#lab-mission h3{
+  font-family: var(--heading-font) !important;
+  font-weight: 700;
+  margin-top: 22px;
+  margin-bottom: 10px;
+}
+
+/* Justify text in Mission/Research/Projects intro */
+#lab-mission p,
+#lab-mission li,
+#projects .section-title p{
+  text-align: justify;
+  text-justify: inter-word;     /* best effort */
+  hyphens: auto;
+}
+
+/* Improve paragraph spacing */
+#lab-mission p{
+  margin-bottom: 14px;
+}
+
+/* Cleaner list look */
+#lab-mission ul{
+  margin-top: 8px;
+  padding-left: 0;
+}
+
+#lab-mission ul li{
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 7px 0;
+}
+
+/* Make check icon aligned and consistent */
+#lab-mission ul li i{
+  margin-top: 4px;
+  font-size: 18px;
+  color: #1f4e79; /* subtle institutional blue */
+}
+
+/* Optional: make background less “template grey” */
+#lab-mission.section-bg,
+#projects.section-bg{
+  background: #ffffff; /* clean white */
+}
+
+/* Add subtle separation between sections */
+#lab-mission{
+  padding: 60px 0;
+  border-bottom: 1px solid #e8ecef;
+}
+#projects{
+  padding: 60px 0;
+}
+
     /* Limit + center the full row of cards */
     .news-cards-row {
       max-width: 1100px; /* adjust 1000–1200 as you like */
@@ -107,9 +198,9 @@
 Our research integrates theoretical insights with practical, data-driven decision modeling. We specialize in several key areas:
           </p>
           <ul>
-            <li><i class=" bi-check-circle"></i> Analysis of human mobility, vehicle flows, and freight logistics in multimodal transportation networks.</li>
-            <li><i class=" bi-check-circle"></i> Development of integrated urban mobility solutions including Mobility as a Service (MaaS).</li>
-            <li><i class=" bi-check-circle"></i> Examination of the interrelationships among transportation systems, environmental impacts, energy use, and land-use patterns.</li>
+            <li><i class="bi-check-circle"></i> Analysis of human mobility, vehicle flows, and freight logistics in multimodal transportation networks.</li>
+            <li><i class="bi"></i> Development of integrated urban mobility solutions including Mobility as a Service (MaaS).</li>
+            <li><i class="bi-check-circle"></i> Examination of the interrelationships among transportation systems, environmental impacts, energy use, and land-use patterns.</li>
             <li><i class=" bi-check-circle"></i> Application of AI, machine learning, econometric, and behavioral–psychological models for transportation systems analysis and decision-making.</li>
             <li><i class=" bi-check-circle"></i> Design of stated- and revealed-preference (SP/RP) surveys and experiments for behavioral modeling and policy analysis.</li>
           </ul>
