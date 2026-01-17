@@ -127,6 +127,26 @@
     .news-card-link .icon-box {
       height: 100%;
     }
+
+    /* Center ONLY the Projects section title + subtitle */
+#projects .section-title {
+  text-align: center;
+}
+
+/* Center the cards row */
+#projects .row.gy-4 {
+  justify-content: center;
+}
+
+/* Optional: make columns not stretch weirdly (keeps same bootstrap behavior) */
+#projects .row.gy-4 > [class*="col-"] {
+  display: flex;
+}
+#projects .project-card {
+  width: 100%;
+  max-width: 420px; /* optional: keeps cards visually consistent */
+}
+
   </style>
 </head>
 
@@ -206,7 +226,8 @@ Our research integrates theoretical insights with practical, data-driven decisio
         <p>We apply innovative research to solve real-world transportation challenges. Here's a glimpse into our work.</p>
       </div>
 
-      <div class="row gy-4">
+      <div class="row gy-4 justify-content-center">
+
 
         <!-- Project Card 1 -->
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
