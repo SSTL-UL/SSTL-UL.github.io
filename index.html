@@ -27,96 +27,85 @@
 
   <!-- Centered News Cards (Option 1) -->
   <style>
-    /* =========================
-   PROFESSIONAL TYPOGRAPHY (Aptos-like)
+  
+    
+   /* =========================
+   TYPO for Mission/Research/Projects ONLY
+   (does NOT affect navbar)
    ========================= */
 
-/* Body font: Aptos-like fallback stack */
 :root{
-  --body-font: "Aptos", "Calibri", "Segoe UI", "Arial", sans-serif;
-  --heading-font: "Aptos Display", "Aptos", "Calibri", "Segoe UI", "Arial", sans-serif;
-  --text-color: #1b1f23; /* darker, more official */
+  --section-font: "Aptos","Calibri","Segoe UI","Arial",sans-serif;
+  --section-heading-font: "Aptos Display","Aptos","Calibri","Segoe UI","Arial",sans-serif;
+  --section-text-color: #1b1f23;
 }
 
-/* Apply globally */
-body{
-  font-family: var(--body-font) !important;
-  color: var(--text-color);
-  font-size: 17px;              /* Word-like */
-  line-height: 1.65;            /* comfortable */
+/* Apply ONLY to the content in these sections */
+#lab-mission,
+#projects{
+  color: var(--section-text-color);
 }
 
-/* Section width: avoid very long lines */
-#lab-mission .container,
-#projects .container{
-  max-width: 980px;             /* more “report-like” */
+/* Body text ONLY inside Mission/Projects */
+#lab-mission p,
+#lab-mission li,
+#projects .section-title p{
+  font-family: var(--section-font);
+  font-size: 17px;     /* Word-like, without touching navbar */
+  line-height: 1.65;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
-/* Headings style */
+/* Headings ONLY inside Mission/Projects */
 #lab-mission .section-title h2,
-#projects .section-title h2{
-  font-family: var(--heading-font) !important;
+#projects .section-title h2,
+#lab-mission h3{
+  font-family: var(--section-heading-font);
   font-weight: 700;
   letter-spacing: 0.2px;
 }
 
-/* Subheading “Research” */
-#lab-mission h3{
-  font-family: var(--heading-font) !important;
-  font-weight: 700;
-  margin-top: 22px;
-  margin-bottom: 10px;
+/* Keep section width nice (optional, only affects these sections) */
+#lab-mission .container,
+#projects .container{
+  max-width: 980px;
 }
 
-/* Justify text in Mission/Research/Projects intro */
-#lab-mission p,
-#lab-mission li,
-#projects .section-title p{
-  text-align: justify;
-  text-justify: inter-word;     /* best effort */
-  hyphens: auto;
-}
+/* --- Research list as black round bullets (no ticks) --- */
 
-/* Improve paragraph spacing */
-#lab-mission p{
-  margin-bottom: 14px;
-}
-
-/* Cleaner list look */
+/* Remove icon spacing and default list style */
 #lab-mission ul{
   margin-top: 8px;
   padding-left: 0;
 }
 
+/* Make each li a bullet row */
 #lab-mission ul li{
   list-style: none;
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  padding: 7px 0;
+  padding: 6px 0;
 }
 
-/* Make check icon aligned and consistent */
+/* Hide any <i> inside li (so even if you forget to remove them, it won't show) */
 #lab-mission ul li i{
-  margin-top: 4px;
-  font-size: 18px;
-  color: #1f4e79; /* subtle institutional blue */
+  display: none !important;
 }
 
-/* Optional: make background less “template grey” */
-#lab-mission.section-bg,
-#projects.section-bg{
-  background: #ffffff; /* clean white */
+/* Add a small black circle bullet */
+#lab-mission ul li::before{
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #000;
+  margin-top: 9px; /* aligns bullet with first text line */
+  flex: 0 0 7px;
 }
 
-/* Add subtle separation between sections */
-#lab-mission{
-  padding: 60px 0;
-  border-bottom: 1px solid #e8ecef;
-}
-#projects{
-  padding: 60px 0;
-}
 
     /* Limit + center the full row of cards */
     .news-cards-row {
@@ -198,11 +187,11 @@ body{
 Our research integrates theoretical insights with practical, data-driven decision modeling. We specialize in several key areas:
           </p>
           <ul>
-            <li><i class="bi-check-circle"></i> Analysis of human mobility, vehicle flows, and freight logistics in multimodal transportation networks.</li>
-            <li><i class="bi"></i> Development of integrated urban mobility solutions including Mobility as a Service (MaaS).</li>
-            <li><i class="bi-check-circle"></i> Examination of the interrelationships among transportation systems, environmental impacts, energy use, and land-use patterns.</li>
-            <li><i class=" bi-check-circle"></i> Application of AI, machine learning, econometric, and behavioral–psychological models for transportation systems analysis and decision-making.</li>
-            <li><i class=" bi-check-circle"></i> Design of stated- and revealed-preference (SP/RP) surveys and experiments for behavioral modeling and policy analysis.</li>
+            <li> Analysis of human mobility, vehicle flows, and freight logistics in multimodal transportation networks.</li>
+            <li> Development of integrated urban mobility solutions including Mobility as a Service (MaaS).</li>
+            <li> Examination of the interrelationships among transportation systems, environmental impacts, energy use, and land-use patterns.</li>
+            <li> Application of AI, machine learning, econometric, and behavioral–psychological models for transportation systems analysis and decision-making.</li>
+            <li> Design of stated- and revealed-preference (SP/RP) surveys and experiments for behavioral modeling and policy analysis.</li>
           </ul>
         </div>
       </div>
