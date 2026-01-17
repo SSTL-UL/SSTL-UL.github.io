@@ -1134,3 +1134,35 @@ section {
   padding-top: 30px;
   border-top: 1px solid #e2eefd;
 }
+
+/* Remove default bullets */
+.info-card ul{
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Common list item layout */
+.info-card ul li{
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 6px 0;
+  line-height: 1.4;
+}
+
+/* Arrow list (Research Areas) */
+.info-card ul.list-arrow li::before{
+  content: "➤";
+  font-weight: 700;
+  color: #000;
+  flex: 0 0 18px;
+}
+
+/* Dot list (Awards) */
+.info-card ul.list-dot li::before{
+  content: "•";
+  font-weight: 900;
+  color: #000;
+  flex: 0 0 18px;
+}
