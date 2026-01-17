@@ -49,6 +49,66 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
     </div>
+
+    <style>
+  /* ===========================
+     FIX: remove weird spacing in ALL lists in #pi-details
+     (forces normal list flow, cancels flex/justify tricks)
+     =========================== */
+  #pi-details .info-card ul{
+    margin: 0;
+    padding-left: 1.2rem;     /* normal indentation */
+    list-style: disc;         /* normal bullet by default */
+  }
+
+  #pi-details .info-card ul li{
+    display: list-item !important;  /* IMPORTANT: cancels flex layouts */
+    align-items: initial !important;
+    justify-content: initial !important;
+    gap: 0 !important;
+    margin: 8px 0;
+    line-height: 1.5;
+  }
+
+  /* ===========================
+     Custom bullets ONLY for these two lists
+     =========================== */
+
+  /* Reset base for custom lists */
+  #pi-details .info-card ul.list-arrow,
+  #pi-details .info-card ul.list-dot{
+    list-style: none !important;
+    padding-left: 0 !important;
+  }
+
+  /* Make room for the symbol */
+  #pi-details .info-card ul.list-arrow li,
+  #pi-details .info-card ul.list-dot li{
+    position: relative;
+    padding-left: 22px; /* space for marker */
+  }
+
+  /* Arrow marker (Research Areas) */
+  #pi-details .info-card ul.list-arrow li::before{
+    content: "➤";
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+    font-weight: 800;
+    color: #000;
+  }
+
+  /* Dot marker (Awards) */
+  #pi-details .info-card ul.list-dot li::before{
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0.05em;
+    font-weight: 900;
+    color: #000;
+  }
+</style>
+
   </header>
 
   <!-- ======= About Hero Section ======= -->
