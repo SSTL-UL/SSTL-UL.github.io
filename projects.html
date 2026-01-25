@@ -10,7 +10,7 @@
 
   <!-- Favicons -->
   <link href="assets/img/logo_v9.png" rel="icon">
-  
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -24,6 +24,51 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- ✅ Fix grid + image framing (safe overrides) -->
+  <style>
+    /* Make sure each column card stretches equally */
+    .project-card{
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      text-decoration: none;
+      border-radius: 14px;
+      overflow: hidden; /* keep rounded corners clean */
+      background: #fff;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .project-card:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.10);
+    }
+
+    /* ✅ Show full image (no crop) */
+    .project-image{
+      width: 100%;
+      height: 220px;          /* keep a uniform height */
+      object-fit: contain;    /* show entire image */
+      object-position: center;
+      background: #f3f6fb;    /* background for letterboxing */
+      display: block;
+    }
+
+    .project-content{
+      padding: 16px 18px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      flex: 1;
+    }
+
+    .project-content h3{
+      font-size: 1.05rem;
+      line-height: 1.35;
+      margin: 0;
+      color: #111;
+    }
+  </style>
 </head>
 
 <body>
@@ -33,22 +78,23 @@
       <a href="" class="logo d-flex align-items-center">
         <img src="assets/img/logo-horizontal-engl-removebg-preview.png" alt="SSTL Logo" class="img-fluid">
       </a>
-    <!-- Navigation -->
-    <nav id="navbar" class="navbar">
-      <ul>
-        <li><a class="nav-link" href="index.html">Home</a></li>
-        <li><a class="nav-link" href="about-bobin.html">About Prof. Wang</a></li>
-        <li><a class="nav-link" href="team.html">Team</a></li>
-        <li><a class="nav-link active" href="projects.html">Projects</a></li>
-        <li><a class="nav-link" href="publications.html">Publications</a></li>
-        <li><a class="nav-link" href="news.html">Events</a></li>
-        <li><a class="nav-link" href="opportunities.html">Opportunities</a></li>
-        <li><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav>
-  </div>
-</header>
+
+      <!-- Navigation -->
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="about-bobin.html">About Prof. Wang</a></li>
+          <li><a class="nav-link" href="team.html">Team</a></li>
+          <li><a class="nav-link active" href="projects.html">Projects</a></li>
+          <li><a class="nav-link" href="publications.html">Publications</a></li>
+          <li><a class="nav-link" href="news.html">Events</a></li>
+          <li><a class="nav-link" href="opportunities.html">Opportunities</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
 
   <!-- ======= Projects Hero Section ======= -->
   <section id="projects-hero" class="page-hero">
@@ -62,13 +108,13 @@
     <section id="projects" class="projects section-bg">
       <div class="container" data-aos="fade-up">
 
+        <!-- ✅ One single row containing all 9 cards -->
         <div class="row gy-4">
 
-
-         <!-- Project Card 1 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <!-- Project Card 1 -->
+          <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="100">
             <a href="project_page/project_1.html" class="project-card">
-            <img src="images/projects_images/project-1.png" alt="Machine learning urban mobility simulation" class="project-image">
+              <img src="images/projects_images/project-1.png" alt="Machine learning urban mobility simulation" class="project-image">
               <div class="project-content">
                 <h3>Machine Learning for New Approaches to Urban Mobility Simulation</h3>
               </div>
@@ -76,9 +122,9 @@
           </div>
 
           <!-- Project Card 2 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="200">
             <a href="project_page/project_2.html" class="project-card">
-            <img src="images/projects_images/projet-2.png" alt="Modal shift and territory" class="project-image"> 
+              <img src="images/projects_images/projet-2.png" alt="Modal shift and territory" class="project-image">
               <div class="project-content">
                 <h3>Understanding and predicting the modal shift of motorists in relation to their territory</h3>
               </div>
@@ -86,9 +132,9 @@
           </div>
 
           <!-- Project Card 3 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="300">
             <a href="project_page/project_3.html" class="project-card">
-            <img src="images/projects_images/project-3.png" alt="Battery electric trucks in forest transportation" class="project-image">
+              <img src="images/projects_images/project-3.png" alt="Battery electric trucks in forest transportation" class="project-image">
               <div class="project-content">
                 <h3>The potential of battery electric trucks in forest transportation</h3>
               </div>
@@ -96,9 +142,9 @@
           </div>
 
           <!-- Project Card 4 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="400">
             <a href="project_page/project_4.html" class="project-card">
-            <img src="images/projects_images/final_project-4_img1.png" alt="Alternatives to solo driving to reduce GHG emissions" class="project-image">
+              <img src="images/projects_images/final_project-4_img1.png" alt="Alternatives to solo driving to reduce GHG emissions" class="project-image">
               <div class="project-content">
                 <h3>PASA-GES: Exploration of the potential of alternatives to single occupancy vehicles to reduce GHG emissions</h3>
               </div>
@@ -106,20 +152,19 @@
           </div>
 
           <!-- Project Card 5 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="500">
             <a href="project_page/project_5.html" class="project-card">
-            <img src="images/projects_images/projet-5.png" alt="AI-driven optimization for multimodal networks" class="project-image">
+              <img src="images/projects_images/projet-5.png" alt="AI-driven optimization for multimodal networks" class="project-image">
               <div class="project-content">
                 <h3>AI-Driven Optimization for Multimodal Transportation Networks: Integrating Theoretical Insights with Data-Driven Decision Modeling</h3>
               </div>
             </a>
           </div>
 
-
           <!-- Project Card 6 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="600">
             <a href="project_page/project_6.html" class="project-card">
-            <img src="images/projects_images/projet-6.png" alt="Carrots and sticks policy evaluation" class="project-image">
+              <img src="images/projects_images/projet-6.png" alt="Carrots and sticks policy evaluation" class="project-image">
               <div class="project-content">
                 <h3>Carrots and sticks: assessing intervention effectiveness for sustainable mobility systems to reduce GHG emissions</h3>
               </div>
@@ -127,9 +172,9 @@
           </div>
 
           <!-- Project Card 7 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+          <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="700">
             <a href="project_page/project_7.html" class="project-card">
-            <img src="images/projects_images/final_project-7_img1.png" alt="MaaS multimodal travel behavior analysis" class="project-image">
+              <img src="images/projects_images/final_project-7_img1.png" alt="MaaS multimodal travel behavior analysis" class="project-image">
               <div class="project-content">
                 <h3>Integrated Multimodal Travel Behavior Analysis under Mobility as a Service</h3>
               </div>
@@ -137,27 +182,27 @@
           </div>
 
           <!-- Project Card 8 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+          <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="800">
             <a href="project_page/project_8.html" class="project-card">
-            <img src="images/projects_images/project-8.2.png" alt="Transportation Electrification" class="project-image">
+              <img src="images/projects_images/project-8.2.png" alt="Transportation network resilience and climate adaptation" class="project-image">
               <div class="project-content">
                 <h3>Leveraging deep learning for transportation network resilience and climate adaptation</h3>
               </div>
             </a>
           </div>
-        </div>
 
-        <!-- Project Card 9 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+          <!-- Project Card 9 -->
+          <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="900">
             <a href="project_page/project_9.html" class="project-card">
-            <img src="images/projects_images/fproject-9.2.png" alt="Transportation Electrification" class="project-image">
+              <img src="images/projects_images/fproject-9.2.png" alt="Transportation electrification in cold-climate regions" class="project-image">
               <div class="project-content">
                 <h3>Transportation electrification in cold-climate regions</h3>
               </div>
             </a>
           </div>
-        </div>
-      </div>
+
+        </div><!-- End row -->
+      </div><!-- End container -->
     </section><!-- End Projects Section -->
   </main>
 
