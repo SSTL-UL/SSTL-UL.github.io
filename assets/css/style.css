@@ -33,25 +33,21 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
-
 /*--------------------------------------------------------------
 # Sections Logo
 --------------------------------------------------------------*/
-
-
-.footer-logo-fr{
-  height: -60px;   /* augmente à 90/110 si tu veux plus gros */
-  width: auto;    /* garde les proportions => pas de déformation */
-  max-width: 80%;
+.footer-logo-fr {
+  height: 80px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
-
 
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
 section {
   padding: 60px 0;
-  padding-bottom: 10px; /* overrides the shorthand */
   overflow: hidden;
 }
 
@@ -128,13 +124,8 @@ section {
 }
 
 @keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 /*--------------------------------------------------------------
@@ -202,9 +193,6 @@ section {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
-/**
-* Desktop Navigation 
-*/
 .navbar {
   padding: 0;
 }
@@ -221,7 +209,7 @@ section {
   position: relative;
 }
 
-.navbar>ul>li {
+.navbar > ul > li {
   white-space: nowrap;
   padding: 10px 0 10px 28px;
 }
@@ -248,21 +236,20 @@ section {
   margin-left: 5px;
 }
 
-.navbar>ul>li>a:before {
+.navbar > ul > li > a:before {
   content: "";
   position: absolute;
-  width: 100%;
   height: 2px;
   bottom: -6px;
   left: 0;
   background-color: #106eea;
   visibility: hidden;
-  width: 0px;
+  width: 0;
   transition: all 0.3s ease-in-out 0s;
 }
 
 .navbar a:hover:before,
-.navbar li:hover>a:before,
+.navbar li:hover > a:before,
 .navbar .active:before {
   visibility: visible;
   width: 100%;
@@ -271,80 +258,14 @@ section {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover>a {
+.navbar li:hover > a {
   color: #106eea;
   text-shadow: none;
 }
 
-.navbar .dropdown ul {
-  display: block;
-  position: absolute;
-  left: 28px;
-  top: calc(100% + 30px);
-  margin: 0;
-  padding: 10px 0;
-  z-index: 99;
-  opacity: 0;
-  visibility: hidden;
-  background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-  transition: 0.3s;
-  border-radius: 4px;
-}
-
-.navbar .dropdown ul li {
-  min-width: 200px;
-}
-
-.navbar .dropdown ul a {
-  padding: 10px 20px;
-  font-weight: 400;
-  color: #222;
-  text-shadow: none;
-}
-
-.navbar .dropdown ul a i {
-  font-size: 12px;
-}
-
-.navbar .dropdown ul a:hover,
-.navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover>a {
-  color: #106eea;
-}
-
-.navbar .dropdown:hover>ul {
-  opacity: 1;
-  top: 100%;
-  visibility: visible;
-}
-
-.navbar .dropdown .dropdown ul {
-  top: 0;
-  left: calc(100% - 30px);
-  visibility: hidden;
-}
-
-.navbar .dropdown .dropdown:hover>ul {
-  opacity: 1;
-  top: 0;
-  left: 100%;
-  visibility: visible;
-}
-
-@media (max-width: 1366px) {
-  .navbar .dropdown .dropdown ul {
-    left: -90%;
-  }
-
-  .navbar .dropdown .dropdown:hover>ul {
-    left: -100%;
-  }
-}
-
-/**
-* Mobile Navigation 
-*/
+/*--------------------------------------------------------------
+# Mobile Navigation
+--------------------------------------------------------------*/
 .mobile-nav-toggle {
   color: #222;
   font-size: 28px;
@@ -396,7 +317,6 @@ section {
   padding: 10px 0;
   background-color: #fff;
   overflow-y: auto;
-  transition: 0.3s;
 }
 
 .navbar-mobile a,
@@ -408,102 +328,8 @@ section {
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover>a {
+.navbar-mobile li:hover > a {
   color: #106eea;
-}
-
-.navbar-mobile .getstarted,
-.navbar-mobile .getstarted:focus {
-  margin: 15px;
-}
-
-.navbar-mobile .dropdown ul {
-  position: static;
-  display: none;
-  margin: 10px 20px;
-  padding: 10px 0;
-  z-index: 99;
-  opacity: 1;
-  visibility: visible;
-  background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-}
-
-.navbar-mobile .dropdown ul li {
-  min-width: 200px;
-}
-
-.navbar-mobile .dropdown ul a {
-  padding: 10px 20px;
-}
-
-.navbar-mobile .dropdown ul a i {
-  font-size: 12px;
-}
-
-.navbar-mobile .dropdown ul a:hover,
-.navbar-mobile .dropdown ul .active:hover,
-.navbar-mobile .dropdown ul li:hover>a {
-  color: #106eea;
-}
-
-.navbar-mobile .dropdown>.dropdown-active {
-  display: block;
-}
-
-/*--------------------------------------------------------------
-# Team Hero Slider
---------------------------------------------------------------*/
-.team-hero-slider {
-  width: 100%;
-  height: 65vh;
-  margin-top: 100px;
-  /* Adjusted for header */
-  position: relative;
-}
-
-.team-hero-slider .swiper-slide {
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-.team-hero-slider .swiper-slide::before {
-  content: "";
-  background: rgba(0, 0, 0, 0.2);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.team-hero-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: rgba(255, 255, 255, 0.7);
-  opacity: 1;
-}
-
-.team-hero-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #106eea;
-}
-
-.team-hero-slider .swiper-button-prev,
-.team-hero-slider .swiper-button-next {
-  color: #fff;
-  transition: 0.3s;
-}
-
-.team-hero-slider .swiper-button-prev:hover,
-.team-hero-slider .swiper-button-next:hover {
-  color: #106eea;
-}
-
-@media (max-width: 768px) {
-  .team-hero-slider {
-    height: 50vh;
-  }
 }
 
 /*--------------------------------------------------------------
@@ -526,10 +352,7 @@ section {
   content: "";
   background: rgba(0, 0, 0, 0.4);
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
 }
 
 .page-hero .container {
@@ -552,20 +375,23 @@ section {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
+#home-hero,
+#projects-hero,
+#contact-hero,
+#project-detail-hero,
+#about-hero,
+#opportunities-hero,
+#publications-hero,
+#team-member-hero {
+  background-image: url("../img/qc.jpg");
+}
+
 .hero-about-box {
   max-width: 700px;
   margin: 40px auto 0 auto;
   padding: 0;
   background: transparent;
   border-radius: 8px;
-}
-
-.hero-about-text {
-  color: rgba(255, 255, 255, 0.95);
-  margin: 0 0 20px 0;
-  font-size: 17px;
-  line-height: 1.7;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .btn-get-started {
@@ -589,34 +415,6 @@ section {
   color: #222;
 }
 
-#home-hero,
-#projects-hero,
-#contact-hero,
-#project-detail-hero,
-#about-hero,
-#opportunities-hero,
-#publications-hero,
-#team-member-hero {
-  background-image: url("../img/qc.jpg");
-}
-
-@media (max-width: 768px) {
-  .page-hero {
-    min-height: 300px;
-    height: auto;
-  }
-
-  .page-hero h1 {
-    font-size: 36px;
-    line-height: 42px;
-  }
-
-  #home-hero h2 {
-    font-size: 18px;
-    line-height: 24px;
-  }
-}
-
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
@@ -630,77 +428,123 @@ section {
   border-radius: 8px;
 }
 
-.services .icon-box .icon {
-  margin: 0 auto;
-  width: 64px;
-  height: 64px;
-  background: #f1f6fe;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  transition: all ease-in-out 0.3s;
-}
-
-.services .icon-box .icon i {
-  color: #106eea;
-  font-size: 28px;
-}
-
-.services .icon-box h4 {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 24px;
-}
-
-.services .icon-box h4 a {
-  color: #222222;
-  transition: ease-in-out 0.3s;
-}
-
-.services .icon-box ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 15px;
-  display: inline-block;
-  text-align: left;
-}
-
-.services .icon-box ul li {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 10px;
-}
-
-.services .icon-box ul li i {
-  font-size: 20px;
-  line-height: 1;
-  color: #106eea;
-  margin-right: 8px;
-  padding-top: 3px;
-}
-
 .services .icon-box:hover {
   border-color: #fff;
   box-shadow: 0px 0 25px 0 rgba(16, 110, 234, 0.1);
 }
 
-.services .icon-box:hover h4 a {
-  color: #106eea;
+/*--------------------------------------------------------------
+# News & Events - Corrected Swiper Grid
+--------------------------------------------------------------*/
+#news {
+  padding: 60px 0;
 }
 
-.services .icon-box:hover .icon {
+#news .section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.news-slider {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 50px 60px;
+  overflow: hidden;
+}
+
+.news-slider .swiper-wrapper {
+  align-items: stretch;
+}
+
+.news-slider .swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+.news-card-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.news-card-link:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.news-slider .icon-box {
+  width: 100%;
+  height: 230px;
+  padding: 26px 26px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.news-slider .icon-box h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  line-height: 1.25;
+  color: #222222;
+}
+
+.news-slider .icon-box h4 span {
+  color: #222222;
+}
+
+.news-slider .icon-box p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  color: #444444;
+}
+
+.news-slider .icon-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.news-slider .swiper-button-next,
+.news-slider .swiper-button-prev {
+  color: #106eea;
+  width: 36px;
+  height: 36px;
+}
+
+.news-slider .swiper-button-next::after,
+.news-slider .swiper-button-prev::after {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.news-slider .swiper-pagination {
+  bottom: 10px !important;
+}
+
+.news-slider .swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+  background: #c7d7f5;
+  opacity: 1;
+}
+
+.news-slider .swiper-pagination-bullet-active {
   background: #106eea;
 }
 
-.services .icon-box:hover .icon i {
-  color: #fff;
+/* Fallback if old Bootstrap news row remains somewhere */
+.news-cards-row {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/*--------------------------------------------------------------
-# News
---------------------------------------------------------------*/
 .news .icon-box {
   padding: 25px;
   border-radius: 8px;
@@ -716,15 +560,6 @@ section {
   margin-bottom: 10px;
 }
 
-.news .icon-box h4 a {
-  color: #222222;
-  transition: 0.3s;
-}
-
-.news .icon-box h4 a:hover {
-  color: #106eea;
-}
-
 .news .icon-box p {
   line-height: 1.6;
   font-size: 14px;
@@ -733,6 +568,17 @@ section {
 .news .icon-box:hover {
   transform: translateY(-5px);
   box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .news-slider {
+    padding: 10px 35px 55px;
+  }
+
+  .news-slider .icon-box {
+    height: 220px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -745,7 +591,6 @@ section {
   margin: 40px 0 20px 0;
 }
 
-/* PI Card */
 .pi-info-card,
 .pi-bio-card {
   background: #fff;
@@ -767,15 +612,6 @@ section {
   max-width: 250px;
   border: 5px solid #fff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-.pi-bio-card .pi-bio-title {
-  font-size: 22px;
-  font-weight: 700;
-  color: #222;
-  margin-bottom: 15px;
-  padding-bottom: 10px;
-  display: inline-block;
 }
 
 .pi-name {
@@ -820,15 +656,6 @@ section {
   color: #106eea;
 }
 
-.pi-bio-card .pi-social {
-  margin-top: 20px;
-}
-
-.pi-bio-card .pi-social a {
-  margin: 0 20px 0 0;
-}
-
-/* Team Member Card - General */
 .team-member-card-link {
   display: block;
   width: 100%;
@@ -841,10 +668,6 @@ section {
 .team-member-card-link:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-}
-
-.team-member-card-link:hover .team-member-info h4 {
-  color: #106eea;
 }
 
 .team-member-card {
@@ -884,7 +707,6 @@ section {
   margin-bottom: 5px;
   font-size: 18px;
   color: #222;
-  transition: color 0.3s;
 }
 
 .team-member-info span {
@@ -897,45 +719,39 @@ section {
 /*--------------------------------------------------------------
 # Projects Page Card Styles
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Projects Page Card Styles (TITLE UNDER IMAGE)
---------------------------------------------------------------*/
-.projects .project-card{
+.projects .project-card {
   display: block;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease-in-out;
   width: 100%;
-  background: #fff;           /* fond blanc de la carte */
+  background: #fff;
   color: #222;
   text-decoration: none;
 }
 
-/* Image en haut (plus d'absolute) */
-.projects .project-card .project-image{
+.projects .project-card .project-image {
   display: block;
   width: 100%;
-  height: 220px;              /* ajuste 200–260 selon ton goût */
+  height: 220px;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
 
-.projects .project-card:hover .project-image{
+.projects .project-card:hover .project-image {
   transform: scale(1.05);
 }
 
-/* Titre sous l'image, fond blanc */
-.projects .project-card .project-content{
-  position: static;           /* important: plus d’overlay */
+.projects .project-card .project-content {
+  position: static;
   height: auto;
   padding: 14px 16px;
   background: #fff;
   display: block;
 }
 
-/* Texte noir */
-.projects .project-card .project-content h3{
+.projects .project-card .project-content h3 {
   margin: 0;
   font-size: 16px;
   font-weight: 500;
@@ -943,12 +759,10 @@ section {
   color: #000;
 }
 
-.projects .project-card:hover{
+.projects .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
-
-
 
 /*--------------------------------------------------------------
 # Project Detail Page Styles
@@ -989,58 +803,6 @@ section {
   color: #555;
 }
 
-.project-detail-card ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.project-detail-card ul li {
-  padding-bottom: 5px;
-}
-
-/*--------------------------------------------------------------
-# About PI Details
---------------------------------------------------------------*/
-.pi-details {
-  padding-top: 0;
-}
-
-.pi-details .info-card {
-  background: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  height: 100%;
-}
-
-.pi-details .info-card h4 {
-  font-size: 20px;
-  font-weight: 700;
-  color: #222;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #f1f6fe;
-  display: flex;
-  align-items: center;
-}
-
-.pi-details .info-card h4 i {
-  font-size: 24px;
-  color: #106eea;
-  margin-right: 15px;
-}
-
-.pi-details .info-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.pi-details .info-card ul li {
-  padding-bottom: 10px;
-  line-height: 1.6;
-}
-
 /*--------------------------------------------------------------
 # Publications Page Styles
 --------------------------------------------------------------*/
@@ -1077,6 +839,60 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Partners
+--------------------------------------------------------------*/
+.collab-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
+  height: 100%;
+}
+
+.collab-card h4 {
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (min-width: 992px) {
+  .logo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.logo-item {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 84px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.logo-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
+}
+
+.logo-item img {
+  max-width: 100%;
+  max-height: 44px;
+  object-fit: contain;
+  display: block;
+}
+
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 .main-footer {
@@ -1089,7 +905,7 @@ section {
 .main-footer .footer-top {
   background: #fff;
   border-top: 1px solid #e2eefd;
-  padding: 30px 0 30px 0;
+  padding: 30px 0;
 }
 
 .main-footer .footer-heading {
@@ -1107,43 +923,21 @@ section {
   margin-bottom: 0;
 }
 
-.main-footer .footer-partners .partner-logos {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-@media (min-width: 768px) {
-  .main-footer .footer-partners.text-md-end .partner-logos {
-    justify-content: flex-end;
-  }
-}
-
-.main-footer .footer-partners img {
-  max-height: 40px;
-  opacity: 0.9;
-  transition: opacity 0.3s;
-}
-
-.main-footer .footer-partners img:hover {
-  opacity: 1;
-}
-
 .main-footer .copyright {
   padding-top: 30px;
   border-top: 1px solid #e2eefd;
 }
 
-/* Remove default bullets */
-.info-card ul{
+/*--------------------------------------------------------------
+# Info cards lists
+--------------------------------------------------------------*/
+.info-card ul {
   list-style: none;
   padding-left: 0;
   margin: 0;
 }
 
-/* Common list item layout */
-.info-card ul li{
+.info-card ul li {
   display: flex;
   align-items: flex-start;
   gap: 10px;
@@ -1151,18 +945,36 @@ section {
   line-height: 1.4;
 }
 
-/* Arrow list (Research Areas) */
-.info-card ul.list-arrow li::before{
+.info-card ul.list-arrow li::before {
   content: "➤";
   font-weight: 700;
   color: #000;
   flex: 0 0 18px;
 }
 
-/* Dot list (Awards) */
-.info-card ul.list-dot li::before{
+.info-card ul.list-dot li::before {
   content: "•";
   font-weight: 900;
   color: #000;
   flex: 0 0 18px;
+}
+
+/*--------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+  .page-hero {
+    min-height: 300px;
+    height: auto;
+  }
+
+  .page-hero h1 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  #home-hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
