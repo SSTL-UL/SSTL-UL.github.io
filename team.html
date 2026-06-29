@@ -173,6 +173,74 @@
   opacity: .85;
 }
 
+    /* ===== Team Hero Banner / Slider ===== */
+.team-hero-slider {
+  width: 100%;
+  height: 520px;
+  min-height: 520px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 0;
+  background: #f5f8fb;
+}
+
+.team-hero-slider .swiper-wrapper,
+.team-hero-slider .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.team-hero-slider .swiper-slide {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Light overlay for readability */
+.team-hero-slider::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 35, 85, 0.18);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.team-hero-slider .swiper-button-next,
+.team-hero-slider .swiper-button-prev,
+.team-hero-slider .swiper-pagination {
+  z-index: 3;
+}
+
+.team-hero-slider .swiper-button-next,
+.team-hero-slider .swiper-button-prev {
+  color: #ffffff;
+}
+
+.team-hero-slider .swiper-pagination-bullet {
+  background: #ffffff;
+  opacity: 0.75;
+}
+
+.team-hero-slider .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .team-hero-slider {
+    height: 420px;
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 576px) {
+  .team-hero-slider {
+    height: 300px;
+    min-height: 300px;
+  }
+}
+
   </style>
 </head>
 
