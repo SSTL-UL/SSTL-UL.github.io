@@ -1199,90 +1199,97 @@ Beyond this accomplishment, the conference provided valuable opportunities to en
       }
 
       /* =======================================================
-         RESEARCH SEMINAR SERIES LOGIC
-         - The seminar cards are horizontal.
-         - The active seminar is centered.
-         - Side seminars stay on the poster.
-         - Only the active seminar photo slider autoplays.
-         ======================================================= */
-      var seminarPhotoSwipers = [];
+   RESEARCH SEMINAR SERIES LOGIC — FINAL
+   - The seminar cards are horizontal.
+   - The active seminar is centered.
+   - Side seminars stay on the poster.
+   - Only the active seminar photo slider autoplays.
+   ======================================================= */
 
-      document.querySelectorAll(".seminar-photo-swiper").forEach(function (photoEl) {
-        var photoSwiper = new Swiper(photoEl, {
-          loop: true,
-          nested: true,
-          speed: 700,
-          allowTouchMove: true,
-          autoplay: false,
-          pagination: {
-            el: photoEl.querySelector(".swiper-pagination"),
-            clickable: true
-          }
-        });
-        seminarPhotoSwipers.push(photoSwiper);
-      });
+var seminarPhotoSwipers = [];
 
-      function activateSeminarPhotos(activeIndex) {
-        seminarPhotoSwipers.forEach(function (swiper, index) {
-          if (swiper.autoplay) swiper.autoplay.stop();
-          swiper.slideToLoop(0, 0); // keep side seminars on the poster
+document.querySelectorAll(".seminar-photo-swiper").forEach(function (photoEl) {
+  var photoSwiper = new Swiper(photoEl, {
+    loop: true,
+    nested: true,
+    speed: 700,
+    allowTouchMove: true,
+    autoplay: false,
+    pagination: {
+      el: photoEl.querySelector(".swiper-pagination"),
+      clickable: true
+    }
+  });
 
-          if (index === activeIndex) {
-            swiper.params.autoplay = {
-              delay: 2400,
-              disableOnInteraction: false
-            };
-            swiper.autoplay.start();
-          }
-        });
+  seminarPhotoSwipers.push(photoSwiper);
+});
+
+function activateSeminarPhotos(activeIndex) {
+  seminarPhotoSwipers.forEach(function (swiper, index) {
+    if (swiper.autoplay) swiper.autoplay.stop();
+
+    // Keep inactive seminars on the first image, which should be the poster.
+    swiper.slideToLoop(0, 0);
+
+    // Only the active seminar autoplays poster + photos.
+    if (index === activeIndex) {
+      swiper.params.autoplay = {
+        delay: 2400,
+        disableOnInteraction: false
+      };
+
+      swiper.autoplay.start();
+    }
+  });
+}
+
+var seminarEl = document.querySelector("#research-seminar-swiper");
+
+if (seminarEl && typeof Swiper !== "undefined") {
+  new Swiper("#research-seminar-swiper", {
+    loop: false,
+    speed: 750,
+    centeredSlides: true,
+    slidesPerView: 1.38,
+    spaceBetween: 28,
+    grabCursor: true,
+    initialSlide: 0,
+    pagination: {
+      el: "#research-seminar-swiper .swiper-pagination",
+      clickable: true
+    },
+    navigation: {
+      nextEl: "#research-seminar-swiper .swiper-button-next",
+      prevEl: "#research-seminar-swiper .swiper-button-prev"
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 16
+      },
+      768: {
+        slidesPerView: 1.12,
+        spaceBetween: 20
+      },
+      992: {
+        slidesPerView: 1.26,
+        spaceBetween: 24
+      },
+      1200: {
+        slidesPerView: 1.38,
+        spaceBetween: 28
       }
-
-      var seminarEl = document.querySelector("#research-seminar-swiper");
-      if (seminarEl && typeof Swiper !== "undefined") {
-        new Swiper("#research-seminar-swiper", {
-          loop: false,
-          speed: 750,
-          centeredSlides: true,
-          slidesPerView: 1.38,
-          spaceBetween: 28,
-          grabCursor: true,
-          initialSlide: 0,
-          pagination: {
-            el: "#research-seminar-swiper .swiper-pagination",
-            clickable: true,
-          },
-          navigation: {
-            nextEl: "#research-seminar-swiper .swiper-button-next",
-            prevEl: "#research-seminar-swiper .swiper-button-prev",
-          },
-          breakpoints: {
-            0: {
-              slidesPerView: 1,
-              spaceBetween: 16
-            },
-            768: {
-              slidesPerView: 1.12,
-              spaceBetween: 20
-            },
-            992: {
-              slidesPerView: 1.26,
-              spaceBetween: 24
-            },
-            1200: {
-              slidesPerView: 1.38,
-              spaceBetween: 28
-            }
-          },
-          on: {
-            init: function () {
-              activateSeminarPhotos(this.realIndex);
-            },
-            slideChangeTransitionEnd: function () {
-              activateSeminarPhotos(this.realIndex);
-            }
-          }
-        });
+    },
+    on: {
+      init: function () {
+        activateSeminarPhotos(this.realIndex);
+      },
+      slideChangeTransitionEnd: function () {
+        activateSeminarPhotos(this.realIndex);
       }
+    }
+  });
+}
 
       initEventSwiper("#swiper-csce2026");
       initEventSwiper("#swiper-ctrf2026");
