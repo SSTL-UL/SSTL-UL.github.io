@@ -103,433 +103,457 @@
     }
   
 
-    /* =========================================================
-       RESEARCH SEMINAR SERIES — HORIZONTAL CENTER SLIDER
-       Behavior:
-       - Seminars are displayed horizontally.
-       - The active / most recent seminar appears in the center.
-       - Side seminars show the poster only.
-       - The center seminar shows poster + photos and details.
-       - Only the center seminar image slider autoplays.
-       ========================================================= */
-    .research-seminars-section {
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
-      padding: 70px 0 64px;
-    }
+   .research-seminars-section {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+  padding: 70px 0 64px;
+}
 
-    .research-seminars-section::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 8% 20%, rgba(11, 61, 145, .08), transparent 28%),
-        radial-gradient(circle at 90% 8%, rgba(49, 132, 206, .10), transparent 25%);
-      pointer-events: none;
-    }
+.research-seminars-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 8% 20%, rgba(11, 61, 145, .08), transparent 28%),
+    radial-gradient(circle at 90% 8%, rgba(49, 132, 206, .10), transparent 25%);
+  pointer-events: none;
+}
 
-    .seminar-section-heading {
-      position: relative;
-      max-width: 920px;
-      margin: 0 auto 34px;
-      text-align: center;
-    }
+.seminar-section-heading {
+  position: relative;
+  max-width: 920px;
+  margin: 0 auto 34px;
+  text-align: center;
+}
 
-    .seminar-section-kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: #0b3d91;
-      background: rgba(11, 61, 145, .08);
-      border: 1px solid rgba(11, 61, 145, .10);
-      border-radius: 999px;
-      padding: 8px 14px;
-      font-weight: 800;
-      font-size: .9rem;
-      margin-bottom: 12px;
-    }
+.seminar-section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #0b3d91;
+  background: rgba(11, 61, 145, .08);
+  border: 1px solid rgba(11, 61, 145, .10);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 800;
+  font-size: .9rem;
+  margin-bottom: 12px;
+}
 
-    .seminar-section-heading h2 {
-      color: #0b3d91;
-      font-weight: 900;
-      letter-spacing: -.02em;
-      margin-bottom: 10px;
-    }
+.seminar-section-heading h2 {
+  color: #0b3d91;
+  font-weight: 900;
+  letter-spacing: -.02em;
+  margin-bottom: 10px;
+}
 
-    .seminar-section-heading p {
-      color: #5d6878;
-      line-height: 1.7;
-      margin: 0 auto;
-      max-width: 800px;
-    }
+.seminar-section-heading p {
+  color: #5d6878;
+  line-height: 1.7;
+  margin: 0 auto;
+  max-width: 800px;
+}
 
-    .seminar-carousel-wrap {
-      position: relative;
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 6px 52px 52px;
-    }
+.seminar-carousel-wrap {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 6px 52px 52px;
+}
 
-    .research-seminar-swiper {
-      overflow: visible;
-    }
+.research-seminar-swiper {
+  overflow: visible;
+}
 
-    .research-seminar-swiper .swiper-wrapper {
-      align-items: center;
-    }
+.research-seminar-swiper .swiper-wrapper {
+  align-items: center;
+}
 
-    .research-seminar-swiper .swiper-slide {
-      height: auto;
-      opacity: .58;
-      transform: scale(.82);
-      transition: opacity .35s ease, transform .35s ease, filter .35s ease;
-      filter: saturate(.82);
-    }
+.research-seminar-swiper .swiper-slide {
+  height: auto;
+  opacity: .58;
+  transform: scale(.82);
+  transition: opacity .35s ease, transform .35s ease, filter .35s ease;
+  filter: saturate(.82);
+}
 
-    .research-seminar-swiper .swiper-slide-active {
-      opacity: 1;
-      transform: scale(1);
-      filter: saturate(1);
-      z-index: 3;
-    }
+.research-seminar-swiper .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+  filter: saturate(1);
+  z-index: 3;
+}
 
-    .seminar-card-horizontal {
-      height: 520px;
-      display: grid;
-      grid-template-columns: 42% 58%;
-      background: #fff;
-      border: 1px solid rgba(11, 61, 145, .11);
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 18px 44px rgba(11, 61, 145, .15);
-      transition: all .35s ease;
-    }
+.seminar-card-horizontal {
+  min-height: 540px;
+  display: grid;
+  grid-template-columns: 42% 58%;
+  background: #fff;
+  border: 1px solid rgba(11, 61, 145, .11);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 18px 44px rgba(11, 61, 145, .15);
+  transition: all .35s ease;
+}
 
-    /* Side cards: poster only */
-    .research-seminar-swiper .swiper-slide:not(.swiper-slide-active) .seminar-card-horizontal {
-      grid-template-columns: 1fr;
-      height: 440px;
-      box-shadow: 0 12px 28px rgba(11, 61, 145, .11);
-    }
+/* Side cards: poster only */
+.research-seminar-swiper .swiper-slide:not(.swiper-slide-active) .seminar-card-horizontal {
+  grid-template-columns: 1fr;
+  height: 440px;
+  min-height: 440px;
+  box-shadow: 0 12px 28px rgba(11, 61, 145, .11);
+}
 
-    .seminar-image-zone {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      background: #eaf2ff;
-      overflow: hidden;
-    }
+.seminar-image-zone {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 540px;
+  background: #eaf2ff;
+  overflow: hidden;
+}
 
-    .seminar-photo-swiper,
-    .seminar-photo-swiper .swiper-wrapper,
-    .seminar-photo-swiper .swiper-slide {
-      width: 100%;
-      height: 100%;
-    }
+.research-seminar-swiper .swiper-slide:not(.swiper-slide-active) .seminar-image-zone {
+  min-height: 440px;
+}
 
-    .seminar-photo-swiper img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
-    }
+.seminar-photo-swiper,
+.seminar-photo-swiper .swiper-wrapper,
+.seminar-photo-swiper .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
 
-    .seminar-photo-swiper .swiper-pagination {
-      bottom: 13px !important;
-    }
+.seminar-photo-swiper img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  background: #f4f8ff;
+}
 
-    .seminar-photo-swiper .swiper-pagination-bullet {
-      background: rgba(255,255,255,.72);
-      opacity: 1;
-      width: 8px;
-      height: 8px;
-    }
+.seminar-photo-swiper .swiper-pagination {
+  bottom: 13px !important;
+}
 
-    .seminar-photo-swiper .swiper-pagination-bullet-active {
-      background: #0b3d91;
-    }
+.seminar-photo-swiper .swiper-pagination-bullet {
+  background: rgba(255,255,255,.72);
+  opacity: 1;
+  width: 8px;
+  height: 8px;
+}
 
-    .research-seminar-swiper .swiper-slide:not(.swiper-slide-active) .seminar-photo-swiper .swiper-pagination {
-      display: none;
-    }
+.seminar-photo-swiper .swiper-pagination-bullet-active {
+  background: #0b3d91;
+}
 
-    .seminar-side-overlay {
-      display: none;
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      padding: 22px;
-      color: #fff;
-      background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,.78) 100%);
-    }
+.research-seminar-swiper .swiper-slide:not(.swiper-slide-active) .seminar-photo-swiper .swiper-pagination {
+  display: none;
+}
 
-    .research-seminar-swiper .swiper-slide:not(.swiper-slide-active) .seminar-side-overlay {
-      display: block;
-    }
+.seminar-side-overlay {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 22px;
+  color: #fff;
+  background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,.78) 100%);
+}
 
-    .seminar-side-overlay .side-date {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: .84rem;
-      font-weight: 800;
-      background: rgba(255,255,255,.18);
-      border: 1px solid rgba(255,255,255,.22);
-      border-radius: 999px;
-      padding: 6px 10px;
-      margin-bottom: 10px;
-      backdrop-filter: blur(6px);
-    }
+.research-seminar-swiper .swiper-slide:not(.swiper-slide-active) .seminar-side-overlay {
+  display: block;
+}
 
-    .seminar-side-overlay h3 {
-      color: #fff;
-      font-size: 1.1rem;
-      line-height: 1.3;
-      font-weight: 900;
-      margin: 0 0 7px;
-    }
+.seminar-side-overlay .side-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .84rem;
+  font-weight: 800;
+  background: rgba(255,255,255,.18);
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 999px;
+  padding: 6px 10px;
+  margin-bottom: 10px;
+  backdrop-filter: blur(6px);
+}
 
-    .seminar-side-overlay p {
-      color: rgba(255,255,255,.9);
-      font-weight: 700;
-      margin: 0;
-      font-size: .92rem;
-    }
+.seminar-side-overlay h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  font-weight: 900;
+  margin: 0 0 7px;
+}
 
-    .seminar-detail-zone {
-      padding: 34px 38px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background:
-        linear-gradient(135deg, rgba(255,255,255,.98), rgba(246,250,255,.98));
-    }
+.seminar-side-overlay p {
+  color: rgba(255,255,255,.9);
+  font-weight: 700;
+  margin: 0;
+  font-size: .92rem;
+}
 
-    .research-seminar-swiper .swiper-slide:not(.swiper-slide-active) .seminar-detail-zone {
-      display: none;
-    }
+.seminar-detail-zone {
+  padding: 34px 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255,255,255,.98), rgba(246,250,255,.98));
+}
 
-    .seminar-badge-row {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-bottom: 14px;
-    }
+.research-seminar-swiper .swiper-slide:not(.swiper-slide-active) .seminar-detail-zone {
+  display: none;
+}
 
-    .seminar-badge-main,
-    .seminar-date-main {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      border-radius: 999px;
-      padding: 8px 12px;
-      font-weight: 800;
-      font-size: .86rem;
-    }
+.seminar-badge-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
 
-    .seminar-badge-main {
-      background: #0b3d91;
-      color: #fff;
-    }
+.seminar-badge-main,
+.seminar-date-main {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-weight: 800;
+  font-size: .86rem;
+}
 
-    .seminar-date-main {
-      background: rgba(11, 61, 145, .08);
-      color: #0b3d91;
-      border: 1px solid rgba(11, 61, 145, .10);
-    }
+.seminar-badge-main {
+  background: #0b3d91;
+  color: #fff;
+}
 
-    .seminar-main-title {
-      font-size: 1.75rem;
-      line-height: 1.22;
-      font-weight: 900;
-      color: #1d2530;
-      letter-spacing: -.02em;
-      margin: 0 0 18px;
-    }
+.seminar-date-main {
+  background: rgba(11, 61, 145, .08);
+  color: #0b3d91;
+  border: 1px solid rgba(11, 61, 145, .10);
+}
 
-    .seminar-speaker-box {
-      display: grid;
-      grid-template-columns: 42px 1fr;
-      gap: 13px;
-      align-items: start;
-      margin-bottom: 18px;
-    }
+.seminar-main-title {
+  font-size: 1.62rem;
+  line-height: 1.25;
+  font-weight: 900;
+  color: #1d2530;
+  letter-spacing: -.02em;
+  margin: 0 0 18px;
+}
 
-    .seminar-speaker-box i {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: #0b3d91;
-      background: rgba(11, 61, 145, .08);
-      font-size: 20px;
-    }
+.seminar-speaker-box {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 13px;
+  align-items: start;
+  margin-bottom: 18px;
+}
 
-    .seminar-speaker-name {
-      font-weight: 900;
-      color: #0b3d91;
-      font-size: 1.08rem;
-      margin-bottom: 3px;
-    }
+.seminar-speaker-box i {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b3d91;
+  background: rgba(11, 61, 145, .08);
+  font-size: 20px;
+}
 
-    .seminar-speaker-affiliation {
-      color: #647184;
-      line-height: 1.55;
-    }
+.seminar-speaker-name {
+  font-weight: 900;
+  color: #0b3d91;
+  font-size: 1.08rem;
+  margin-bottom: 3px;
+}
 
-    .seminar-info-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-bottom: 18px;
-    }
+.seminar-speaker-affiliation {
+  color: #647184;
+  line-height: 1.55;
+}
 
-    .seminar-info-box {
-      display: grid;
-      grid-template-columns: 30px 1fr;
-      gap: 10px;
-      background: #f6f9fd;
-      border: 1px solid rgba(11, 61, 145, .08);
-      border-radius: 14px;
-      padding: 13px;
-      min-height: 82px;
-    }
+.seminar-info-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 18px;
+}
 
-    .seminar-info-box i {
-      color: #0b3d91;
-      font-size: 19px;
-      margin-top: 2px;
-    }
+.seminar-info-box {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 10px;
+  background: #f6f9fd;
+  border: 1px solid rgba(11, 61, 145, .08);
+  border-radius: 14px;
+  padding: 13px;
+  min-height: 82px;
+}
 
-    .seminar-info-box strong {
-      display: block;
-      color: #1d2530;
-      font-size: .88rem;
-      margin-bottom: 3px;
-    }
+.seminar-info-box i {
+  color: #0b3d91;
+  font-size: 19px;
+  margin-top: 2px;
+}
 
-    .seminar-info-box span {
-      display: block;
-      color: #586678;
-      line-height: 1.45;
-      font-size: .92rem;
-    }
+.seminar-info-box strong {
+  display: block;
+  color: #1d2530;
+  font-size: .88rem;
+  margin-bottom: 3px;
+}
 
-    .seminar-main-description {
-      color: #4b5868;
-      line-height: 1.72;
-      margin: 0;
-    }
+.seminar-info-box span {
+  display: block;
+  color: #586678;
+  line-height: 1.45;
+  font-size: .92rem;
+}
 
-    .research-seminar-swiper .swiper-button-prev,
-    .research-seminar-swiper .swiper-button-next {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: #fff;
-      color: #0b3d91;
-      border: 1px solid rgba(11, 61, 145, .10);
-      box-shadow: 0 12px 28px rgba(11, 61, 145, .16);
-    }
+.seminar-main-description {
+  color: #4b5868;
+  line-height: 1.72;
+  margin: 0;
+}
 
-    .research-seminar-swiper .swiper-button-prev::after,
-    .research-seminar-swiper .swiper-button-next::after {
-      font-size: 18px;
-      font-weight: 900;
-    }
+.research-seminar-swiper .swiper-button-prev,
+.research-seminar-swiper .swiper-button-next {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #fff;
+  color: #0b3d91;
+  border: 1px solid rgba(11, 61, 145, .10);
+  box-shadow: 0 12px 28px rgba(11, 61, 145, .16);
+}
 
-    .research-seminar-swiper .swiper-pagination {
-      bottom: -8px !important;
-    }
+.research-seminar-swiper .swiper-button-prev::after,
+.research-seminar-swiper .swiper-button-next::after {
+  font-size: 18px;
+  font-weight: 900;
+}
 
-    .research-seminar-swiper .swiper-pagination-bullet {
-      opacity: 1;
-      background: #aebbd0;
-    }
+.research-seminar-swiper .swiper-pagination {
+  bottom: -8px !important;
+}
 
-    .research-seminar-swiper .swiper-pagination-bullet-active {
-      background: #0b3d91;
-    }
+.research-seminar-swiper .swiper-pagination-bullet {
+  opacity: 1;
+  background: #aebbd0;
+}
 
-    .seminar-swipe-helper {
-      position: relative;
-      text-align: center;
-      color: #66758a;
-      font-weight: 700;
-      margin-top: 22px;
-    }
+.research-seminar-swiper .swiper-pagination-bullet-active {
+  background: #0b3d91;
+}
 
-    @media (max-width: 1199px) {
-      .seminar-card-horizontal {
-        height: 500px;
-      }
-      .research-seminar-swiper .swiper-slide:not(.swiper-slide-active) .seminar-card-horizontal {
-        height: 400px;
-      }
-      .seminar-main-title {
-        font-size: 1.48rem;
-      }
-      .seminar-detail-zone {
-        padding: 28px;
-      }
-    }
+.seminar-swipe-helper {
+  position: relative;
+  text-align: center;
+  color: #66758a;
+  font-weight: 700;
+  margin-top: 22px;
+}
 
-    @media (max-width: 991px) {
-      .seminar-carousel-wrap {
-        padding: 0 24px 52px;
-      }
-      .seminar-card-horizontal,
-      .research-seminar-swiper .swiper-slide:not(.swiper-slide-active) .seminar-card-horizontal {
-        height: auto;
-        min-height: auto;
-        grid-template-columns: 1fr;
-      }
-      .seminar-image-zone {
-        height: 330px;
-      }
-      .seminar-detail-zone,
-      .research-seminar-swiper .swiper-slide:not(.swiper-slide-active) .seminar-detail-zone {
-        display: block;
-        padding: 24px;
-      }
-      .seminar-side-overlay {
-        display: none !important;
-      }
-      .seminar-info-row {
-        grid-template-columns: 1fr;
-      }
-    }
+@media (max-width: 1199px) {
+  .seminar-card-horizontal {
+    min-height: 520px;
+  }
 
-    @media (max-width: 576px) {
-      .research-seminars-section {
-        padding: 52px 0 56px;
-      }
-      .seminar-carousel-wrap {
-        padding-left: 0;
-        padding-right: 0;
-      }
-      .research-seminar-swiper .swiper-button-prev,
-      .research-seminar-swiper .swiper-button-next {
-        display: none;
-      }
-      .seminar-section-heading {
-        padding: 0 8px;
-      }
-      .seminar-image-zone {
-        height: 260px;
-      }
-      .seminar-main-title {
-        font-size: 1.22rem;
-      }
-      .seminar-detail-zone {
-        padding: 20px;
-      }
-    }
+  .seminar-image-zone {
+    min-height: 520px;
+  }
+
+  .research-seminar-swiper .swiper-slide:not(.swiper-slide-active) .seminar-card-horizontal {
+    height: 400px;
+    min-height: 400px;
+  }
+
+  .research-seminar-swiper .swiper-slide:not(.swiper-slide-active) .seminar-image-zone {
+    min-height: 400px;
+  }
+
+  .seminar-main-title {
+    font-size: 1.42rem;
+  }
+
+  .seminar-detail-zone {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 991px) {
+  .seminar-carousel-wrap {
+    padding: 0 24px 52px;
+  }
+
+  .seminar-card-horizontal,
+  .research-seminar-swiper .swiper-slide:not(.swiper-slide-active) .seminar-card-horizontal {
+    height: auto;
+    min-height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .seminar-image-zone,
+  .research-seminar-swiper .swiper-slide:not(.swiper-slide-active) .seminar-image-zone {
+    height: 360px;
+    min-height: 360px;
+  }
+
+  .seminar-detail-zone,
+  .research-seminar-swiper .swiper-slide:not(.swiper-slide-active) .seminar-detail-zone {
+    display: block;
+    padding: 24px;
+  }
+
+  .seminar-side-overlay {
+    display: none !important;
+  }
+
+  .seminar-info-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .research-seminars-section {
+    padding: 52px 0 56px;
+  }
+
+  .seminar-carousel-wrap {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .research-seminar-swiper .swiper-button-prev,
+  .research-seminar-swiper .swiper-button-next {
+    display: none;
+  }
+
+  .seminar-section-heading {
+    padding: 0 8px;
+  }
+
+  .seminar-image-zone,
+  .research-seminar-swiper .swiper-slide:not(.swiper-slide-active) .seminar-image-zone {
+    height: 280px;
+    min-height: 280px;
+  }
+
+  .seminar-main-title {
+    font-size: 1.22rem;
+  }
+
+  .seminar-detail-zone {
+    padding: 20px;
+  }
+}
 
   </style>
 </head>
@@ -596,158 +620,276 @@
          - Side seminars show the poster only.
          - The center seminar displays the poster and then autoplays the photos.
          ======================================================= -->
-    <section id="research-seminars" class="research-seminars-section">
-      <div class="container" data-aos="fade-up">
+    <!-- =======================================================
+     RESEARCH SEMINAR SERIES — HORIZONTAL CENTER SLIDER — FINAL
 
-        <div class="seminar-section-heading">
-          <div class="seminar-section-kicker">
-            <i class="bi bi-mic"></i>
-            SSTL / LTID Seminar Series
-          </div>
-          <h2>Research Seminar Series</h2>
-          <p>
-            A seminar series bringing together researchers, students, and invited speakers to discuss
-            emerging topics in transportation, data science, artificial intelligence, optimization, and sustainable mobility.
-          </p>
-        </div>
+     HOW TO ADD A NEW SEMINAR:
+     1) Duplicate one complete <div class="swiper-slide"> ... </div> block below.
+     2) Replace title, speaker, affiliation, date, time, location, theme, and description.
+     3) Replace the image paths inside .seminar-photo-swiper.
+        IMPORTANT: the FIRST image must be the poster.
+        The following images can be event photos.
+     4) Put the most recent seminar FIRST if you want it to appear in the center by default.
 
-        <div class="seminar-carousel-wrap">
-          <div class="swiper research-seminar-swiper" id="research-seminar-swiper">
-            <div class="swiper-wrapper">
+     VISUAL BEHAVIOR:
+     - Side seminars show the poster only.
+     - The center seminar displays the poster and then autoplays the photos.
+     - Images are NOT cropped because object-fit is set to contain.
+     ======================================================= -->
+<section id="research-seminars" class="research-seminars-section">
+  <div class="container" data-aos="fade-up">
 
-              <!-- =======================================================
-                   SEMINAR 1 — MAIN / MOST RECENT SEMINAR
-                   Put the most recent seminar first.
-                   The first image is the poster; the next images are photos.
-                   ======================================================= -->
-              <div class="swiper-slide">
-                <article class="seminar-card-horizontal">
-                  <div class="seminar-image-zone">
-                    <div class="swiper seminar-photo-swiper">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                          <img src="assets/img/events/research-seminars/Prof-Kazuo-Nishii/poster.jpg" alt="Poster — Prof. Kazuo Nishii seminar">
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="assets/img/events/research-seminars/Prof-Kazuo-Nishii/group-photo.png" alt="Prof. Kazuo Nishii seminar">
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="assets/img/events/research-seminars/Prof-Kazuo-Nishii/photo1.png" alt="Prof. Kazuo Nishii seminar">
-                        </div>
-                       
-                      </div>
-                      <div class="swiper-pagination"></div>
-                    </div>
-
-                    <div class="seminar-side-overlay">
-                      <div class="side-date"><i class="bi bi-calendar3"></i> July 17, 2026</div>
-                      <h3>What Are the Issues Related to the Introduction of MaaS Mobility Options in Accordance with the Needs of Commuters in Japan?​</h3>
-                      <p>Prof. Kazuo Nishii</p>
-                    </div>
-                  </div>
-
-                  <div class="seminar-detail-zone">
-                    <div class="seminar-badge-row">
-                      <span class="seminar-badge-main"><i class="bi bi-mic-fill"></i> Research Seminar</span>
-                      <span class="seminar-date-main"><i class="bi bi-calendar3"></i> July 06, 2026 (Monday)</span>
-                    </div>
-
-                    <h3 class="seminar-main-title">
-                      What Are the Issues Related to the Introduction of MaaS Mobility Options in Accordance with the Needs of Commuters in Japan?​
-                    </h3>
-
-                    <div class="seminar-speaker-box">
-                      <i class="bi bi-person"></i>
-                      <div>
-                        <div class="seminar-speaker-name">Prof. KAzuo Nishii</div>
-                        <div class="seminar-speaker-affiliation">
-                          Emeritus Professor ​<br>
-                         Yamanashi University, Japan
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="seminar-info-row">
-                     
-                    
-
-                    <p class="seminar-main-description">
-                      This seminar explores the challenges of introducing MaaS mobility options in Japan in response to commuters’ needs.
-It focuses on how data-driven approaches can support user-oriented mobility planning around railway terminal areas.
-The talk highlights the potential of MaaS to improve urban accessibility, connectivity, and sustainable transportation choices.
-                    </p>
-                  </div>
-                </article>
-              </div>
-
-              <!-- =======================================================
-                   SEMINAR 2 — DUPLICATE AND CUSTOMIZE THIS BLOCK
-                   Replace all content and image paths for a future seminar.
-                   ======================================================= -->
-              <div class="swiper-slide">
-                <article class="seminar-card-horizontal">
-                  <div class="seminar-image-zone">
-                    <div class="swiper seminar-photo-swiper">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                          <img src="assets/img/events/research-seminars/Prof-Babaak-Ashuri/poster.jpg" alt="Seminar poster">
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="assets/img/events/seminars/sample-2/photo1.jpg" alt="Seminar photo 1">
-                        </div>
-                       
-                      </div>
-                      <div class="swiper-pagination"></div>
-                    </div>
-
-                    <div class="seminar-side-overlay">
-                      <div class="side-date"><i class="bi bi-calendar3"></i> July 17, 2026 </div>
-                      <h3>Transportation Project Delivery Analytics: Applying Data Analytics and AI to Enhance Project Risk Analysis​</h3>
-                      <p>Prof. Babaak Ashuri</p>
-                    </div>
-                  </div>
-
-                  <div class="seminar-detail-zone">
-                    <div class="seminar-badge-row">
-                      <span class="seminar-badge-main"><i class="bi bi-mic-fill"></i> Research Seminar</span>
-                      <span class="seminar-date-main"><i class="bi bi-calendar3"></i> July 17, 2026 (Friday)</span>
-                    </div>
-
-                    <h3 class="seminar-main-title">
-                      Transportation Project Delivery Analytics: Applying Data Analytics and AI to Enhance Project Risk Analysis​
-                    </h3>
-
-                    <div class="seminar-speaker-box">
-                      <i class="bi bi-person"></i>
-                      <div>
-                        <div class="seminar-speaker-name">Prof. Babaak Ashuri</div>
-                        <div class="seminar-speaker-affiliation">
-                          Ph.D., FDBIA​<br>
-                          Georgia Institute of Technology
-                        </div>
-                      </div>
-                    </div>
-
-                    <p class="seminar-main-description">
-                     This seminar focuses on how data analytics and artificial intelligence can enhance transportation project delivery and risk analysis.
-It highlights methods for improving decision-making, cost control, and infrastructure planning.
-The talk connects advanced analytics with practical challenges in managing complex transportation projects.
-                    </p>
-                  </div>
-                </article>
-              </div>
-
-             
-
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-pagination"></div>
-          </div>
-
-        </div>
+    <div class="seminar-section-heading">
+      <div class="seminar-section-kicker">
+        <i class="bi bi-mic"></i>
+        SSTL / LTID Seminar Series
       </div>
-    </section>
 
+      <h2>Research Seminar Series</h2>
+
+      <p>
+        A seminar series bringing together researchers, students, and invited speakers to discuss
+        emerging topics in transportation, data science, artificial intelligence, optimization, and sustainable mobility.
+      </p>
+    </div>
+
+    <div class="seminar-carousel-wrap">
+      <div class="swiper research-seminar-swiper" id="research-seminar-swiper">
+        <div class="swiper-wrapper">
+
+          <!-- =======================================================
+               SEMINAR 1 — MAIN / MOST RECENT SEMINAR
+               Put the most recent seminar first.
+               The first image is the poster; the next images are photos.
+               ======================================================= -->
+          <div class="swiper-slide">
+            <article class="seminar-card-horizontal">
+
+              <div class="seminar-image-zone">
+                <div class="swiper seminar-photo-swiper">
+                  <div class="swiper-wrapper">
+
+                    <!-- DEFAULT IMAGE / POSTER -->
+                    <div class="swiper-slide">
+                      <img src="assets/img/events/research-seminars/Prof-Kazuo-Nishii/poster.jpg"
+                           alt="Poster — Prof. Kazuo Nishii seminar">
+                    </div>
+
+                    <!-- EVENT PHOTOS -->
+                    <div class="swiper-slide">
+                      <img src="assets/img/events/research-seminars/Prof-Kazuo-Nishii/group-photo.png"
+                           alt="Prof. Kazuo Nishii seminar group photo">
+                    </div>
+
+                    <div class="swiper-slide">
+                      <img src="assets/img/events/research-seminars/Prof-Kazuo-Nishii/photo1.png"
+                           alt="Prof. Kazuo Nishii seminar photo">
+                    </div>
+
+                  </div>
+
+                  <div class="swiper-pagination"></div>
+                </div>
+
+                <div class="seminar-side-overlay">
+                  <div class="side-date">
+                    <i class="bi bi-calendar3"></i>
+                    July 6, 2026
+                  </div>
+
+                  <h3>
+                    What Are the Issues Related to the Introduction of MaaS Mobility Options in Accordance with the Needs of Commuters in Japan?
+                  </h3>
+
+                  <p>Prof. Kazuo Nishii</p>
+                </div>
+              </div>
+
+              <div class="seminar-detail-zone">
+                <div class="seminar-badge-row">
+                  <span class="seminar-badge-main">
+                    <i class="bi bi-mic-fill"></i>
+                    Research Seminar
+                  </span>
+
+                  <span class="seminar-date-main">
+                    <i class="bi bi-calendar3"></i>
+                    July 6, 2026 (Monday)
+                  </span>
+                </div>
+
+                <h3 class="seminar-main-title">
+                  What Are the Issues Related to the Introduction of MaaS Mobility Options in Accordance with the Needs of Commuters in Japan?
+                </h3>
+
+                <div class="seminar-speaker-box">
+                  <i class="bi bi-person"></i>
+
+                  <div>
+                    <div class="seminar-speaker-name">Prof. Kazuo Nishii</div>
+
+                    <div class="seminar-speaker-affiliation">
+                      Emeritus Professor<br>
+                      Yamanashi University, Japan
+                    </div>
+                  </div>
+                </div>
+
+                <div class="seminar-info-row">
+                  <div class="seminar-info-box">
+                    <i class="bi bi-clock"></i>
+                    <div>
+                      <strong>Time</strong>
+                      <span>10:00 AM – 11:30 AM</span>
+                    </div>
+                  </div>
+
+                  <div class="seminar-info-box">
+                    <i class="bi bi-geo-alt"></i>
+                    <div>
+                      <strong>Location</strong>
+                      <span>Pavillon Adrien-Pouliot (PLT), Room 3370</span>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="seminar-main-description">
+                  This seminar explores the challenges of introducing MaaS mobility options in Japan in response to commuters’ needs.
+                  It focuses on how data-driven approaches can support user-oriented mobility planning around railway terminal areas.
+                  The talk highlights the potential of MaaS to improve urban accessibility, connectivity, and sustainable transportation choices.
+                </p>
+              </div>
+
+            </article>
+          </div>
+
+          <!-- =======================================================
+               SEMINAR 2 — DUPLICATE AND CUSTOMIZE THIS BLOCK
+               Replace all content and image paths for a future seminar.
+               The first image must always be the poster.
+               ======================================================= -->
+          <div class="swiper-slide">
+            <article class="seminar-card-horizontal">
+
+              <div class="seminar-image-zone">
+                <div class="swiper seminar-photo-swiper">
+                  <div class="swiper-wrapper">
+
+                    <!-- DEFAULT IMAGE / POSTER -->
+                    <div class="swiper-slide">
+                      <img src="assets/img/events/research-seminars/Prof-Babak-Ashuri/poster.jpg"
+                           alt="Poster — Prof. Babak Ashuri seminar">
+                    </div>
+
+                    <!-- EVENT PHOTOS -->
+                    <div class="swiper-slide">
+                      <img src="assets/img/events/research-seminars/Prof-Babak-Ashuri/photo1.jpg"
+                           alt="Prof. Babak Ashuri seminar photo 1">
+                    </div>
+
+                    <div class="swiper-slide">
+                      <img src="assets/img/events/research-seminars/Prof-Babak-Ashuri/photo2.jpg"
+                           alt="Prof. Babak Ashuri seminar photo 2">
+                    </div>
+
+                  </div>
+
+                  <div class="swiper-pagination"></div>
+                </div>
+
+                <div class="seminar-side-overlay">
+                  <div class="side-date">
+                    <i class="bi bi-calendar3"></i>
+                    July 17, 2026
+                  </div>
+
+                  <h3>
+                    Transportation Project Delivery Analytics: Applying Data Analytics and AI to Enhance Project Risk Analysis
+                  </h3>
+
+                  <p>Prof. Babak Ashuri</p>
+                </div>
+              </div>
+
+              <div class="seminar-detail-zone">
+                <div class="seminar-badge-row">
+                  <span class="seminar-badge-main">
+                    <i class="bi bi-mic-fill"></i>
+                    Research Seminar
+                  </span>
+
+                  <span class="seminar-date-main">
+                    <i class="bi bi-calendar3"></i>
+                    July 17, 2026 (Friday)
+                  </span>
+                </div>
+
+                <h3 class="seminar-main-title">
+                  Transportation Project Delivery Analytics: Applying Data Analytics and AI to Enhance Project Risk Analysis
+                </h3>
+
+                <div class="seminar-speaker-box">
+                  <i class="bi bi-person"></i>
+
+                  <div>
+                    <div class="seminar-speaker-name">Prof. Babak Ashuri</div>
+
+                    <div class="seminar-speaker-affiliation">
+                      Ph.D., FDBIA<br>
+                      Georgia Institute of Technology
+                    </div>
+                  </div>
+                </div>
+
+                <div class="seminar-info-row">
+                  <div class="seminar-info-box">
+                    <i class="bi bi-clock"></i>
+                    <div>
+                      <strong>Time</strong>
+                      <span>9:30 AM – 3:00 PM</span>
+                    </div>
+                  </div>
+
+                  <div class="seminar-info-box">
+                    <i class="bi bi-geo-alt"></i>
+                    <div>
+                      <strong>Location</strong>
+                      <span>Pavillon Adrien-Pouliot (PLT), Room 3370</span>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="seminar-main-description">
+                  This seminar focuses on how data analytics and artificial intelligence can enhance transportation project delivery and risk analysis.
+                  It highlights methods for improving decision-making, cost control, and infrastructure planning.
+                  The talk connects advanced analytics with practical challenges in managing complex transportation projects.
+                </p>
+              </div>
+
+            </article>
+          </div>
+
+          <!-- =======================================================
+               ADD FUTURE SEMINARS HERE
+               Copy one complete <div class="swiper-slide"> ... </div>
+               and paste it above or below this comment.
+               ======================================================= -->
+
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <div class="seminar-swipe-helper">
+        <i class="bi bi-arrow-left-right me-1"></i>
+        Swipe or use the arrows to browse the seminar series.
+      </div>
+    </div>
+
+  </div>
+</section>
 
     <section id="lab-activities" class="py-5">
       <div class="container" data-aos="fade-up">
