@@ -620,22 +620,7 @@
          - Side seminars show the poster only.
          - The center seminar displays the poster and then autoplays the photos.
          ======================================================= -->
-    <!-- =======================================================
-     RESEARCH SEMINAR SERIES — HORIZONTAL CENTER SLIDER — FINAL
-
-     HOW TO ADD A NEW SEMINAR:
-     1) Duplicate one complete <div class="swiper-slide"> ... </div> block below.
-     2) Replace title, speaker, affiliation, date, time, location, theme, and description.
-     3) Replace the image paths inside .seminar-photo-swiper.
-        IMPORTANT: the FIRST image must be the poster.
-        The following images can be event photos.
-     4) Put the most recent seminar FIRST if you want it to appear in the center by default.
-
-     VISUAL BEHAVIOR:
-     - Side seminars show the poster only.
-     - The center seminar displays the poster and then autoplays the photos.
-     - Images are NOT cropped because object-fit is set to contain.
-     ======================================================= -->
+  
 <section id="research-seminars" class="research-seminars-section">
   <div class="container" data-aos="fade-up">
 
@@ -666,74 +651,46 @@
             <article class="seminar-card-horizontal">
 
               <div class="seminar-image-zone">
-                <div class="swiper seminar-photo-swiper">
-                  <div class="swiper-wrapper">
+  <div class="swiper seminar-photo-swiper">
+    <div class="swiper-wrapper">
 
-                    <!-- DEFAULT IMAGE / POSTER -->
-                    <div class="swiper-slide">
-                      <img src="assets/img/events/research-seminars/Prof-Kazuo-Nishii/poster-img.jpg"
-                           alt="Poster — Prof. Kazuo Nishii seminar">
-                    </div>
+      <!-- DEFAULT IMAGE / POSTER -->
+      <div class="swiper-slide">
+        <img src="assets/img/events/research-seminars/Prof-Kazuo-Nishii/poster-img.jpg"
+             alt="Poster — Prof. Kazuo Nishii seminar">
+      </div>
 
-                    <!-- EVENT PHOTOS -->
-                    <div class="swiper-slide">
-                      <img src="assets/img/events/research-seminars/Prof-Kazuo-Nishii/group-photo1.png"
-                           alt="Prof. Kazuo Nishii seminar group photo">
-                    </div>
+      <!-- EVENT PHOTO 1 -->
+      <div class="swiper-slide">
+        <img src="assets/img/events/research-seminars/Prof-Kazuo-Nishii/group-photo1.png"
+             alt="Prof. Kazuo Nishii seminar group photo">
+      </div>
 
-                    <div class="swiper-slide">
-                      <img src="assets/img/events/research-seminars/Prof-Kazuo-Nishii/photo1.png"
-                           alt="Prof. Kazuo Nishii seminar photo">
-                    </div>
+      <!-- EVENT PHOTO 2 -->
+      <div class="swiper-slide">
+        <img src="assets/img/events/research-seminars/Prof-Kazuo-Nishii/photo1.png"
+             alt="Prof. Kazuo Nishii seminar photo">
+      </div>
 
-                  </div>
+    </div>
 
-                  <div class="swiper-pagination"></div>
-                </div>
+    <!-- IMPORTANT: pagination spécifique au mini-slider -->
+    <div class="swiper-pagination seminar-photo-pagination"></div>
+  </div>
 
-                <div class="seminar-side-overlay">
-                  <div class="side-date">
-                    <i class="bi bi-calendar3"></i>
-                    July 6, 2026
-                  </div>
+  <div class="seminar-side-overlay">
+    <div class="side-date">
+      <i class="bi bi-calendar3"></i>
+      July 6, 2026
+    </div>
 
-                  <h3>
-                    What Are the Issues Related to the Introduction of MaaS Mobility Options in Accordance with the Needs of Commuters in Japan?
-                  </h3>
+    <h3>
+      What Are the Issues Related to the Introduction of MaaS Mobility Options in Accordance with the Needs of Commuters in Japan?
+    </h3>
 
-                  <p>Prof. Kazuo Nishii</p>
-                </div>
-              </div>
-
-              <div class="seminar-detail-zone">
-                <div class="seminar-badge-row">
-                  <span class="seminar-badge-main">
-                    <i class="bi bi-mic-fill"></i>
-                    Research Seminar
-                  </span>
-
-                  <span class="seminar-date-main">
-                    <i class="bi bi-calendar3"></i>
-                    July 6, 2026 (Monday)
-                  </span>
-                </div>
-
-                <h3 class="seminar-main-title">
-                  What Are the Issues Related to the Introduction of MaaS Mobility Options in Accordance with the Needs of Commuters in Japan?
-                </h3>
-
-                <div class="seminar-speaker-box">
-                  <i class="bi bi-person"></i>
-
-                  <div>
-                    <div class="seminar-speaker-name">Prof. Kazuo Nishii</div>
-
-                    <div class="seminar-speaker-affiliation">
-                      Emeritus Professor<br>
-                      Yamanashi University, Japan
-                    </div>
-                  </div>
-                </div>
+    <p>Prof. Kazuo Nishii</p>
+  </div>
+</div>
 
                 
 
@@ -847,14 +804,9 @@
 
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-        <div class="swiper-pagination"></div>
       </div>
 
-      <div class="seminar-swipe-helper">
-        <i class="bi bi-arrow-left-right me-1"></i>
-        Swipe or use the arrows to browse the seminar series.
-      </div>
-    </div>
+  
 
   </div>
 </section>
