@@ -214,11 +214,15 @@
   overflow: hidden;
 }
 
-.research-seminar-swiper .swiper-slide:not(.swiper-slide-active) .seminar-image-zone {
-  min-height: 440px;
+/* Le Swiper remplit réellement toute la zone d'image */
+.seminar-photo-swiper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-.seminar-photo-swiper,
 .seminar-photo-swiper .swiper-wrapper,
 .seminar-photo-swiper .swiper-slide {
   width: 100%;
@@ -230,18 +234,33 @@
   height: 100%;
   display: block;
   object-fit: contain;
+  object-position: center;
   background: #f4f8ff;
 }
 
-.seminar-photo-swiper .swiper-pagination {
-  bottom: 13px !important;
+/* Pagination des photos */
+.research-seminar-swiper
+.seminar-photo-swiper
+> .swiper-pagination {
+  position: absolute;
+  left: 50%;
+  bottom: 16px !important;
+  width: auto !important;
+  transform: translateX(-50%);
+  padding: 6px 9px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 4px 12px rgba(11, 61, 145, 0.14);
+  line-height: 1;
+  z-index: 15;
 }
 
 .seminar-photo-swiper .swiper-pagination-bullet {
-  background: rgba(255,255,255,.72);
-  opacity: 1;
   width: 8px;
   height: 8px;
+  margin: 0 4px !important;
+  background: #9caec9;
+  opacity: 1;
 }
 
 .seminar-photo-swiper .swiper-pagination-bullet-active {
@@ -423,35 +442,61 @@
   margin: 0;
 }
 
-.research-seminar-swiper .swiper-button-prev,
-.research-seminar-swiper .swiper-button-next {
-  width: 48px;
-  height: 48px;
+.seminar-main-nav {
+  position: absolute;
+  top: 50%;
+  z-index: 30;
+
+  width: 46px;
+  height: 46px;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(11, 61, 145, 0.14);
   border-radius: 50%;
-  background: #fff;
+
+  background: #ffffff;
   color: #0b3d91;
-  border: 1px solid rgba(11, 61, 145, .10);
-  box-shadow: 0 12px 28px rgba(11, 61, 145, .16);
+
+  box-shadow: 0 10px 26px rgba(11, 61, 145, 0.18);
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
-.research-seminar-swiper .swiper-button-prev::after,
-.research-seminar-swiper .swiper-button-next::after {
-  font-size: 18px;
-  font-weight: 900;
-}
-
-.research-seminar-swiper .swiper-pagination {
-  bottom: -8px !important;
-}
-
-.research-seminar-swiper .swiper-pagination-bullet {
-  opacity: 1;
-  background: #aebbd0;
-}
-
-.research-seminar-swiper .swiper-pagination-bullet-active {
+.seminar-main-nav:hover {
   background: #0b3d91;
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.06);
 }
+
+.seminar-main-nav i {
+  font-size: 21px;
+  line-height: 1;
+}
+
+.seminar-main-prev {
+  left: 0;
+}
+
+.seminar-main-next {
+  right: 0;
+}
+
+.seminar-main-nav.swiper-button-disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+
 
 .seminar-swipe-helper {
   position: relative;
@@ -522,9 +567,10 @@
 }
 
 @media (max-width: 576px) {
-  .research-seminars-section {
-    padding: 52px 0 56px;
+  .seminar-main-nav {
+    display: none;
   }
+}
 
   .seminar-carousel-wrap {
     padding-left: 0;
@@ -756,53 +802,56 @@
             <article class="seminar-card-horizontal">
 
               <div class="seminar-image-zone">
-                <div class="swiper seminar-photo-swiper">
-                  <div class="swiper-wrapper">
 
-                    <!-- DEFAULT IMAGE / POSTER -->
-                    <div class="swiper-slide">
-                      <img src="assets/img/events/research-seminars/Prof-Babaak-Ashuri/poster.png"
-                           alt="Poster — Prof. Babaak Ashuri seminar">
-                    </div>
+  <div class="swiper seminar-photo-swiper">
+    <div class="swiper-wrapper">
 
-                   
-                  </div>
-                  <!-- EVENT PHOTOS -->
-                    <div class="swiper-slide">
-                      <img src="assets/img/events/research-seminars/Prof-Babaak-Ashuri/photo1.png"
-                           alt="Prof. Kazuo Nishii seminar group photo">
-                    </div>
+      <!-- POSTER -->
+      <div class="swiper-slide">
+        <img
+          src="assets/img/events/research-seminars/Prof-Babaak-Ashuri/poster.png"
+          alt="Poster — Prof. Babaak Ashuri seminar">
+      </div>
 
-                  <div class="swiper-slide">
-                      <img src="assets/img/events/research-seminars/Prof-Babaak-Ashuri/photo2.png"
-                           alt="Prof. Kazuo Nishii seminar group photo">
-                    </div>
+      <!-- EVENT PHOTOS -->
+      <div class="swiper-slide">
+        <img
+          src="assets/img/events/research-seminars/Prof-Babaak-Ashuri/photo1.png"
+          alt="Prof. Babaak Ashuri seminar photo 1">
+      </div>
 
-                  <div class="swiper-slide">
-                      <img src="assets/img/events/research-seminars/Prof-Babaak-Ashuri/photo3.png"
-                           alt="Prof. Kazuo Nishii seminar group photo">
-                    </div>
+      <div class="swiper-slide">
+        <img
+          src="assets/img/events/research-seminars/Prof-Babaak-Ashuri/photo2.png"
+          alt="Prof. Babaak Ashuri seminar photo 2">
+      </div>
 
-                    
-                  </div>
+      <div class="swiper-slide">
+        <img
+          src="assets/img/events/research-seminars/Prof-Babaak-Ashuri/photo3.png"
+          alt="Prof. Babaak Ashuri seminar photo 3">
+      </div>
 
-                  <div class="swiper-pagination"></div>
-                </div>
+    </div>
 
-                <div class="seminar-side-overlay">
-                  <div class="side-date">
-                    <i class="bi bi-calendar3"></i>
-                    July 17, 2026
-                  </div>
+    <div class="swiper-pagination"></div>
+  </div>
 
-                  <h3>
-                    Transportation Project Delivery Analytics: Applying Data Analytics and AI to Enhance Project Risk Analysis
-                  </h3>
+  <div class="seminar-side-overlay">
+    <div class="side-date">
+      <i class="bi bi-calendar3"></i>
+      July 17, 2026
+    </div>
 
-                  <p>Prof. Babaak Ashuri</p>
-                </div>
-              </div>
+    <h3>
+      Transportation Project Delivery Analytics:
+      Applying Data Analytics and AI to Enhance Project Risk Analysis
+    </h3>
 
+    <p>Prof. Babaak Ashuri</p>
+  </div>
+
+</div>
               <div class="seminar-detail-zone">
                 <div class="seminar-badge-row">
                   <span class="seminar-badge-main">
@@ -851,16 +900,28 @@
                and paste it above or below this comment.
                ======================================================= -->
 
-        </div>
-
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+                </div>
       </div>
 
-     
+      <!-- Main seminar navigation -->
+      <button
+        type="button"
+        class="seminar-main-nav seminar-main-prev"
+        aria-label="Previous seminar">
+        <i class="bi bi-chevron-left"></i>
+      </button>
 
+      <button
+        type="button"
+        class="seminar-main-nav seminar-main-next"
+        aria-label="Next seminar">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+
+    </div>
   </div>
 </section>
+    
 
     <section id="lab-activities" class="py-5">
       <div class="container" data-aos="fade-up">
@@ -1225,13 +1286,10 @@ if (seminarEl && typeof Swiper !== "undefined") {
     spaceBetween: 28,
     grabCursor: true,
     initialSlide: 0,
-    pagination: {
-      el: "#research-seminar-swiper .swiper-pagination",
-      clickable: true
-    },
     navigation: {
-      nextEl: "#research-seminar-swiper .swiper-button-next",
-      prevEl: "#research-seminar-swiper .swiper-button-prev"
+  nextEl: ".seminar-main-next",
+  prevEl: ".seminar-main-prev"
+},
     },
     breakpoints: {
       0: {
