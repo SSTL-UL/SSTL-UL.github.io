@@ -28,6 +28,7 @@
   <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
 
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
@@ -165,25 +166,23 @@
             <div class="project-detail-card">
               <h4>Objective</h4>
               <p>
-                Traditional urban mobility simulations are often limited by computational complexity and reliance on simplified behavioral assumptions.
-                This project seeks to overcome these limitations by developing novel simulation methodologies powered by machine learning.
-                Our goal is to create highly scalable, data-driven, and behaviorally realistic simulations that can accurately model the complexities
-                of modern urban transportation.
+              Every day, millions of people choose how to get around a city — by car, bus, bike, or taxi — and these choices affect everyone else on the road. When one mode gets congested, it often pushes more people onto another, creating ripple effects across the entire transportation system. Predicting these patterns accurately is essential for planning better cities, but today's traffic models are slow and struggle to keep up with the scale and complexity of real urban networks with multiple modes of transport. This project aims to solve that problem by combining rigorous mathematical modeling with modern machine learning, creating a tool that can realistically simulate how people move across a whole city — quickly enough to test new ideas before they're built. 
+                
               </p>
 
               <h4>Methodology</h4>
               <p>
-                We are exploring the use of agent-based modeling combined with deep learning to simulate the decisions of millions of individual travelers.
-                By training neural networks on large-scale mobility datasets, our simulated agents can learn and replicate complex human travel patterns.
-                This allows us to test the impact of new technologies, policies, and infrastructure projects—such as autonomous vehicle fleets or congestion pricing—
-                in a high-fidelity virtual environment before real-world implementation.
+               Our approach works in two stages. 
+
+Stage 1 — Building a realistic mathematical optimization model. We first create a detailed model of how people distribute themselves across a transportation network. This model captures a key real-world principle: travelers naturally settle into a state where no one can improve their trip by switching routes or modes — a balance known as traffic equilibrium. Our model goes further by accounting for interactions between different modes (for example, how car congestion can push more people onto buses or bikes) and for differences in service quality or cost across travel options. We solve this model using established mathematical techniques to obtain a highly accurate, trustworthy picture of traffic patterns on real network data. 
+
+Stage 2 — Teaching a neural network to learn the pattern. Solving the full mathematical model is accurate but can be slow, especially when we want to test many "what-if" scenarios — like adding a new bike lane, introducing congestion pricing, or changing bus frequency. To make this fast, we train advanced AI models to understand networks and connections, similar to how the modes and routes in a city are connected. By learning from many solved examples of the mathematical model, this neural network learns to predict traffic patterns almost instantly, without having to re-solve the full equations every time. 
+                
               </p>
 
               <h4>Outcomes and Impacts</h4>
               <p>
-                This research will deliver a next-generation urban mobility simulation platform. This platform will serve as a powerful "digital twin" for cities,
-                enabling urban planners to experiment with innovative transportation solutions in a risk-free setting.
-                The insights gained from these simulations will lead to more efficient, equitable, and sustainable urban mobility planning and policy-making.
+                The result of this work is a fast and reliable tool for simulating city-wide traffic across multiple modes of transportation. Instead of waiting hours for a traditional model to compute how a policy change might affect traffic, planners could get near-instant accurate predictions, making it practical to explore many scenarios in a short amount of time. Moreover, this kind of tool can help cities evaluate new infrastructure, transportation policies, or technologies — such as congestion pricing or expanded transit service — before committing real resources to them. Ultimately, this research supports smarter, faster, and more informed decision-making for building more efficient and sustainable cities. 
               </p>
             </div>
           </div>
@@ -202,6 +201,18 @@
 
                   <div class="carousel-item">
                     <img src="../images/projects_images/projet-5.2.png" alt="AI-driven optimization project — visual 2">
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="../images/projects_images/projet-5.3.png" alt="AI-driven optimization project — visual 2">
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="../images/projects_images/projet-5.4.png" alt="AI-driven optimization project — visual 2">
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="../images/projects_images/projet-5.5.png" alt="AI-driven optimization project — visual 2">
                   </div>
 
                 </div>
