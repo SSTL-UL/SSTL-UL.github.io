@@ -2,53 +2,104 @@
   "use strict";
 
   function initializeLanguages() {
-    // Évite d'ajouter deux fois le sélecteur.
-    if (document.querySelector(".gtranslate_wrapper")) return;
-    // Traduction contrôlée du lien d'accueil dans toutes les pages.
-document
-  .querySelectorAll('#navbar a[href]')
-  .forEach(function (link) {
-    const href = link.getAttribute("href");
+    if (document.getElementById("sstl-language-switcher")) return;
 
-    // Liens utilisés à la racine et dans les sous-dossiers.
-    if (href !== "index.html" && href !== "../index.html") {
-      return;
-    }
+    // Prépare automatiquement la traduction du lien Home.
+    document.querySelectorAll("#navbar a[href]").forEach(function (link) {
+      const href = link.getAttribute("href");
 
-    // Évite de recréer un élément déjà configuré.
-    if (link.querySelector("[data-label-en]")) return;
+      if (href !== "index.html" && href !== "../index.html") return;
+      if (link.querySelector("[data-label-en]")) return;
 
-    const label = document.createElement("span");
+      const label = document.createElement("span");
+      label.className = "notranslate";
+      label.setAttribute("translate", "no");
+      label.setAttribute("data-label-en", "Home");
+      label.setAttribute("data-label-fr", "Accueil");
+      label.textContent = "Home";
 
-    label.className = "notranslate";
-    label.setAttribute("translate", "no");
+      link.replaceChildren(label);
+    });
 
-    label.setAttribute("data-label-en", "Home");
-    label.setAttribute("data-label-fr", "Accueil");
-    label.setAttribute("data-label-es", "Inicio");
-    label.setAttribute("data-label-ar", "الرئيسية");
-    label.setAttribute("data-label-zh-cn", "首页");
+    // Sélecteur visible EN | FR.
+    const switcher = document.createElement("div");
+    switcher.id = "sstl-language-switcher";
+    switcher.className = "notranslate";
+    switcher.setAttribute("translate", "no");
+    switcher.setAttribute("role", "group");
+    switcher.setAttribute("aria-label", "Language / Langue");
 
-    label.textContent = "Home";
+    switcher.innerHTML = `
+      <button type="button" data-language="en"
+              lang="en" aria-label="English"
+              aria-pressed="true" disabled>EN</button>
+      <span aria-hidden="true">|</span>
+      <button type="button" data-language="fr"
+              lang="fr" aria-label="Français"
+              aria-pressed="false" disabled>FR</button>
+    `;
 
-    // Conserve le lien et ses classes, notamment "active".
-    link.replaceChildren(label);
-  });
+    document.body.appendChild(switcher);
 
-    const menu = document.querySelector("#navbar > ul");
-    if (!menu) return;
-
-    // Ajoute le sélecteur après les liens du menu.
-    const item = document.createElement("li");
-    item.className = "sstl-language-item";
-
+    // Le widget technique reste masqué.
     const container = document.createElement("div");
     container.className = "gtranslate_wrapper";
+    container.hidden = true;
+    document.body.appendChild(container);
 
-    item.appendChild(container);
-    menu.appendChild(item);
+    function updateLabels(language) {
+      document.querySelectorAll("[data-label-en]").forEach(function (element) {
+        const text =
+          element.getAttribute("data-label-" + language) ||
+          element.getAttribute("data-label-en");
 
-    // Configuration du service.
+        if (element.textContent !== text) {
+          element.textContent = text;
+        }
+      });
+
+      switcher.querySelectorAll("button").forEach(function (button) {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.language === language)
+        );
+      });
+    }
+
+    let selector = null;
+
+    function connectSelector() {
+      const found = container.querySelector(".gt_selector");
+      if (!found || found === selector) return;
+
+      selector = found;
+
+      function syncLanguage() {
+        const language = selector.value.split("|").pop();
+        updateLabels(language === "fr" ? "fr" : "en");
+      }
+
+      selector.addEventListener("change", syncLanguage);
+      syncLanguage();
+
+      switcher.querySelectorAll("button").forEach(function (button) {
+        button.disabled = false;
+      });
+    }
+
+    switcher.addEventListener("click", function (event) {
+      const button = event.target.closest("button[data-language]");
+      if (!button || !selector) return;
+
+      selector.value = "en|" + button.dataset.language;
+
+      // Déclenche le changement via le widget GTranslate.
+      selector.dispatchEvent(new Event("change", { bubbles: true }));
+    });
+
+    const observer = new MutationObserver(connectSelector);
+    observer.observe(container, { childList: true, subtree: true });
+
     window.gtranslateSettings = {
       default_language: "en",
       languages: ["en", "fr"],
@@ -56,65 +107,21 @@ document
       wrapper_selector: ".gtranslate_wrapper"
     };
 
-    // Charge le sélecteur et le service de traduction.
     const script = document.createElement("script");
-    script.src =
-      "https://cdn.gtranslate.net/widgets/latest/dropdown.js";
+    script.src = "https://cdn.gtranslate.net/widgets/latest/dropdown.js";
     script.async = true;
+    script.addEventListener("load", connectSelector);
 
-    script.onerror = function () {
-      container.textContent = "Translation unavailable";
-    };
-    // Affiche nos traductions pour les textes protégés.
-function updateCustomLabels(language) {
-  const attribute = "data-label-" + language.toLowerCase();
+    script.addEventListener("error", function () {
+      switcher.title =
+        "Translation unavailable / Traduction indisponible";
+    });
 
-  document.querySelectorAll("[data-label-en]").forEach(function (element) {
-    const text =
-      element.getAttribute(attribute) ||
-      element.getAttribute("data-label-en");
-
-    if (element.textContent !== text) {
-      element.textContent = text;
-    }
-  });
-}
-
-// Lit la langue sélectionnée dans GTranslate.
-// Les valeurs sont de la forme "en|fr".
-function getSelectedLanguage() {
-  const selector = document.querySelector(
-    ".gtranslate_wrapper .gt_selector"
-  );
-
-  if (!selector || !selector.value) return "en";
-
-  return selector.value.split("|").pop();
-}
-
-// Met à jour les textes à chaque changement de langue.
-document.addEventListener("change", function (event) {
-  if (
-    event.target instanceof HTMLSelectElement &&
-    event.target.matches(".gtranslate_wrapper .gt_selector")
-  ) {
-    updateCustomLabels(getSelectedLanguage());
-  }
-});
-
-// Applique aussi les traductions lorsque le sélecteur est chargé,
-// notamment si une langue est déjà sélectionnée à l'arrivée.
-script.addEventListener("load", function () {
-  updateCustomLabels(getSelectedLanguage());
-});
     document.body.appendChild(script);
   }
 
   if (document.readyState === "loading") {
-    document.addEventListener(
-      "DOMContentLoaded",
-      initializeLanguages
-    );
+    document.addEventListener("DOMContentLoaded", initializeLanguages);
   } else {
     initializeLanguages();
   }
