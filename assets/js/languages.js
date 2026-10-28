@@ -4,7 +4,110 @@
   function initializeLanguages() {
     if (document.getElementById("sstl-language-switcher")) return;
 
-    // Prépare automatiquement la traduction du lien Home.
+    // =====================================================
+    // 1. Titres français personnalisés
+    // =====================================================
+
+    const frenchTitles = {
+      "Meryam Chaieb": "Étudiante au doctorat",
+      "Bobin Wang": "Chercheuse principale",
+      "Xuelin Tian": "Chercheuse postdoctorale",
+      "Sara Gharavi": "Chercheuse postdoctorale",
+      "Mahdie Asl-Javadian": "Étudiante au doctorat",
+      "Xianyu Zhong": "Étudiante au doctorat",
+      "Weijia Wang": "Étudiante au doctorat",
+      "Camille Godbout": "Étudiante à la maîtrise",
+      "Barsha Lamichhane": "Ancienne professionnelle de recherche",
+      "Mahnaz Rabbani Khorasgani":
+        "Ancienne professionnelle de recherche"
+    };
+
+    const profileNames = {
+      "meryam-chaieb.html": "Meryam Chaieb",
+      "xuelin-tian.html": "Xuelin Tian",
+      "sara-gharavi.html": "Sara Gharavi",
+      "mahdie-asl-javadian.html": "Mahdie Asl-Javadian",
+      "xianyu-zhong.html": "Xianyu Zhong",
+      "weijia-wang.html": "Weijia Wang",
+      "camille-godbout.html": "Camille Godbout"
+    };
+
+    function prepareFrenchTitle(element, frenchTitle) {
+      if (!element || !frenchTitle) return;
+
+      // Mémorise le titre anglais pour le rétablir avec EN.
+      if (!element.hasAttribute("data-label-en")) {
+        element.setAttribute(
+          "data-label-en",
+          element.textContent.trim()
+        );
+      }
+
+      element.setAttribute("data-label-fr", frenchTitle);
+      element.classList.add("notranslate");
+      element.setAttribute("translate", "no");
+    }
+
+    // Cartes des membres actuels et anciens sur la page Team.
+    document.querySelectorAll(".team-member-info").forEach(function (card) {
+      const nameElement = card.querySelector("h4");
+      if (!nameElement) return;
+
+      const name = nameElement.textContent
+        .trim()
+        .replace(/\s+/g, " ");
+
+      prepareFrenchTitle(
+        card.querySelector("span"),
+        frenchTitles[name]
+      );
+    });
+
+    // Présentation de Bobin Wang sur la page Team.
+    const principalName = document.querySelector(".pi-name");
+
+    if (
+      principalName &&
+      principalName.textContent.includes("Bobin Wang")
+    ) {
+      prepareFrenchTitle(
+        document.querySelector(".pi-info-card .pi-title"),
+        frenchTitles["Bobin Wang"]
+      );
+
+      prepareFrenchTitle(
+        document.querySelector(".pi-bio-title"),
+        frenchTitles["Bobin Wang"]
+      );
+    }
+
+    // Titres sur les fiches individuelles.
+    const currentFile = window.location.pathname
+      .split("/")
+      .pop()
+      .toLowerCase();
+
+    const profileName = profileNames[currentFile];
+
+    if (profileName) {
+      prepareFrenchTitle(
+        document.querySelector("main .pi-title"),
+        frenchTitles[profileName]
+      );
+    }
+
+    // Le rang universitaire est distinct du rôle de direction.
+    if (currentFile === "about-bobin.html") {
+      prepareFrenchTitle(
+        document.querySelector("main .pi-title"),
+        "Professeure adjointe"
+      );
+    }
+
+    // =====================================================
+    // 2. Traduction du lien Home → Accueil
+    // =====================================================
+
     document.querySelectorAll("#navbar a[href]").forEach(function (link) {
       const href = link.getAttribute("href");
 
@@ -21,7 +124,10 @@
       link.replaceChildren(label);
     });
 
-    // Sélecteur visible EN | FR.
+    // =====================================================
+    // 3. Sélecteur visible EN | FR
+    // =====================================================
+
     const switcher = document.createElement("div");
     switcher.id = "sstl-language-switcher";
     switcher.className = "notranslate";
@@ -46,6 +152,10 @@
     container.className = "gtranslate_wrapper";
     container.hidden = true;
     document.body.appendChild(container);
+
+    // =====================================================
+    // 4. Application des traductions personnalisées
+    // =====================================================
 
     function updateLabels(language) {
       document.querySelectorAll("[data-label-en]").forEach(function (element) {
@@ -98,7 +208,14 @@
     });
 
     const observer = new MutationObserver(connectSelector);
-    observer.observe(container, { childList: true, subtree: true });
+    observer.observe(container, {
+      childList: true,
+      subtree: true
+    });
+
+    // =====================================================
+    // 5. Chargement de GTranslate
+    // =====================================================
 
     window.gtranslateSettings = {
       default_language: "en",
@@ -108,7 +225,8 @@
     };
 
     const script = document.createElement("script");
-    script.src = "https://cdn.gtranslate.net/widgets/latest/dropdown.js";
+    script.src =
+      "https://cdn.gtranslate.net/widgets/latest/dropdown.js";
     script.async = true;
     script.addEventListener("load", connectSelector);
 
@@ -121,7 +239,10 @@
   }
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initializeLanguages);
+    document.addEventListener(
+      "DOMContentLoaded",
+      initializeLanguages
+    );
   } else {
     initializeLanguages();
   }
