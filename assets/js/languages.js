@@ -21,7 +21,7 @@
     // Configuration du service.
     window.gtranslateSettings = {
       default_language: "en",
-      languages: ["en", "fr", "es", "ar", "zh-CN"],
+      languages: ["en", "fr"],
       wrapper_selector: ".gtranslate_wrapper"
     };
 
