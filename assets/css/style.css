@@ -1015,3 +1015,69 @@ section {
 #navbar.navbar-mobile .gtranslate_wrapper select {
   max-width: 100%;
 }
+
+/* SSTL : sélecteur EN | FR dans le coin supérieur droit */
+#sstl-language-switcher {
+  position: fixed;
+  top: 6px;
+  right: 18px;
+  z-index: 1100;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 3px 10px;
+  border: 1px solid #e2e7ed;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+#sstl-language-switcher button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 4px 2px;
+  color: #526174;
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#sstl-language-switcher button[aria-pressed="true"] {
+  color: #174d82;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+#sstl-language-switcher button:hover {
+  color: #174d82;
+}
+
+#sstl-language-switcher button:focus-visible {
+  outline: 2px solid #174d82;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+#sstl-language-switcher button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+#sstl-language-switcher > span {
+  color: #c1c8d0;
+}
+
+@media (max-width: 991px) {
+  #sstl-language-switcher {
+    top: 4px;
+    right: 12px;
+  }
+}
